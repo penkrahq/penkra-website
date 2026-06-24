@@ -1,0 +1,12 @@
+.git
+.github
+.next
+node_modules
+out
+TODO.md
+.env
+.env.*
+.DS_Store
+*.log
+*.tsbuildinfo
+README.md

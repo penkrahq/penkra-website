@@ -1,0 +1,54 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: penkra-com-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, personal, penkra-com]
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v5
+
+      - name: Deploy with Docker Compose
+        env:
+          COMPOSE_BAKE: "true"
+          COMPOSE_PROJECT_NAME: penkra-com
+        run: |
+          docker compose -p "$COMPOSE_PROJECT_NAME" build
+          docker compose -p "$COMPOSE_PROJECT_NAME" up --force-recreate --remove-orphans -d
+          sleep 5
+          docker compose -p "$COMPOSE_PROJECT_NAME" ps
+          docker compose -p "$COMPOSE_PROJECT_NAME" logs --no-color --tail=120 penkra-com
+
+          CONTAINER_ID="$(docker compose -p "$COMPOSE_PROJECT_NAME" ps -q penkra-com)"
+          if [ -z "$CONTAINER_ID" ] || [ "$(docker inspect -f '{{.State.Running}}' "$CONTAINER_ID")" != "true" ]; then
+            echo "penkra.com container is not running after deploy"
+            exit 1
+          fi
+
+          docker compose -p "$COMPOSE_PROJECT_NAME" exec -T penkra-com node --input-type=module <<'NODE'
+          const deadline = Date.now() + 60_000;
+          let lastError;
+          while (Date.now() < deadline) {
+            try {
+              const response = await fetch("http://127.0.0.1:3000/");
+              if (response.ok) {
+                console.log("penkra.com health check passed");
+                process.exit(0);
+              }
+              lastError = new Error(`status responded ${response.status}`);
+            } catch (error) {
+              lastError = error;
+            }
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+          }
+          console.error("penkra.com did not become healthy before deploy smoke:", lastError);
+          process.exit(1);
+          NODE

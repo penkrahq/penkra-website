@@ -1,0 +1,93 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#FFFEFC"/>
+  <style>
+    .title { font-family: Arial, Helvetica, sans-serif; font-size: 32px; font-weight: 400; fill: #073B63; }
+    .label { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; fill: #333333; }
+    .small { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; fill: #5B6972; }
+    .word { font-family: Georgia, 'Times New Roman', serif; font-size: 76px; font-weight: 400; fill: #073B63; }
+    .wordSans { font-family: Arial, Helvetica, sans-serif; font-size: 64px; font-weight: 400; fill: #073B63; }
+    .ink { stroke: #073B63; }
+    .fillInk { fill: #073B63; }
+    .wash { fill: #B9D8E8; }
+    .mist { fill: #D8EDF6; }
+    .linen { fill: #EDF7FB; }
+    .line { stroke: #B6CED5; }
+  </style>
+
+  <text x="70" y="78" class="title">Penkra logo directions</text>
+  <text x="70" y="112" class="small">Blue-first, flat, calm, operational. These are rough vector concepts for choosing a direction.</text>
+
+  <g transform="translate(70 165)">
+    <rect width="680" height="250" rx="14" fill="#EDF7FB"/>
+    <text x="28" y="42" class="label">01. Folded document + wordmark</text>
+    <g transform="translate(38 82)">
+      <rect x="0" y="0" width="92" height="112" rx="14" fill="#073B63"/>
+      <path d="M58 0v34h34" stroke="#FFFEFC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M24 62l17 17 30-38" stroke="#FFFEFC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="126" y="78" class="word">Penkra</text>
+    </g>
+    <text x="38" y="218" class="small">Direct paperwork signal. Strongest for trust services and operations.</text>
+  </g>
+
+  <g transform="translate(850 165)">
+    <rect width="680" height="250" rx="14" fill="#FFFEFC" stroke="#E5E7EB"/>
+    <text x="28" y="42" class="label">02. Rounded P monogram</text>
+    <g transform="translate(38 84)">
+      <rect x="0" y="0" width="112" height="112" rx="24" fill="#073B63"/>
+      <path d="M35 86V27h33c18 0 29 11 29 27s-11 27-29 27H52" stroke="#FFFEFC" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M52 81l36-36" stroke="#B9D8E8" stroke-width="8" stroke-linecap="round"/>
+      <text x="148" y="77" class="wordSans">Penkra</text>
+    </g>
+    <text x="38" y="218" class="small">Most app-friendly. Works well as favicon, app icon, and social avatar.</text>
+  </g>
+
+  <g transform="translate(70 475)">
+    <rect width="680" height="250" rx="14" fill="#FFFEFC" stroke="#E5E7EB"/>
+    <text x="28" y="42" class="label">03. Conversation + task check</text>
+    <g transform="translate(38 84)">
+      <rect x="0" y="0" width="128" height="96" rx="22" fill="#B9D8E8"/>
+      <path d="M34 96l-18 26 38-26" fill="#B9D8E8"/>
+      <rect x="34" y="29" width="60" height="10" rx="5" fill="#073B63"/>
+      <path d="M38 61l14 14 34-36" stroke="#073B63" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="162" y="75" class="word">Penkra</text>
+    </g>
+    <text x="38" y="218" class="small">Best for WhatsApp-first service. Softer and more customer-facing.</text>
+  </g>
+
+  <g transform="translate(850 475)">
+    <rect width="680" height="250" rx="14" fill="#EDF7FB"/>
+    <text x="28" y="42" class="label">04. Stamp / handled mark</text>
+    <g transform="translate(38 82)">
+      <rect x="0" y="0" width="112" height="112" rx="14" fill="#FFFEFC" stroke="#073B63" stroke-width="7"/>
+      <path d="M29 60l17 17 38-43" stroke="#073B63" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M23 91h66" stroke="#B6CED5" stroke-width="6" stroke-linecap="round"/>
+      <text x="148" y="78" class="wordSans">Penkra</text>
+    </g>
+    <text x="38" y="218" class="small">Feels official and procedural. Good for documents, invoices, and completed work.</text>
+  </g>
+
+  <g transform="translate(70 785)">
+    <rect width="680" height="250" rx="14" fill="#FFFEFC" stroke="#E5E7EB"/>
+    <text x="28" y="42" class="label">05. Path / logistics mark</text>
+    <g transform="translate(38 84)">
+      <rect x="0" y="0" width="128" height="96" rx="20" fill="#D8EDF6"/>
+      <circle cx="32" cy="48" r="10" fill="#073B63"/>
+      <circle cx="96" cy="48" r="10" fill="#073B63"/>
+      <path d="M42 48c14-32 41-32 44 0" stroke="#073B63" stroke-width="8" stroke-linecap="round"/>
+      <path d="M83 43l13 5-10 11" stroke="#073B63" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="162" y="75" class="wordSans">Penkra</text>
+    </g>
+    <text x="38" y="218" class="small">Broader than paperwork. Suggests coordination, movement, and follow-through.</text>
+  </g>
+
+  <g transform="translate(850 785)">
+    <rect width="680" height="250" rx="14" fill="#B9D8E8"/>
+    <text x="28" y="42" class="label">06. Editorial wordmark only</text>
+    <g transform="translate(38 84)">
+      <text x="0" y="78" class="word">Penkra</text>
+      <path d="M4 100h236" stroke="#073B63" stroke-width="5" stroke-linecap="round"/>
+      <path d="M272 100h52" stroke="#FFFEFC" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <text x="38" y="218" class="small">Most premium and quiet. Needs a separate icon later for app/favicon usage.</text>
+  </g>
+</svg>

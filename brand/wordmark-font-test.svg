@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#FFFEFC"/>
+  <style>
+    .label { font: 22px Arial, sans-serif; fill: #333; }
+    .mark { fill: #073B63; font-size: 144px; letter-spacing: -6px; }
+  </style>
+  <text x="48" y="64" class="label">Rounded font base test for direction 10</text>
+  <text x="48" y="180" class="mark" font-family="'Arial Rounded MT Bold', 'Arial Rounded Bold', Arial, sans-serif">Penkra</text>
+  <text x="48" y="215" class="label">01 Arial Rounded MT Bold</text>
+  <text x="48" y="340" class="mark" font-family="'SF Pro Rounded', '.SF NS Rounded', Arial, sans-serif" font-weight="700">Penkra</text>
+  <text x="48" y="375" class="label">02 SF Pro Rounded Bold</text>
+  <text x="48" y="500" class="mark" font-family="'SF Pro Rounded', '.SF NS Rounded', Arial, sans-serif" font-weight="600">Penkra</text>
+  <text x="48" y="535" class="label">03 SF Pro Rounded Semibold</text>
+  <text x="48" y="660" class="mark" font-family="'Avenir Next', Avenir, Arial, sans-serif" font-weight="600">Penkra</text>
+  <text x="48" y="695" class="label">04 Avenir Next Demi/Medium</text>
+</svg>
