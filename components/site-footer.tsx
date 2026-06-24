@@ -35,6 +35,13 @@ const FOOTER_GROUPS = [
       { label: "Email", href: mailtoLink(), external: true },
     ],
   },
+  {
+    title: "Social",
+    links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/penkra/", external: true },
+      { label: "YouTube", href: "https://www.youtube.com/@penkra", external: true },
+    ],
+  },
 ];
 
 export function SiteFooter() {

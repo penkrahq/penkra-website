@@ -97,7 +97,20 @@ export default function RootLayout({
             url: siteUrl,
             logo: absoluteUrl("/icons/icon-512.png"),
             email: "emmanuel@penkra.com",
-            sameAs: [],
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                email: "emmanuel@penkra.com",
+                telephone: "+13073461585",
+                url: absoluteUrl("/contact"),
+                availableLanguage: ["en"],
+              },
+            ],
+            sameAs: [
+              "https://www.linkedin.com/company/penkra/",
+              "https://www.youtube.com/@penkra",
+            ],
           }}
         />
         <JsonLd

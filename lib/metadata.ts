@@ -4,7 +4,7 @@ export const siteUrl = "https://penkra.com";
 export const siteName = "Penkra";
 export const defaultTitle = "Penkra | Paperwork, admin, and logistics handled";
 export const defaultDescription =
-  "Penkra helps people and businesses delegate paperwork, registrations, admin follow-ups, records, logistics, and compliance awareness, starting in Ghana.";
+  "Penkra helps people and businesses delegate paperwork, registrations, admin follow-ups, records, logistics, and compliance awareness.";
 
 type PageMetadataInput = {
   title?: string;
