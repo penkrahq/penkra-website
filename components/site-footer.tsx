@@ -38,6 +38,7 @@ const FOOTER_GROUPS = [
   {
     title: "Social",
     links: [
+      { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61591393648650", external: true },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/penkra/", external: true },
       { label: "YouTube", href: "https://www.youtube.com/@penkra", external: true },
     ],

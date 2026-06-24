@@ -108,6 +108,7 @@ export default function RootLayout({
               },
             ],
             sameAs: [
+              "https://www.facebook.com/profile.php?id=61591393648650",
               "https://www.linkedin.com/company/penkra/",
               "https://www.youtube.com/@penkra",
             ],
