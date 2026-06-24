@@ -1,7 +1,6 @@
-const WHATSAPP_FALLBACK = "https://wa.me/";
-const BOOK_CALL_FALLBACK =
-  "mailto:hello@penkra.com?subject=Book%20a%20call";
-const CONTACT_EMAIL_FALLBACK = "hello@penkra.com";
+const WHATSAPP_FALLBACK = "https://wa.me/13073461585";
+const BOOK_CALL_FALLBACK = "https://cal.com/penkra/intro";
+const CONTACT_EMAIL_FALLBACK = "emmanuel@penkra.com";
 
 export function whatsappLink(message: string): string {
   const base = process.env.NEXT_PUBLIC_WHATSAPP_URL ?? WHATSAPP_FALLBACK;

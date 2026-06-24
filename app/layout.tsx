@@ -95,7 +95,7 @@ export default function RootLayout({
             name: siteName,
             url: siteUrl,
             logo: absoluteUrl("/icons/icon-512.png"),
-            email: "hello@penkra.com",
+            email: "emmanuel@penkra.com",
             sameAs: [],
           }}
         />

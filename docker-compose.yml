@@ -13,7 +13,7 @@ services:
       - VIRTUAL_HOST=penkra.com,www.penkra.com
       - VIRTUAL_PORT=3000
       - LETSENCRYPT_HOST=penkra.com,www.penkra.com
-      - LETSENCRYPT_EMAIL=hello@penkra.com
+      - LETSENCRYPT_EMAIL=emmanuel@penkra.com
     expose:
       - "3000"
     networks:
