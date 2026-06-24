@@ -139,75 +139,79 @@ export function ProcessTrack({
                     <li
                       key={c.step}
                       data-process-step={i}
-                      onClick={() => {
-                        if (isMobile) setActive(i);
-                      }}
-                      onKeyDown={(event) => {
-                        if (!isMobile) return;
-                        if (event.key === "Enter" || event.key === " ") {
-                          event.preventDefault();
-                          setActive(i);
-                        }
-                      }}
-                      role={isMobile ? "button" : undefined}
-                      tabIndex={isMobile ? 0 : undefined}
                       style={{
-                        display: "flex",
-                        gap: "18px",
-                        alignItems: "flex-start",
                         padding: "14px 0",
                         borderTop:
                           i === 0 ? "1px solid var(--color-hairline-gray)" : "none",
                         borderBottom: "1px solid var(--color-hairline-gray)",
-                        opacity: isActive ? 1 : isPast ? 0.5 : 0.4,
                         transform: isActive ? "translateX(0)" : "translateX(-8px)",
                         transition:
-                          "opacity 400ms cubic-bezier(0,0,0,1), transform 400ms cubic-bezier(0,0,0,1)",
+                          "transform 400ms cubic-bezier(0,0,0,1)",
                       }}
                     >
-                      <span
-                        aria-hidden
-                        data-process-step-number
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (isMobile) setActive(i);
+                        }}
+                        aria-current={isActive ? "step" : undefined}
                         style={{
-                          fontFamily: "var(--font-serif)",
-                          fontSize: "var(--text-subheading)",
-                          color: isActive
-                            ? "var(--color-blue-ink)"
-                            : "var(--color-graphite)",
-                          fontWeight: 300,
-                          minWidth: "28px",
-                          lineHeight: 1.2,
+                          display: "flex",
+                          gap: "18px",
+                          alignItems: "flex-start",
+                          width: "100%",
+                          padding: 0,
+                          border: 0,
+                          background: "transparent",
+                          color: "inherit",
+                          textAlign: "left",
+                          cursor: isMobile ? "pointer" : "default",
                         }}
                       >
-                        {c.step}
-                      </span>
-                      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                         <span
-                          data-process-step-title
+                          aria-hidden
+                          data-process-step-number
                           style={{
-                            fontSize: "var(--text-body)",
+                            fontFamily: "var(--font-serif)",
+                            fontSize: "var(--text-subheading)",
                             color: isActive
                               ? "var(--color-blue-ink)"
-                              : "var(--color-charcoal)",
-                            fontWeight: isActive ? 500 : 400,
-                            lineHeight: 1.3,
+                              : "var(--color-graphite)",
+                            fontWeight: 300,
+                            minWidth: "28px",
+                            lineHeight: 1.2,
                           }}
                         >
-                          {c.title}
+                          {c.step}
                         </span>
-                        <span
-                          data-process-step-body
-                          style={{
-                            display: isActive ? "block" : "none",
-                            fontSize: "var(--text-body-sm)",
-                            color: "var(--color-charcoal)",
-                            lineHeight: "var(--leading-body-sm)",
-                            maxWidth: "44ch",
-                          }}
-                        >
-                          {c.body}
+                        <span style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                          <span
+                            data-process-step-title
+                            style={{
+                              fontSize: "var(--text-body)",
+                              color: isActive
+                                ? "var(--color-blue-ink)"
+                                : "var(--color-charcoal)",
+                              fontWeight: isActive ? 500 : 400,
+                              lineHeight: 1.3,
+                            }}
+                          >
+                            {c.title}
+                          </span>
+                          <span
+                            data-process-step-body
+                            style={{
+                              display: isActive ? "block" : "none",
+                              fontSize: "var(--text-body-sm)",
+                              color: "var(--color-charcoal)",
+                              lineHeight: "var(--leading-body-sm)",
+                              maxWidth: "44ch",
+                            }}
+                          >
+                            {c.body}
+                          </span>
                         </span>
-                      </div>
+                      </button>
                     </li>
                   );
                 })}

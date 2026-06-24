@@ -154,8 +154,6 @@ export default function RootLayout({
                 section.querySelectorAll('[data-process-step]').forEach((step) => {
                   const index = Number(step.getAttribute('data-process-step'));
                   const isActive = index === active;
-                  const isPast = index < active;
-                  step.style.opacity = isActive ? '1' : isPast ? '0.5' : '0.4';
                   step.style.transform = isActive ? 'translateX(0)' : 'translateX(-8px)';
 
                   const number = step.querySelector('[data-process-step-number]');

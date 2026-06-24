@@ -110,7 +110,7 @@ export function SiteHeader() {
           <Button
             href={wa("home")}
             external
-            aria-label="Message Penkra on WhatsApp — opens a new tab"
+            aria-label="Message us on WhatsApp — opens a new tab"
             style={{ padding: "11px 18px" }}
           >
             Message us
