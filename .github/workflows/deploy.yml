@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, personal, penkra-com]
+    runs-on: [self-hosted, penkra, penkra-com]
     steps:
       - name: Check out code
         uses: actions/checkout@v5
