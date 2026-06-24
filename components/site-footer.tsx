@@ -25,6 +25,11 @@ const FOOTER_GROUPS = [
     title: "Company",
     links: [
       { label: "Contact", href: "/contact" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
+      { label: "Billing", href: "/billing" },
+      { label: "Data handling", href: "/data-handling" },
+      { label: "AI-assisted work", href: "/ai-assisted" },
       { label: "WhatsApp", href: wa("contact"), external: true },
       { label: "Book a call", href: bookCallLink(), external: true },
       { label: "Email", href: mailtoLink(), external: true },
@@ -191,7 +196,7 @@ export function SiteFooter() {
           }}
         >
           <span>© {new Date().getFullYear()} Penkra</span>
-          <span>Ghana first · WhatsApp-first · Itemized billing</span>
+          <span>AI-assisted · Human-reviewed · Itemized billing</span>
         </div>
       </div>
 

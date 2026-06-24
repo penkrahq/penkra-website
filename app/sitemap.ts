@@ -7,6 +7,11 @@ const routes = [
   "/ghana",
   "/ghana/business-registration",
   "/contact",
+  "/privacy",
+  "/terms",
+  "/billing",
+  "/data-handling",
+  "/ai-assisted",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

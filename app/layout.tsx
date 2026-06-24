@@ -5,6 +5,7 @@ import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { CountryProvider } from "../components/country-provider";
 import { JsonLd } from "../components/json-ld";
+import { Analytics } from "../components/analytics";
 import {
   absoluteUrl,
   defaultDescription,
@@ -117,6 +118,7 @@ export default function RootLayout({
           <main style={{ flex: 1, paddingTop: "70px" }}>{children}</main>
           <SiteFooter />
         </CountryProvider>
+        <Analytics />
         <script
           id="penkra-interaction-fallbacks"
           dangerouslySetInnerHTML={{
