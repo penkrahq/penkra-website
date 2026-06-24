@@ -7,12 +7,15 @@ import { PillBadge } from "../../components/pill-badge";
 import { ServicesCountrySummary } from "../../components/services-country-summary";
 import { SERVICES_CATEGORIES, SERVICE_BUNDLES, FINAL_CTA, wa } from "../../lib/site-content";
 import { bookCallLink } from "../../lib/links";
+import { pageMetadata } from "../../lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Services",
   description:
     "What can Penkra handle for you? Choose a service or message us if the work does not fit a neat category.",
-};
+  path: "/services",
+  image: "/og/services.png",
+});
 
 const ANCHOR_MAP: Record<string, string> = {
   "Business setup": "business",

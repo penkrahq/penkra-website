@@ -14,12 +14,15 @@ import {
   wa,
 } from "../../lib/site-content";
 import { bookCallLink } from "../../lib/links";
+import { pageMetadata } from "../../lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Ghana Services",
   description:
     "Penkra helps local founders, diaspora founders, foreign-owned businesses, and individuals handle Ghana-specific paperwork, registration, records, admin follow-ups, and logistics.",
-};
+  path: "/ghana",
+  image: "/og/services.png",
+});
 
 export default function GhanaPage() {
   return (

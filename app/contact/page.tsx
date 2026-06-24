@@ -6,12 +6,14 @@ import { Reveal } from "../../components/reveal";
 import { Button } from "../../components/button";
 import { CONTACT_INTAKE, FINAL_CTA, wa } from "../../lib/site-content";
 import { bookCallLink, contactEmail, mailtoLink } from "../../lib/links";
+import { pageMetadata } from "../../lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact Penkra",
   description:
     "Start with a WhatsApp message or book a call. If your request is simple, WhatsApp is usually fastest.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

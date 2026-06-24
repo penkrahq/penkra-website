@@ -6,12 +6,14 @@ import { Reveal } from "../../components/reveal";
 import { Button } from "../../components/button";
 import { COUNTRIES, FINAL_CTA, wa } from "../../lib/site-content";
 import { bookCallLink } from "../../lib/links";
+import { pageMetadata } from "../../lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Countries",
   description:
     "Penkra is starting in Ghana and built to expand country by country. See where we operate and tell us where you need help.",
-};
+  path: "/countries",
+});
 
 export default function CountriesPage() {
   return (

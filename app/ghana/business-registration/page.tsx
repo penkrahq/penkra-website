@@ -22,16 +22,41 @@ import {
   wa,
 } from "../../../lib/site-content";
 import { bookCallLink } from "../../../lib/links";
+import { pageMetadata } from "../../../lib/metadata";
+import { JsonLd } from "../../../components/json-ld";
 
-export const metadata: Metadata = {
+const description =
+  "Penkra helps local, diaspora, and foreign-owned founders clarify the right registration path, prepare required information, coordinate paperwork, track follow-ups, and keep records.";
+
+export const metadata: Metadata = pageMetadata({
   title: "Ghana Business Registration Help",
-  description:
-    "Penkra helps local, diaspora, and foreign-owned founders clarify the right registration path, prepare required information, coordinate paperwork, track follow-ups, and keep records.",
-};
+  description,
+  path: "/ghana/business-registration",
+  image: "/og/business-registration.png",
+});
 
 export default function BusinessRegistrationPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Ghana business registration support",
+          description,
+          provider: {
+            "@type": "Organization",
+            name: "Penkra",
+            url: "https://penkra.com",
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Ghana",
+          },
+          serviceType: "Business registration support",
+          url: "https://penkra.com/ghana/business-registration",
+        }}
+      />
       <PageHero
         badge="Ghana business registration"
         h1="Register your business without managing every step yourself."

@@ -4,6 +4,14 @@ import "./globals.css";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { CountryProvider } from "../components/country-provider";
+import { JsonLd } from "../components/json-ld";
+import {
+  absoluteUrl,
+  defaultDescription,
+  defaultTitle,
+  siteName,
+  siteUrl,
+} from "../lib/metadata";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -20,29 +28,45 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-const siteUrl = "https://penkra.com";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Penkra | Paperwork, admin, and logistics handled",
+    default: defaultTitle,
     template: "%s | Penkra",
   },
-  description:
-    "Penkra helps people and businesses delegate paperwork, registrations, admin follow-ups, records, logistics, and compliance awareness, starting in Ghana.",
+  description: defaultDescription,
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
-    title: "Penkra | Paperwork, admin, and logistics handled",
-    description:
-      "Penkra helps people and businesses delegate paperwork, registrations, admin follow-ups, records, logistics, and compliance awareness, starting in Ghana.",
+    title: defaultTitle,
+    description: defaultDescription,
     url: siteUrl,
-    siteName: "Penkra",
+    siteName,
     type: "website",
+    images: [
+      {
+        url: absoluteUrl("/og/default.png"),
+        width: 1200,
+        height: 630,
+        alt: "Penkra preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Penkra | Paperwork, admin, and logistics handled",
-    description:
-      "Penkra helps people and businesses delegate paperwork, registrations, admin follow-ups, records, logistics, and compliance awareness, starting in Ghana.",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [absoluteUrl("/og/default.png")],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   robots: {
     index: true,
@@ -64,6 +88,30 @@ export default function RootLayout({
           minHeight: "100vh",
         }}
       >
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: siteName,
+            url: siteUrl,
+            logo: absoluteUrl("/icons/icon-512.png"),
+            email: "hello@penkra.com",
+            sameAs: [],
+          }}
+        />
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: siteName,
+            url: siteUrl,
+            inLanguage: "en",
+            publisher: {
+              "@type": "Organization",
+              name: siteName,
+            },
+          }}
+        />
         <CountryProvider>
           <SiteHeader />
           <main style={{ flex: 1, paddingTop: "70px" }}>{children}</main>
