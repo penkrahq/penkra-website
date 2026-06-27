@@ -20,6 +20,7 @@ const FOOTER_GROUPS: FooterGroup[] = [
     title: "Services",
     links: [
       { label: "All services", href: "/services" },
+      { label: "What we handle", href: "/what-we-handle" },
       { label: "Business registration", href: "/ghana/business-registration" },
       { label: "Registration guide", href: "/ghana/business-registration/guide" },
       { label: "Paperwork and forms", href: "/services" },
@@ -37,6 +38,8 @@ const FOOTER_GROUPS: FooterGroup[] = [
   {
     title: "Company",
     links: [
+      { label: "Launch note", href: "/launch" },
+      { label: "Founder note", href: "/founder-note" },
       { label: "How it works", href: "/how-it-works" },
       { label: "Contact", href: "/contact" },
       { label: "FAQ", href: "/faq" },
