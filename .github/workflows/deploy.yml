@@ -41,12 +41,36 @@ jobs:
           let lastError;
           while (Date.now() < deadline) {
             try {
-              const response = await fetch("http://127.0.0.1:3000/");
-              if (response.ok) {
+              const [home, sitemap, robots, manifest] = await Promise.all([
+                fetch("http://127.0.0.1:3000/"),
+                fetch("http://127.0.0.1:3000/sitemap.xml"),
+                fetch("http://127.0.0.1:3000/robots.txt"),
+                fetch("http://127.0.0.1:3000/manifest.webmanifest"),
+              ]);
+
+              if (!home.ok || !sitemap.ok || !robots.ok || !manifest.ok) {
+                throw new Error(
+                  `home=${home.status} sitemap=${sitemap.status} robots=${robots.status} manifest=${manifest.status}`,
+                );
+              }
+
+              const [homeText, sitemapText, robotsText, manifestJson] = await Promise.all([
+                home.text(),
+                sitemap.text(),
+                robots.text(),
+                manifest.json(),
+              ]);
+
+              if (
+                homeText.includes("Penkra") &&
+                sitemapText.includes("https://penkra.com") &&
+                robotsText.includes("Sitemap: https://penkra.com/sitemap.xml") &&
+                manifestJson.name === "Penkra"
+              ) {
                 console.log("penkra.com health check passed");
                 process.exit(0);
               }
-              lastError = new Error(`status responded ${response.status}`);
+              lastError = new Error("penkra.com smoke payload did not match expected content");
             } catch (error) {
               lastError = error;
             }
