@@ -15,7 +15,9 @@ jobs:
   deploy:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: [self-hosted, Linux, ARM64, penkra, website]
-    environment: production
+    environment:
+      name: production
+      url: https://penkra.com
     steps:
       - name: Check out code
         uses: actions/checkout@v5
