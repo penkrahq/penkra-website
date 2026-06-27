@@ -1,0 +1,55 @@
+name: Smoke
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  public-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify public website
+        run: |
+          node --input-type=module <<'NODE'
+          const baseUrl = "https://penkra.com";
+
+          async function get(path) {
+            const response = await fetch(`${baseUrl}${path}`, {
+              headers: { accept: path.endsWith(".webmanifest") ? "application/manifest+json" : "*/*" },
+            });
+            if (!response.ok) {
+              throw new Error(`${path} returned HTTP ${response.status}`);
+            }
+            return response;
+          }
+
+          const [home, sitemap, robots, manifest] = await Promise.all([
+            get("/"),
+            get("/sitemap.xml"),
+            get("/robots.txt"),
+            get("/manifest.webmanifest"),
+          ]);
+
+          const [homeText, sitemapText, robotsText, manifestJson] = await Promise.all([
+            home.text(),
+            sitemap.text(),
+            robots.text(),
+            manifest.json(),
+          ]);
+
+          if (!homeText.includes("Penkra")) {
+            throw new Error("Home page did not include Penkra");
+          }
+          if (!sitemapText.includes("https://penkra.com")) {
+            throw new Error("Sitemap did not include https://penkra.com");
+          }
+          if (!robotsText.includes("Sitemap: https://penkra.com/sitemap.xml")) {
+            throw new Error("robots.txt did not reference the sitemap");
+          }
+          if (manifestJson.name !== "Penkra") {
+            throw new Error(`Unexpected manifest name: ${manifestJson.name}`);
+          }
+
+          console.log("Public website smoke passed for https://penkra.com");
+          NODE

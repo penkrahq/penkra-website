@@ -43,6 +43,9 @@ The deploy workflow checks the container locally for:
 - `/robots.txt`
 - `/manifest.webmanifest`
 
+The `Smoke` workflow also runs every 6 hours against `https://penkra.com` and can be dispatched
+manually when DNS, deployment, or metadata changes need a public verification pass.
+
 For a manual public smoke check after deployment:
 
 ```bash
@@ -51,4 +54,3 @@ curl -fsS https://penkra.com/sitemap.xml | grep -F "https://penkra.com"
 curl -fsS https://penkra.com/robots.txt | grep -F "Sitemap: https://penkra.com/sitemap.xml"
 curl -fsS https://penkra.com/manifest.webmanifest | grep -F '"name":"Penkra"'
 ```
-
