@@ -21,7 +21,7 @@ const faqItems = [
   {
     question: "How does pricing work?",
     answer:
-      "Some work can be covered by subscription. Work that involves external fees, heavy human work, physical logistics, or third-party providers is quoted separately before fulfilment.",
+      "The Ghana founding subscription is GHS 400 per month for ongoing operational help, AI-assisted work, and light operator supervision. Work that involves government fees, external fees, heavy human work, physical logistics, paid filings, or third-party providers is quoted separately before fulfilment.",
   },
   {
     question: "How does monthly invoicing work?",
