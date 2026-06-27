@@ -7,6 +7,8 @@ type ButtonProps = {
   external?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  ctaId?: string;
+  ctaLocation?: string;
   "aria-label"?: string;
 };
 
@@ -45,6 +47,8 @@ export function Button({
   external,
   className,
   style,
+  ctaId,
+  ctaLocation,
   "aria-label": ariaLabel,
 }: ButtonProps) {
   const resolved =
@@ -61,6 +65,8 @@ export function Button({
         className={className}
         style={{ ...resolved, ...style }}
         aria-label={ariaLabel}
+        data-cta-id={ctaId}
+        data-cta-location={ctaLocation}
       >
         {children}
         <Arrow />
@@ -74,6 +80,8 @@ export function Button({
       className={className}
       style={{ ...resolved, ...style }}
       aria-label={ariaLabel}
+      data-cta-id={ctaId}
+      data-cta-location={ctaLocation}
     >
       {children}
       <Arrow />

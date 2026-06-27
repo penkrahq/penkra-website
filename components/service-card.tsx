@@ -28,6 +28,10 @@ export function ServiceCard({
 }: ServiceCardProps) {
   const ctaHref = href ?? (message ? whatsappLink(message) : undefined);
   const label = ctaLabel ?? (href ? "Start this request" : "Ask about this");
+  const ctaId = `service_card_${title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_|_$/g, "")}`;
 
   return (
     <div
@@ -81,17 +85,19 @@ export function ServiceCard({
         <Link
           href={ctaHref}
           target={ctaHref.startsWith("http") ? "_blank" : undefined}
-            rel={ctaHref.startsWith("http") ? "noopener noreferrer" : undefined}
-            style={{
-              marginTop: "auto",
-              fontSize: "var(--text-body-sm)",
-              color: "var(--color-blue-ink)",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "7px",
-            }}
-          >
-            {label} <span aria-hidden>→</span>
+          rel={ctaHref.startsWith("http") ? "noopener noreferrer" : undefined}
+          data-cta-id={ctaId}
+          data-cta-location="service_card"
+          style={{
+            marginTop: "auto",
+            fontSize: "var(--text-body-sm)",
+            color: "var(--color-blue-ink)",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "7px",
+          }}
+        >
+          {label} <span aria-hidden>→</span>
         </Link>
       ) : null}
     </div>

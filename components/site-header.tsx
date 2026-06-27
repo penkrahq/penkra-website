@@ -111,6 +111,8 @@ export function SiteHeader() {
             href={wa("home")}
             external
             aria-label="Message us on WhatsApp — opens a new tab"
+            ctaId="header_whatsapp"
+            ctaLocation="site_header"
             style={{ padding: "11px 18px" }}
           >
             Message us

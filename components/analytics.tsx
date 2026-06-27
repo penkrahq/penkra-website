@@ -136,6 +136,8 @@ export function Analytics() {
         href,
         label: (link.textContent || "").trim(),
         path: window.location.pathname,
+        cta_id: link.dataset.ctaId,
+        cta_location: link.dataset.ctaLocation,
       });
     }
 

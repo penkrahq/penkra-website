@@ -84,7 +84,13 @@ export function PageHero({
                 marginTop: "4px",
               }}
             >
-              <Button href={primary.href} external={primary.external} aria-label={primary.label}>
+              <Button
+                href={primary.href}
+                external={primary.external}
+                aria-label={primary.label}
+                ctaId="page_hero_primary"
+                ctaLocation="page_hero"
+              >
                 {primary.label}
               </Button>
               {secondary ? (
@@ -93,6 +99,8 @@ export function PageHero({
                   external={secondary.external}
                   variant="secondary"
                   aria-label={secondary.label}
+                  ctaId="page_hero_secondary"
+                  ctaLocation="page_hero"
                 >
                   {secondary.label}
                 </Button>

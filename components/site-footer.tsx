@@ -106,10 +106,23 @@ export function SiteFooter() {
               </p>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
-              <Button href={wa("home")} external aria-label="Message Penkra on WhatsApp">
+              <Button
+                href={wa("home")}
+                external
+                aria-label="Message Penkra on WhatsApp"
+                ctaId="footer_top_whatsapp"
+                ctaLocation="site_footer"
+              >
                 Message Penkra
               </Button>
-              <Button href={bookCallLink()} external variant="secondary" aria-label="Book a call">
+              <Button
+                href={bookCallLink()}
+                external
+                variant="secondary"
+                aria-label="Book a call"
+                ctaId="footer_top_book_call"
+                ctaLocation="site_footer"
+              >
                 Book a call
               </Button>
             </div>

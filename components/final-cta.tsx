@@ -69,6 +69,8 @@ export function FinalCta({ heading, body, primary, secondary }: FinalCtaProps) {
                 external={primary.external}
                 variant="secondary"
                 aria-label={primary.label}
+                ctaId="final_cta_primary"
+                ctaLocation="final_cta"
                 style={{
                   background: "var(--color-linen-white)",
                   color: "var(--color-blue-ink)",
@@ -83,6 +85,8 @@ export function FinalCta({ heading, body, primary, secondary }: FinalCtaProps) {
                   external={secondary.external}
                   variant="secondary"
                   aria-label={secondary.label}
+                  ctaId="final_cta_secondary"
+                  ctaLocation="final_cta"
                   style={{
                     background: "transparent",
                     color: "var(--color-linen-white)",

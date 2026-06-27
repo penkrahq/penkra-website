@@ -87,6 +87,8 @@ export function HeroPanels({
             href={primaryCta.href}
             external={primaryCta.external}
             aria-label={`${primaryCta.label} — opens a new tab`}
+            ctaId="home_hero_primary"
+            ctaLocation="home_hero"
           >
             {primaryCta.label}
           </Button>
@@ -96,6 +98,8 @@ export function HeroPanels({
               external={secondaryCta.external}
               variant="secondary"
               aria-label={secondaryCta.label}
+              ctaId="home_hero_secondary"
+              ctaLocation="home_hero"
             >
               {secondaryCta.label}
             </Button>
