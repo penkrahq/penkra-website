@@ -215,7 +215,7 @@ export const BUSINESS_REG_INVOICE = [
   "Document preparation",
   "Filing coordination",
   "Follow-up",
-  "Government / third-party fee placeholder",
+  "Government / third-party fees",
 ];
 
 export const BUSINESS_REG_DISCLAIMER =
