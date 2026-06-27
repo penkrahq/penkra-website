@@ -7,6 +7,7 @@ type FooterLink = {
   label: string;
   href: string;
   external?: boolean;
+  ctaId?: string;
 };
 
 type FooterGroup = {
@@ -41,17 +42,32 @@ const FOOTER_GROUPS: FooterGroup[] = [
       { label: "Billing", href: "/billing" },
       { label: "Data handling", href: "/data-handling" },
       { label: "AI-assisted work", href: "/ai-assisted" },
-      { label: "WhatsApp", href: wa("contact"), external: true },
-      { label: "Book a call", href: bookCallLink(), external: true },
-      { label: "Email", href: mailtoLink(), external: true },
+      { label: "WhatsApp", href: wa("contact"), external: true, ctaId: "footer_link_whatsapp" },
+      { label: "Book a call", href: bookCallLink(), external: true, ctaId: "footer_link_book_call" },
+      { label: "Email", href: mailtoLink(), external: true, ctaId: "footer_link_email" },
     ],
   },
   {
     title: "Social",
     links: [
-      { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61591393648650", external: true },
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/penkra/", external: true },
-      { label: "YouTube", href: "https://www.youtube.com/@penkra", external: true },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=61591393648650",
+        external: true,
+        ctaId: "footer_social_facebook",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/penkra/",
+        external: true,
+        ctaId: "footer_social_linkedin",
+      },
+      {
+        label: "YouTube",
+        href: "https://www.youtube.com/@penkra",
+        external: true,
+        ctaId: "footer_social_youtube",
+      },
     ],
   },
 ];
@@ -189,6 +205,8 @@ export function SiteFooter() {
                         href={l.href}
                         target={l.href.startsWith("http") ? "_blank" : undefined}
                         rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        data-cta-id={l.ctaId}
+                        data-cta-location={`site_footer_${group.title.toLowerCase()}`}
                         style={{
                           fontSize: "var(--text-body-sm)",
                           color: "var(--color-charcoal)",

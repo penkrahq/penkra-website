@@ -43,6 +43,8 @@ export default function ContactPage() {
               </span>
               <a
                 href={mailtoLink()}
+                data-cta-id="contact_card_email"
+                data-cta-location="contact_card"
                 style={{
                   fontSize: "var(--text-body)",
                   color: "var(--color-blue-ink)",
@@ -55,7 +57,13 @@ export default function ContactPage() {
               <span style={{ fontSize: "var(--text-caption)", color: "var(--color-graphite)" }}>
                 WhatsApp
               </span>
-              <Button href={wa("contact")} external variant="secondary">
+              <Button
+                href={wa("contact")}
+                external
+                variant="secondary"
+                ctaId="contact_card_whatsapp"
+                ctaLocation="contact_card"
+              >
                 Open WhatsApp
               </Button>
             </div>
@@ -63,7 +71,13 @@ export default function ContactPage() {
               <span style={{ fontSize: "var(--text-caption)", color: "var(--color-graphite)" }}>
                 Book a call
               </span>
-              <Button href={bookCallLink()} external variant="secondary">
+              <Button
+                href={bookCallLink()}
+                external
+                variant="secondary"
+                ctaId="contact_card_book_call"
+                ctaLocation="contact_card"
+              >
                 Schedule a time
               </Button>
             </div>
