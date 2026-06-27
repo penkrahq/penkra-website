@@ -4,7 +4,8 @@ import { pageMetadata } from "../../lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
   title: "Billing and Refund Policy",
-  description: "How Penkra handles itemized billing, third-party fees, refunds, and disputes.",
+  description:
+    "How Penkra handles the founding subscription, itemized billing, third-party fees, refunds, and disputes.",
   path: "/billing",
 });
 
@@ -15,6 +16,13 @@ export default function BillingPage() {
       title="Billing and refunds"
       description="Penkra uses granular, itemized billing because real service work often combines preparation, follow-up, logistics, third-party fees, and ongoing admin."
       sections={[
+        {
+          title: "Founding subscription",
+          body: [
+            "The Ghana founding subscription is GHS 400 per month. It covers access to ongoing operational help, AI-assisted work, and light operator supervision.",
+            "The subscription does not include government fees, third-party provider fees, physical logistics, heavy manual fulfilment, licensed professional advice, or paid filing/submission costs.",
+          ],
+        },
         {
           title: "Itemized billing",
           body: [
