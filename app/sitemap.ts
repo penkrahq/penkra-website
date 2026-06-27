@@ -9,6 +9,7 @@ const routes = [
   { path: "/ghana", priority: 0.8 },
   { path: "/ghana/business-registration", priority: 0.9 },
   { path: "/contact", priority: 0.8 },
+  { path: "/faq", priority: 0.7 },
   { path: "/privacy", priority: 0.5 },
   { path: "/terms", priority: 0.5 },
   { path: "/billing", priority: 0.6 },
