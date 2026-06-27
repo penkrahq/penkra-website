@@ -20,6 +20,19 @@ type PostHogQueue = {
   [key: string]: unknown;
 };
 
+type CampaignAttribution = {
+  landing_path: string;
+  landing_url: string;
+  referrer?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  utm_term?: string;
+};
+
+const ATTRIBUTION_STORAGE_KEY = "penkra_campaign_attribution";
+
 function loadPostHogStub() {
   if (window.posthog?.__SV || window.posthog?.__loaded) return;
 
@@ -94,6 +107,59 @@ function loadPostHogStub() {
   posthog.__SV = 1;
 }
 
+function readCampaignAttribution(): CampaignAttribution | null {
+  try {
+    const stored = window.sessionStorage.getItem(ATTRIBUTION_STORAGE_KEY);
+    if (!stored) return null;
+
+    return JSON.parse(stored) as CampaignAttribution;
+  } catch {
+    return null;
+  }
+}
+
+function captureCampaignAttribution(): CampaignAttribution | null {
+  const existing = readCampaignAttribution();
+  if (existing) return existing;
+
+  const params = new URLSearchParams(window.location.search);
+  const attribution: CampaignAttribution = {
+    landing_path: window.location.pathname,
+    landing_url: window.location.href,
+  };
+
+  for (const key of [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term",
+  ] as const) {
+    const value = params.get(key);
+    if (value) attribution[key] = value;
+  }
+
+  if (document.referrer) attribution.referrer = document.referrer;
+
+  const hasCampaignContext =
+    Boolean(attribution.referrer) ||
+    Boolean(attribution.utm_source) ||
+    Boolean(attribution.utm_medium) ||
+    Boolean(attribution.utm_campaign) ||
+    Boolean(attribution.utm_content) ||
+    Boolean(attribution.utm_term);
+
+  if (!hasCampaignContext) return null;
+
+  try {
+    window.sessionStorage.setItem(ATTRIBUTION_STORAGE_KEY, JSON.stringify(attribution));
+  } catch {
+    return attribution;
+  }
+
+  return attribution;
+}
+
 export function Analytics() {
   const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
   const host = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com";
@@ -112,6 +178,8 @@ export function Analytics() {
       advanced_disable_flags: true,
       person_profiles: "identified_only",
     });
+
+    const campaignAttribution = captureCampaignAttribution();
 
     function captureClick(event: MouseEvent) {
       const target = event.target;
@@ -138,6 +206,7 @@ export function Analytics() {
         path: window.location.pathname,
         cta_id: link.dataset.ctaId,
         cta_location: link.dataset.ctaLocation,
+        ...campaignAttribution,
       });
     }
 
