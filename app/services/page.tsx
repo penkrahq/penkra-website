@@ -62,7 +62,7 @@ export default function ServicesPage() {
                     <ServiceCard
                       title={s.title}
                       body={s.body}
-                      href={(s as any).href}
+                      href={"href" in s ? s.href : undefined}
                       message={s.message}
                       tone={i % 3 === 0 ? "soft" : i % 3 === 1 ? "accent" : "default"}
                     />

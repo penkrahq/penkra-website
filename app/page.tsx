@@ -75,7 +75,7 @@ export default function Home() {
                       ? "A structured service path with clear steps, documents, and records."
                       : "Send the request on WhatsApp. We will clarify whether it fits and what the work looks like."
                   }
-                  href={(card as any).href}
+                  href={"href" in card ? card.href : undefined}
                   message={card.message}
                   tone={i % 2 === 0 ? "soft" : "default"}
                 />
@@ -248,7 +248,7 @@ export default function Home() {
                 <ServiceCard
                   title={s.title}
                   body={s.body}
-                  href={(s as any).href}
+                  href={"href" in s ? s.href : undefined}
                   message={`I need help with ${s.title.toLowerCase()}.`}
                   tone={i % 3 === 0 ? "soft" : i % 3 === 1 ? "accent" : "default"}
                 />

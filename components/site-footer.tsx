@@ -3,7 +3,18 @@ import { Button } from "./button";
 import { bookCallLink, mailtoLink } from "../lib/links";
 import { wa } from "../lib/site-content";
 
-const FOOTER_GROUPS = [
+type FooterLink = {
+  label: string;
+  href: string;
+  external?: boolean;
+};
+
+type FooterGroup = {
+  title: string;
+  links: FooterLink[];
+};
+
+const FOOTER_GROUPS: FooterGroup[] = [
   {
     title: "Services",
     links: [
@@ -158,7 +169,7 @@ export function SiteFooter() {
                 {group.title}
               </div>
               <ul style={{ display: "flex", flexDirection: "column", gap: "11px" }}>
-                {group.links.map((l: any) => (
+                {group.links.map((l) => (
                   <li key={l.label}>
                     {l.external ? (
                       <a
