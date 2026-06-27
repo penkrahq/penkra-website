@@ -120,6 +120,18 @@ export default function Home() {
           },
         ]}
       />
+      <section className="section tight-mobile" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <Button
+            href="/how-it-works"
+            variant="secondary"
+            ctaId="home_process_how_it_works"
+            ctaLocation="home_process"
+          >
+            Read how Penkra works
+          </Button>
+        </div>
+      </section>
 
       <TrustSection />
 

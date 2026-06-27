@@ -5,6 +5,7 @@ const lastModified = "2026-06-27";
 const routes = [
   { path: "", priority: 1 },
   { path: "/services", priority: 0.8 },
+  { path: "/how-it-works", priority: 0.8 },
   { path: "/countries", priority: 0.7 },
   { path: "/ghana", priority: 0.8 },
   { path: "/ghana/business-registration", priority: 0.9 },
