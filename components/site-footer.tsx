@@ -21,6 +21,7 @@ const FOOTER_GROUPS: FooterGroup[] = [
     links: [
       { label: "All services", href: "/services" },
       { label: "Business registration", href: "/ghana/business-registration" },
+      { label: "Registration guide", href: "/ghana/business-registration/guide" },
       { label: "Paperwork and forms", href: "/services" },
       { label: "Records and admin", href: "/services" },
       { label: "Logistics", href: "/services" },

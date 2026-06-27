@@ -24,6 +24,7 @@ import {
 import { bookCallLink } from "../../../lib/links";
 import { absoluteUrl, pageMetadata } from "../../../lib/metadata";
 import { JsonLd } from "../../../components/json-ld";
+import { Button } from "../../../components/button";
 
 const description =
   "Penkra helps local, diaspora, and foreign-owned founders clarify the right registration path, prepare required information, coordinate paperwork, track follow-ups, and keep records.";
@@ -103,7 +104,18 @@ export default function BusinessRegistrationPage() {
           <SectionHeading
             badge="Business types"
             heading="Support for the main Ghana registration paths."
+            body="If you are still preparing, start with the guide before sending documents or choosing a path."
           />
+          <div style={{ marginTop: "21px" }}>
+            <Button
+              href="/ghana/business-registration/guide"
+              variant="secondary"
+              ctaId="business_registration_guide"
+              ctaLocation="business_registration_page"
+            >
+              Read the preparation guide
+            </Button>
+          </div>
           <div
             className="biz-types-grid"
             style={{

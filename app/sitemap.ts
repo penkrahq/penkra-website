@@ -8,6 +8,7 @@ const routes = [
   { path: "/countries", priority: 0.7 },
   { path: "/ghana", priority: 0.8 },
   { path: "/ghana/business-registration", priority: 0.9 },
+  { path: "/ghana/business-registration/guide", priority: 0.7 },
   { path: "/contact", priority: 0.8 },
   { path: "/faq", priority: 0.7 },
   { path: "/privacy", priority: 0.5 },
