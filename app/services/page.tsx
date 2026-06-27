@@ -7,7 +7,8 @@ import { PillBadge } from "../../components/pill-badge";
 import { ServicesCountrySummary } from "../../components/services-country-summary";
 import { SERVICES_CATEGORIES, SERVICE_BUNDLES, FINAL_CTA, wa } from "../../lib/site-content";
 import { bookCallLink } from "../../lib/links";
-import { pageMetadata } from "../../lib/metadata";
+import { absoluteUrl, pageMetadata } from "../../lib/metadata";
+import { JsonLd } from "../../components/json-ld";
 
 export const metadata: Metadata = pageMetadata({
   title: "Services",
@@ -31,6 +32,62 @@ const ANCHOR_MAP: Record<string, string> = {
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": absoluteUrl("/services#service"),
+          name: "Penkra operational support services",
+          description:
+            "Operational support for paperwork, registration, admin follow-ups, records, logistics, compliance awareness, and custom delegated work.",
+          serviceType: "Operational support",
+          provider: {
+            "@id": absoluteUrl("/#organization"),
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Ghana",
+          },
+          url: absoluteUrl("/services"),
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Penkra service categories",
+            itemListElement: SERVICES_CATEGORIES.map((service, index) => {
+              const anchor = ANCHOR_MAP[service.title];
+              return {
+                "@type": "Offer",
+                position: index + 1,
+                itemOffered: {
+                  "@type": "Service",
+                  name: service.title,
+                  description: service.body,
+                  url: absoluteUrl("href" in service && service.href ? service.href : `/services#${anchor}`),
+                },
+              };
+            }),
+          },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: absoluteUrl("/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Services",
+              item: absoluteUrl("/services"),
+            },
+          ],
+        }}
+      />
       <PageHero
         badge="Services"
         h1="What do you need handled?"

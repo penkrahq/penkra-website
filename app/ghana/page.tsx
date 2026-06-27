@@ -14,7 +14,8 @@ import {
   wa,
 } from "../../lib/site-content";
 import { bookCallLink } from "../../lib/links";
-import { pageMetadata } from "../../lib/metadata";
+import { absoluteUrl, pageMetadata } from "../../lib/metadata";
+import { JsonLd } from "../../components/json-ld";
 
 export const metadata: Metadata = pageMetadata({
   title: "Ghana Services",
@@ -27,6 +28,61 @@ export const metadata: Metadata = pageMetadata({
 export default function GhanaPage() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": absoluteUrl("/ghana#service"),
+          name: "Ghana paperwork and operations support",
+          description:
+            "Ghana-specific paperwork, business registration, records, admin follow-ups, and logistics support.",
+          serviceType: "Ghana operational support",
+          provider: {
+            "@id": absoluteUrl("/#organization"),
+          },
+          areaServed: {
+            "@type": "Country",
+            name: "Ghana",
+          },
+          url: absoluteUrl("/ghana"),
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Ghana service request types",
+            itemListElement: GHANA_REQUEST_CARDS.map((name, index) => ({
+              "@type": "Offer",
+              position: index + 1,
+              itemOffered: {
+                "@type": "Service",
+                name,
+                areaServed: {
+                  "@type": "Country",
+                  name: "Ghana",
+                },
+              },
+            })),
+          },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: absoluteUrl("/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Ghana",
+              item: absoluteUrl("/ghana"),
+            },
+          ],
+        }}
+      />
       <PageHero
         badge="Ghana"
         h1="Paperwork and operations support in Ghana."

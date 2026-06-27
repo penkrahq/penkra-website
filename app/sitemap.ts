@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const lastModified = "2026-06-27";
+const lastModified = "2026-06-28";
 
 const routes = [
   { path: "", priority: 1 },

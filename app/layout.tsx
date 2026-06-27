@@ -93,10 +93,13 @@ export default function RootLayout({
           data={{
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": absoluteUrl("/#organization"),
             name: siteName,
             url: siteUrl,
             logo: absoluteUrl("/icons/icon-512.png"),
+            description: defaultDescription,
             email: "emmanuel@penkra.com",
+            telephone: "+13073461585",
             contactPoint: [
               {
                 "@type": "ContactPoint",
@@ -118,12 +121,12 @@ export default function RootLayout({
           data={{
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": absoluteUrl("/#website"),
             name: siteName,
             url: siteUrl,
             inLanguage: "en",
             publisher: {
-              "@type": "Organization",
-              name: siteName,
+              "@id": absoluteUrl("/#organization"),
             },
           }}
         />
