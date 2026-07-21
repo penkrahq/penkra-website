@@ -1,317 +1,425 @@
-import { HeroPanels } from "../components/hero-panels";
-import { TrustStrip } from "../components/trust-strip";
-import { TrustSection } from "../components/trust-section";
-import { ProcessTrack } from "../components/process-track";
-import { SectionHeading } from "../components/section-heading";
-import { ServiceCard } from "../components/service-card";
-import { FinalCta } from "../components/final-cta";
+"use client";
+
+import Image from "next/image";
+import { useRef } from "react";
 import { Reveal } from "../components/reveal";
-import { Button } from "../components/button";
-import {
-  ConversationCard,
-  CaseTrackerCard,
-  InvoicePreviewCard,
-  DocumentChecklistCard,
-} from "../components/operation-mockup";
-import {
-  HOME_REQUEST_CARDS,
-  HOW_IT_WORKS,
-  SERVICE_SNAPSHOT,
-  BILLING_LINE_ITEMS,
-  COUNTRIES,
-  BUSINESS_REG_INTAKE,
-  FINAL_CTA,
-  wa,
-} from "../lib/site-content";
 import { bookCallLink } from "../lib/links";
+import { AlNav, AlFinalCta, AlFooter, useAlHomeBodyClass } from "../components/al-chrome";
+
+const PRODUCTS = [
+  {
+    n: "// 01",
+    title: "Web & Product",
+    body: "Raise capital, close deals, and manage your portfolio with one senior team.",
+    image: "/home/product-web.png",
+  },
+  {
+    n: "// 02",
+    title: "Brand & Identity",
+    body: "Raise capital and grow your fund with a done-for-you deal-by-deal team.",
+    image: "/home/product-brand.png",
+  },
+  {
+    n: "// 03",
+    title: "Content & Social",
+    body: "Eliminate the heavy operational burden by launching or scaling your content engine.",
+    image: "/home/product-content.png",
+  },
+  {
+    n: "// 04",
+    title: "Growth & Marketing",
+    body: "Replace subscription paperwork with flexible digital workflows that scale.",
+    image: "/home/product-growth.png",
+  },
+];
+
+const PARTNERS = ["AETHER", "SILVER", "NAUTILUS", "CORNERSTONE", "ALLVUE"];
+
+const STATS = [
+  { value: "$40M+", label: "REVENUE GENERATED FOR CLIENTS" },
+  { value: "120+", label: "PROJECTS SHIPPED" },
+  { value: "6", label: "YEARS BUILDING STARTUPS" },
+  { value: "40+", label: "FOUNDERS SERVED" },
+  { value: "98%", label: "ON-TIME DELIVERY" },
+];
+
+const AVATARS = [
+  { src: "/home/avatar-1.png", x: 0, y: 10 },
+  { src: "/home/avatar-2.png", x: 100, y: 30 },
+  { src: "/home/avatar-3.png", x: 200, y: 0 },
+];
+
+const PRICING = [
+  {
+    tier: "STARTER",
+    price: "$200",
+    blurb: "Solo founders getting their first site live.",
+    features: ["1 request at a time", "5-day delivery", "Email support", "Monthly 30-min call"],
+    featured: false,
+  },
+  {
+    tier: "GROWTH",
+    price: "$1,000",
+    blurb: "Teams ready to grow on multiple fronts, fast.",
+    features: [
+      "3 concurrent requests",
+      "2-day delivery",
+      "Priority Slack",
+      "Weekly call",
+      "Dedicated PM",
+    ],
+    featured: true,
+  },
+  {
+    tier: "SCALE",
+    price: "$5,000",
+    blurb: "Companies serious about owning their category.",
+    features: [
+      "Unlimited requests",
+      "24-hour delivery",
+      "Dedicated team",
+      "Daily Slack + 2x calls",
+      "Custom strategy",
+    ],
+    featured: false,
+  },
+];
+
+const ARTICLES = [
+  {
+    tag: "DESIGN",
+    date: "JAN 15, 2026",
+    read: "6 MIN READ",
+    title: "How we built an agent that ships a website in 4 hours",
+    color: "#2a3a30",
+  },
+  {
+    tag: "GROWTH",
+    date: "JAN 15, 2026",
+    read: "6 MIN READ",
+    title: "The human-in-the-loop pattern that makes AI actually useful",
+    color: "#3a3028",
+  },
+  {
+    tag: "OPS",
+    date: "JAN 15, 2026",
+    read: "6 MIN READ",
+    title: "What an AI-powered growth team looks like in practice",
+    color: "#282a30",
+  },
+  {
+    tag: "BRAND",
+    date: "JAN 15, 2026",
+    read: "6 MIN READ",
+    title: "Why your next hire should be an agent, not a freelancer",
+    color: "#3a2a28",
+  },
+];
+
+function Hero() {
+  return (
+    <section className="al-hero" id="top">
+      <div className="al-inner al-hero-inner">
+        <Reveal>
+          <div className="al-chip">
+            <span>New: type a task, we ship it end-to-end</span>
+            <span>→</span>
+          </div>
+        </Reveal>
+        <Reveal delay={60}>
+          <h1 className="al-hero-h1">
+            Type a task.
+            <br />
+            We build it.
+          </h1>
+        </Reveal>
+        <Reveal delay={120}>
+          <p className="al-hero-sub">
+            penkra is an AI agency. Our agents do the work, our senior experts review it — so you
+            get websites, content, and growth, shipped end-to-end.
+          </p>
+        </Reveal>
+        <Reveal delay={180}>
+          <a className="al-hero-cta" href={bookCallLink()} target="_blank" rel="noopener noreferrer">
+            Book a 30-min call
+          </a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function Products() {
+  return (
+    <section className="al-products" id="work">
+      <div className="al-inner al-products-grid">
+        {PRODUCTS.map((p, i) => (
+          <Reveal key={p.title} delay={i * 70}>
+            <div className="al-product-card">
+              <div className="al-product-img">
+                <Image
+                  src={p.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 90vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="al-product-content">
+                <span className="al-product-tag">{p.n}</span>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+                <div className="al-product-link">
+                  <span>Learn more</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Partners() {
+  return (
+    <section className="al-partners">
+      <div className="al-inner al-partners-inner">
+        <Reveal>
+          <p className="al-partners-heading">Trusted by founders shipping with AI agents.</p>
+        </Reveal>
+        <Reveal delay={60}>
+          <div className="al-partners-logos">
+            {PARTNERS.map((p) => (
+              <span key={p}>{p}</span>
+            ))}
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <a className="al-partners-link" href={bookCallLink()} target="_blank" rel="noopener noreferrer">
+            <span>
+              Our premier partnership program assembles top professionals to deliver comprehensive
+              expertise &amp; support
+            </span>
+            <span>→</span>
+          </a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function FullService() {
+  return (
+    <section className="al-fullservice" id="process">
+      <div className="al-inner al-fullservice-inner">
+        <Reveal>
+          <div className="al-fullservice-left">
+            <h2>Agents in the lead. Humans in the loop.</h2>
+            <p>
+              Every task is run by an AI agent and reviewed by a senior human. You get speed
+              without sacrificing craft.
+            </p>
+            <a
+              className="al-fullservice-link"
+              href={bookCallLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>See how the loop works</span>
+              <span>→</span>
+            </a>
+          </div>
+        </Reveal>
+        <Reveal delay={80}>
+          <div className="al-avatar-cluster">
+            {AVATARS.map((a, i) => (
+              <div
+                className="al-avatar"
+                key={a.src}
+                style={{ left: a.x, top: a.y, zIndex: i + 1 }}
+              >
+                <Image src={a.src} alt="" fill sizes="160px" style={{ objectFit: "cover" }} />
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function ByTheNumbers() {
+  return (
+    <section className="al-numbers">
+      <div className="al-inner al-numbers-inner">
+        <Reveal>
+          <div className="al-numbers-left">
+            <p className="al-numbers-eyebrow">BY THE NUMBERS</p>
+            <h2 className="al-numbers-h2">Agents that ship. Humans that review.</h2>
+            <p className="al-numbers-body">From first prompt to live in days, not months.</p>
+          </div>
+        </Reveal>
+        <div className="al-numbers-right">
+          {STATS.map((s, i) => (
+            <Reveal key={s.label} delay={80 + i * 60}>
+              <div className="al-stat-row">
+                <span className="al-stat-value">{s.value}</span>
+                <span className="al-stat-label">{s.label}</span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Pricing() {
+  return (
+    <section className="al-pricing" id="pricing">
+      <div className="al-inner al-pricing-inner">
+        <div className="al-pricing-head">
+          <Reveal>
+            <p className="al-eyebrow">$ PRICING</p>
+          </Reveal>
+          <Reveal delay={40}>
+            <h2 className="al-pricing-title">Simple, transparent pricing.</h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className="al-pricing-sub">
+              Three tiers. Priority, speed, and access scale with the plan. Cancel anytime.
+            </p>
+          </Reveal>
+        </div>
+        <div className="al-pricing-grid">
+          {PRICING.map((tier, i) => (
+            <Reveal key={tier.tier} delay={120 + i * 80}>
+              <div className={`al-pricing-card${tier.featured ? " al-pricing-card-featured" : ""}`}>
+                {tier.featured ? <span className="al-pricing-badge">MOST POPULAR</span> : null}
+                <span className="al-pricing-tier">{tier.tier}</span>
+                <div className="al-pricing-price-row">
+                  <span className="al-pricing-price">{tier.price}</span>
+                  <span className="al-pricing-permo">/mo</span>
+                </div>
+                <p className="al-pricing-blurb">{tier.blurb}</p>
+                <div className="al-pricing-divider" />
+                <ul className="al-pricing-features">
+                  {tier.features.map((f) => (
+                    <li key={f}>
+                      <span className="al-pricing-check">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  className="al-pricing-cta"
+                  href={bookCallLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book a 30-min call
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section className="al-testimonials">
+      <div className="al-testimonials-inner" id="about">
+        <div className="al-testimonials-left">
+          <Reveal>
+            <div className="al-testimonial-dots">
+              <span className="al-dot al-dot-active">●</span>
+              <span className="al-dot">○</span>
+              <span className="al-dot">○</span>
+            </div>
+          </Reveal>
+          <Reveal delay={60}>
+            <blockquote>
+              &ldquo;I typed &lsquo;build me a landing page&rsquo; on Monday. By Wednesday,
+              penkra&rsquo;s agent had shipped it, their designer had refined it, and we were
+              collecting signups. That&rsquo;s the future of agencies.&rdquo;
+            </blockquote>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="al-testimonial-attr">
+              <p className="al-testimonial-name">Marcus T.</p>
+              <p className="al-testimonial-role">GP, Vesper Capital</p>
+            </div>
+          </Reveal>
+        </div>
+        <div className="al-testimonials-right">
+          <Image
+            src="/home/testimonial-marcus.png"
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Articles() {
+  return (
+    <section className="al-articles">
+      <div className="al-inner al-articles-inner">
+        <div className="al-articles-head">
+          <Reveal>
+            <p className="al-eyebrow">$ RESOURCES</p>
+          </Reveal>
+          <Reveal delay={40}>
+            <h2 className="al-articles-title">Latest articles</h2>
+          </Reveal>
+        </div>
+        <div className="al-articles-grid">
+          {ARTICLES.map((a, i) => (
+            <Reveal key={a.title} delay={80 + i * 60}>
+              <article className="al-article-card">
+                <div className="al-article-img" style={{ background: a.color }} />
+                <div className="al-article-content">
+                  <span className="al-article-tag">{a.tag}</span>
+                  <h3>{a.title}</h3>
+                  <p className="al-article-meta">
+                    {a.date} <span>·</span> {a.read}
+                  </p>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
+  const rootRef = useRef<HTMLDivElement>(null);
+  useAlHomeBodyClass();
+
   return (
-    <>
-      {/* Hero */}
-      <section className="section tight-mobile" style={{ paddingTop: "21px", paddingBottom: "35px" }}>
-        <div className="container">
-          <HeroPanels
-            eyebrow="Starting in Ghana"
-            h1="Tell us what you need handled."
-            copy="Message us what you need done. We clarify the work, handle the paperwork, follow-ups, and logistics, and keep records — starting in Ghana."
-            primaryCta={{ label: "Message Penkra", href: wa("home"), external: true }}
-            secondaryCta={{ label: "Book a call", href: bookCallLink(), external: true }}
-            mockups={
-              <>
-                <ConversationCard />
-                <CaseTrackerCard />
-              </>
-            }
-          />
-        </div>
-      </section>
-
-      <TrustStrip />
-
-      {/* What do you need? */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            badge="Start with the request"
-            heading="You do not need to know the exact process before talking to us."
-            body="Tell us what you are trying to get done. If it fits an existing service, we will route it there. If it is custom, we will clarify the work before starting."
-          />
-          <div
-            className="cards-grid"
-            style={{
-              marginTop: "42px",
-              display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "21px",
-            }}
-          >
-            {HOME_REQUEST_CARDS.map((card, i) => (
-              <Reveal key={card.title} delay={i * 60}>
-                <ServiceCard
-                  title={card.title}
-                  body={
-                    "href" in card && card.href
-                      ? "A structured service path with clear steps, documents, and records."
-                      : "Send the request on WhatsApp. We will clarify whether it fits and what the work looks like."
-                  }
-                  href={"href" in card ? card.href : undefined}
-                  message={card.message}
-                  tone={i % 2 === 0 ? "soft" : "default"}
-                />
-              </Reveal>
-            ))}
-          </div>
-          <style>{`
-            @media (min-width: 640px) { .cards-grid { grid-template-columns: repeat(2, 1fr) !important; } }
-            @media (min-width: 1024px) { .cards-grid { grid-template-columns: repeat(3, 1fr) !important; } }
-          `}</style>
-        </div>
-      </section>
-
-      {/* How Penkra works — scroll-led sticky storytelling */}
-      <ProcessTrack
-        badge="How it works"
-        heading="One conversation becomes a clear plan of work."
-        cards={[
-          {
-            step: "01",
-            title: HOW_IT_WORKS[0].title,
-            body: HOW_IT_WORKS[0].body,
-            mockup: <ConversationCard active />,
-          },
-          {
-            step: "02",
-            title: HOW_IT_WORKS[1].title,
-            body: HOW_IT_WORKS[1].body,
-            mockup: <DocumentChecklistCard items={BUSINESS_REG_INTAKE} active />,
-          },
-          {
-            step: "03",
-            title: HOW_IT_WORKS[2].title,
-            body: HOW_IT_WORKS[2].body,
-            mockup: <CaseTrackerCard active />,
-          },
-          {
-            step: "04",
-            title: HOW_IT_WORKS[3].title,
-            body: HOW_IT_WORKS[3].body,
-            mockup: <InvoicePreviewCard items={BILLING_LINE_ITEMS} active />,
-          },
-        ]}
-      />
-      <section className="section tight-mobile" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <Button
-            href="/how-it-works"
-            variant="secondary"
-            ctaId="home_process_how_it_works"
-            ctaLocation="home_process"
-          >
-            Read how Penkra works
-          </Button>
-        </div>
-      </section>
-
-      <TrustSection />
-
-      {/* Ghana first */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            badge="Countries"
-            heading="Starting in Ghana, built to expand country by country."
-            body="Requirements differ by country, so pages and service flows are country-specific. Ghana is live. Tell us where else you need help and we will track demand."
-          />
-          <div
-            className="country-grid"
-            style={{
-              marginTop: "42px",
-              display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "21px",
-            }}
-          >
-            {COUNTRIES.map((c, i) => (
-              <Reveal key={c.name} delay={i * 80}>
-                <div
-                  style={{
-                    background:
-                      c.status === "available"
-                        ? "var(--color-blue-wash)"
-                        : "var(--color-linen-blue)",
-                    border: "1px solid var(--color-hairline-gray)",
-                    borderRadius: "var(--radius-cards)",
-                    padding: "28px",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "14px",
-                    height: "100%",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <h3
-                      className="serif"
-                      style={{
-                        fontSize: "var(--text-heading-sm)",
-                        lineHeight: "var(--leading-heading-sm)",
-                        fontWeight: 300,
-                        color: "var(--color-blue-ink)",
-                      }}
-                    >
-                      {c.name}
-                    </h3>
-                    <span
-                      style={{
-                        fontSize: "var(--text-caption)",
-                        color:
-                          c.status === "available"
-                            ? "var(--color-blue-ink)"
-                            : "var(--color-graphite)",
-                        background:
-                          c.status === "available"
-                            ? "var(--color-linen-white)"
-                            : "transparent",
-                        border:
-                          c.status === "available"
-                            ? "none"
-                            : "1px solid var(--color-hairline-gray)",
-                        borderRadius: "var(--radius-badges)",
-                        padding: "4px 11px",
-                      }}
-                    >
-                      {c.status === "available" ? "Available" : "Coming later"}
-                    </span>
-                  </div>
-                  <p
-                    style={{
-                      fontSize: "var(--text-body-sm)",
-                      lineHeight: "var(--leading-body-sm)",
-                      color: "var(--color-charcoal)",
-                    }}
-                  >
-                    {c.blurb}
-                  </p>
-                  <div style={{ marginTop: "auto" }}>
-                    {c.href ? (
-                      <Button href={c.href} variant="secondary">
-                        {c.cta}
-                      </Button>
-                    ) : (
-                      <Button href={wa("countries")} external variant="secondary">
-                        {c.cta}
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <style>{`
-            @media (min-width: 768px) { .country-grid { grid-template-columns: repeat(2, 1fr) !important; } }
-          `}</style>
-        </div>
-      </section>
-
-      {/* Services snapshot */}
-      <section className="section" style={{ background: "var(--color-linen-blue)" }}>
-        <div className="container">
-          <SectionHeading
-            badge="Delegated operations"
-            heading="Services are building blocks. Your request can combine several."
-          />
-          <div
-            className="services-grid"
-            style={{
-              marginTop: "42px",
-              display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "21px",
-            }}
-          >
-            {SERVICE_SNAPSHOT.map((s, i) => (
-              <Reveal key={s.title} delay={i * 50}>
-                <ServiceCard
-                  title={s.title}
-                  body={s.body}
-                  href={"href" in s ? s.href : undefined}
-                  message={`I need help with ${s.title.toLowerCase()}.`}
-                  tone={i % 3 === 0 ? "soft" : i % 3 === 1 ? "accent" : "default"}
-                />
-              </Reveal>
-            ))}
-          </div>
-          <div style={{ marginTop: "42px" }}>
-            <Button href="/services" variant="secondary">
-              See all services
-            </Button>
-          </div>
-          <style>{`
-            @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr) !important; } }
-            @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(4, 1fr) !important; } }
-          `}</style>
-        </div>
-      </section>
-
-      {/* Billing */}
-      <section className="section">
-        <div className="container">
-          <div
-            className="billing-grid"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr",
-              gap: "42px",
-              alignItems: "center",
-            }}
-          >
-            <SectionHeading
-              badge="Pricing"
-              heading="Granular work, itemized clearly."
-              body="Some requests are simple. Others involve preparation, filing, follow-up, logistics, government fees, or third-party costs. We clarify expected work before starting and keep charges itemized for monthly invoicing."
-            />
-            <Reveal delay={120}>
-              <InvoicePreviewCard items={BILLING_LINE_ITEMS} />
-            </Reveal>
-          </div>
-          <style>{`
-            @media (min-width: 1024px) { .billing-grid { grid-template-columns: 1.2fr 1fr !important; } }
-          `}</style>
-        </div>
-      </section>
-
-      <FinalCta
-        heading={FINAL_CTA.home.heading}
-        body={FINAL_CTA.home.body}
-        primary={{ label: "Message Penkra", href: wa("home"), external: true }}
-        secondary={{ label: "Book a call", href: bookCallLink(), external: true }}
-      />
-    </>
+    <div className="al-home" ref={rootRef}>
+      <AlNav />
+      <Hero />
+      <Products />
+      <Partners />
+      <FullService />
+      <ByTheNumbers />
+      <Pricing />
+      <Testimonials />
+      <Articles />
+      <AlFinalCta />
+      <AlFooter />
+    </div>
   );
 }
