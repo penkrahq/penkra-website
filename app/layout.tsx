@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Newsreader } from "next/font/google";
+import { Inter, Manrope, Newsreader } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
@@ -18,6 +18,12 @@ const manrope = Manrope({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const pencilInter = Inter({
+  subsets: ["latin"],
+  variable: "--font-pencil-inter",
   display: "swap",
 });
 
@@ -81,7 +87,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${newsreader.variable}`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${newsreader.variable} ${pencilInter.variable}`}
+    >
       <body
         style={{
           display: "flex",

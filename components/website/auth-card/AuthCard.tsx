@@ -1,0 +1,102 @@
+import Link from "next/link";
+import type { FormEventHandler } from "react";
+
+import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
+import { InputShared } from "../../foundations/input-shared/InputShared";
+import { ContinueWithGitHubButton } from "../continue-with-github-button/ContinueWithGitHubButton";
+import { ContinueWithGoogleButton } from "../continue-with-google-button/ContinueWithGoogleButton";
+import styles from "./AuthCard.module.css";
+
+export type AuthCardMode = "sign-in" | "sign-up";
+
+export type AuthCardProps = {
+  mode?: AuthCardMode;
+  onGitHub?: () => void;
+  onGoogle?: () => void;
+  onSubmit?: FormEventHandler<HTMLFormElement>;
+  submitting?: boolean;
+};
+
+const copy = {
+  "sign-in": {
+    alternateHref: "/sign-up",
+    alternateLabel: "Create one",
+    alternatePrompt: "Don't have an account?",
+    heading: "Welcome back",
+    submit: "Sign in",
+    subhead: "Sign in to your Penkra account.",
+  },
+  "sign-up": {
+    alternateHref: "/sign-in",
+    alternateLabel: "Sign in",
+    alternatePrompt: "Already have an account?",
+    heading: "Create your account",
+    submit: "Create account",
+    subhead: "Start building with Penkra in minutes.",
+  },
+} as const;
+
+export function AuthCard({
+  mode = "sign-in",
+  onGitHub,
+  onGoogle,
+  onSubmit,
+  submitting = false,
+}: AuthCardProps) {
+  const content = copy[mode];
+
+  return (
+    <section className={styles.card}>
+      <header className={styles.headingGroup}>
+        <h1 className={styles.heading}>{content.heading}</h1>
+        <p className={styles.subhead}>{content.subhead}</p>
+      </header>
+
+      <div className={styles.oauth}>
+        <ContinueWithGoogleButton disabled={submitting} onClick={onGoogle} />
+        <ContinueWithGitHubButton disabled={submitting} onClick={onGitHub} />
+      </div>
+
+      <div className={styles.divider}>or</div>
+
+      <form className={styles.fields} onSubmit={onSubmit}>
+        <InputShared
+          aria-label="Email address"
+          autoComplete="email"
+          disabled={submitting}
+          icon="mail"
+          name="email"
+          placeholder="you@company.com"
+          required
+          type="email"
+        />
+        <InputShared
+          aria-label="Password"
+          autoComplete={mode === "sign-in" ? "current-password" : "new-password"}
+          disabled={submitting}
+          icon="lock"
+          minLength={8}
+          name="password"
+          placeholder="Password"
+          required
+          type="password"
+        />
+        <ButtonPrimary disabled={submitting} fullWidth type="submit">
+          {submitting ? "Please wait…" : content.submit}
+        </ButtonPrimary>
+      </form>
+
+      <div className={styles.footer}>
+        <span>{content.alternatePrompt}</span>
+        <Link className={styles.footerLink} href={content.alternateHref}>
+          {content.alternateLabel}
+        </Link>
+      </div>
+
+      <p className={styles.legal}>
+        By continuing, you agree to Penkra&apos;s <Link href="/terms">Terms of Service</Link> and{" "}
+        <Link href="/privacy">Privacy Policy</Link>.
+      </p>
+    </section>
+  );
+}

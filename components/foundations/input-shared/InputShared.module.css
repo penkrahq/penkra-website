@@ -1,0 +1,75 @@
+.control {
+  align-items: center;
+  background: var(--pencil-auth-control);
+  border: 1px solid var(--pencil-auth-border);
+  border-radius: 10px;
+  color: var(--pencil-auth-text-tertiary);
+  display: flex;
+  gap: 8px;
+  height: 43px;
+  padding: 0 16px;
+  transition:
+    border-color 140ms ease,
+    color 140ms ease;
+  width: 100%;
+}
+
+.control:hover {
+  border-color: var(--pencil-auth-border-hover);
+  color: var(--pencil-auth-text-secondary);
+}
+
+.control:focus-within {
+  border-color: var(--pencil-auth-accent);
+  color: var(--pencil-auth-text-primary);
+}
+
+.control[data-invalid="true"] {
+  border-color: var(--pencil-auth-error);
+  color: var(--pencil-auth-text-primary);
+}
+
+.control[data-disabled="true"] {
+  background: var(--pencil-auth-surface);
+  border-color: var(--pencil-auth-disabled);
+  color: var(--pencil-auth-disabled-text);
+}
+
+.icon {
+  color: currentColor;
+  display: block;
+  flex: 0 0 auto;
+  height: 16px;
+  width: 16px;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  color: var(--pencil-auth-text-primary);
+  flex: 1;
+  font: 400 14px/1.2 var(--font-pencil);
+  min-width: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.input::placeholder {
+  color: currentColor;
+  opacity: 1;
+}
+
+.input:disabled {
+  color: var(--pencil-auth-disabled-text);
+  cursor: not-allowed;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--pencil-auth-control) inset;
+  -webkit-text-fill-color: var(--pencil-auth-text-primary);
+}
+
+.storyWidth {
+  width: 320px;
+}

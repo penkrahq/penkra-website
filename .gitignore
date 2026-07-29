@@ -2,6 +2,7 @@ TODO.md
 node_modules
 .next
 out
+storybook-static
 .env
 .env.local
 .DS_Store
