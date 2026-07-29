@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes, ReactNode } from "react";
+import { forwardRef, type InputHTMLAttributes, type ReactNode } from "react";
 
 import styles from "./InputShared.module.css";
 
@@ -9,31 +9,38 @@ export type InputSharedProps = Omit<InputHTMLAttributes<HTMLInputElement>, "size
   invalid?: boolean;
 };
 
-export function InputShared({
-  "aria-invalid": ariaInvalid,
-  disabled = false,
-  icon,
-  invalid = false,
-  ...props
-}: InputSharedProps) {
-  const isInvalid = invalid || ariaInvalid === true || ariaInvalid === "true";
+export const InputShared = forwardRef<HTMLInputElement, InputSharedProps>(
+  function InputShared(
+    {
+      "aria-invalid": ariaInvalid,
+      disabled = false,
+      icon,
+      invalid = false,
+      ...props
+    },
+    ref,
+  ) {
+    const isInvalid = invalid || ariaInvalid === true || ariaInvalid === "true";
 
-  return (
-    <label
-      className={styles.control}
-      data-disabled={disabled || undefined}
-      data-invalid={isInvalid || undefined}
-    >
-      {icon ? <span className={styles.icon}>{renderIcon(icon)}</span> : null}
-      <input
-        aria-invalid={isInvalid || undefined}
-        className={styles.input}
-        disabled={disabled}
-        {...props}
-      />
-    </label>
-  );
-}
+    return (
+      <label
+        className={styles.control}
+        data-disabled={disabled || undefined}
+        data-invalid={isInvalid || undefined}
+        data-slot="input-shared"
+      >
+        {icon ? <span className={styles.icon}>{renderIcon(icon)}</span> : null}
+        <input
+          aria-invalid={isInvalid || undefined}
+          className={styles.input}
+          disabled={disabled}
+          ref={ref}
+          {...props}
+        />
+      </label>
+    );
+  },
+);
 
 function renderIcon(icon: InputIcon) {
   const paths: Record<InputIcon, ReactNode> = {

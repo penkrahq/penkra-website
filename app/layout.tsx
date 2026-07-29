@@ -23,7 +23,7 @@ const manrope = Manrope({
 
 const pencilInter = Inter({
   subsets: ["latin"],
-  variable: "--font-pencil-inter",
+  variable: "--font-auth-inter",
   display: "swap",
 });
 

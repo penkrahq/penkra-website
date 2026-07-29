@@ -9,11 +9,12 @@ const meta = {
     layout: "fullscreen",
     pencil: {
       componentId: "P8VhfD",
-      groupId: "NTSQr",
       instances: {
         signIn: "de8aZ",
         signUp: "XibI9",
       },
+      sectionLabelId: "MiA6V",
+      sectionMarkerId: "AxsD0",
     },
   },
   title: "Website/Auth Card/Shared",

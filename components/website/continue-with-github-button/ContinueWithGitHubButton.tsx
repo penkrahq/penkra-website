@@ -9,7 +9,7 @@ export type ContinueWithGitHubButtonProps = Omit<
 
 export function ContinueWithGitHubButton(props: ContinueWithGitHubButtonProps) {
   return (
-    <ProviderButton icon={<GitHubMark />} {...props}>
+    <ProviderButton data-pencil-component="r5iDQb" icon={<GitHubMark />} {...props}>
       Continue with GitHub
     </ProviderButton>
   );

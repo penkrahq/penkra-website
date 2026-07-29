@@ -1,7 +1,7 @@
 .card {
-  background: var(--pencil-auth-surface);
-  border: 1px solid var(--pencil-auth-border);
-  color: var(--pencil-auth-text-primary);
+  background: var(--auth-surface);
+  border: 1px solid var(--auth-border);
+  color: var(--auth-text-primary);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -17,14 +17,14 @@
 }
 
 .heading {
-  color: var(--pencil-auth-text-primary);
-  font: 600 26px/1.2 var(--font-pencil);
+  color: var(--auth-text-primary);
+  font: 600 26px/1.2 var(--font-auth);
   margin: 0;
 }
 
 .subhead {
-  color: var(--pencil-auth-text-secondary);
-  font: 400 14px/1.2 var(--font-pencil);
+  color: var(--auth-text-secondary);
+  font: 400 14px/1.2 var(--font-auth);
   margin: 0;
 }
 
@@ -36,15 +36,15 @@
 
 .divider {
   align-items: center;
-  color: var(--pencil-auth-text-tertiary);
+  color: var(--auth-text-tertiary);
   display: flex;
-  font: 400 12px/1.25 var(--font-pencil);
+  font: 400 12px/1.25 var(--font-auth);
   gap: 12px;
 }
 
 .divider::before,
 .divider::after {
-  background: var(--pencil-auth-border);
+  background: var(--auth-border);
   content: "";
   flex: 1;
   height: 1px;
@@ -57,28 +57,28 @@
 }
 
 .footer {
-  color: var(--pencil-auth-text-secondary);
+  color: var(--auth-text-secondary);
   display: flex;
-  font: 400 13px/1.23 var(--font-pencil);
+  font: 400 13px/1.23 var(--font-auth);
   gap: 4px;
   justify-content: center;
 }
 
 .footerLink {
-  color: var(--pencil-auth-accent);
+  color: var(--auth-accent);
   font-weight: 600;
 }
 
 .legal {
-  color: var(--pencil-auth-text-tertiary);
-  font: 400 12px/1.25 var(--font-pencil);
+  color: var(--auth-text-tertiary);
+  font: 400 12px/1.25 var(--font-auth);
   margin: 0;
   text-align: center;
 }
 
 .storyCanvas {
   align-items: center;
-  background: var(--pencil-auth-canvas);
+  background: var(--auth-canvas);
   display: flex;
   justify-content: center;
   min-height: 100vh;

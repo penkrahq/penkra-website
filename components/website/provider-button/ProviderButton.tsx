@@ -8,12 +8,15 @@ export type ProviderButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function ProviderButton({
   children,
+  className,
   icon,
   type = "button",
   ...props
 }: ProviderButtonProps) {
+  const classes = [styles.button, className].filter(Boolean).join(" ");
+
   return (
-    <button className={styles.button} type={type} {...props}>
+    <button className={classes} type={type} {...props}>
       <span className={styles.icon}>{icon}</span>
       {children}
     </button>

@@ -46,7 +46,11 @@ export function AuthCard({
   const content = copy[mode];
 
   return (
-    <section className={styles.card}>
+    <section
+      className={styles.card}
+      data-pencil-component="P8VhfD"
+      data-pencil-instance={mode === "sign-in" ? "de8aZ" : "XibI9"}
+    >
       <header className={styles.headingGroup}>
         <h1 className={styles.heading}>{content.heading}</h1>
         <p className={styles.subhead}>{content.subhead}</p>

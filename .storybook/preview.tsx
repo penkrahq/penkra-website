@@ -18,16 +18,16 @@ const newsreader = Newsreader({
   weight: ["300", "400"],
 });
 
-const pencilInter = Inter({
+const authInter = Inter({
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-pencil-inter",
+  variable: "--font-auth-inter",
 });
 
 const preview = {
   decorators: [
     (Story) => (
-      <div className={`${manrope.variable} ${newsreader.variable} ${pencilInter.variable}`}>
+      <div className={`${manrope.variable} ${newsreader.variable} ${authInter.variable}`}>
         <Story />
       </div>
     ),

@@ -19,24 +19,24 @@
   --font-serif: var(--font-fraunces), ui-serif, Georgia, Cambria,
     "Times New Roman", Times, serif;
 
-  /* penkra-website.pen — Website/Auth surfaces */
-  --pencil-auth-accent: #3b82f6;
-  --pencil-auth-accent-active: #2563eb;
-  --pencil-auth-accent-focus: #7aa2f7;
-  --pencil-auth-accent-hover: #5b9cf6;
-  --pencil-auth-border: #26272e;
-  --pencil-auth-border-hover: #5b5f73;
-  --pencil-auth-canvas: #0f1115;
-  --pencil-auth-control: #1c2030;
-  --pencil-auth-disabled: #1f212b;
-  --pencil-auth-disabled-text: #4a4e5e;
-  --pencil-auth-error: #ef4444;
-  --pencil-auth-surface: #141519;
-  --pencil-auth-text-primary: #e8eaf2;
-  --pencil-auth-text-secondary: #9aa0b4;
-  --pencil-auth-text-tertiary: #6b7088;
-  --pencil-auth-white: #fff;
-  --font-pencil: var(--font-pencil-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  /* Website/Auth surfaces */
+  --auth-accent: #3b82f6;
+  --auth-accent-active: #2563eb;
+  --auth-accent-focus: #7aa2f7;
+  --auth-accent-hover: #5b9cf6;
+  --auth-border: #26272e;
+  --auth-border-hover: #5b5f73;
+  --auth-canvas: #0f1115;
+  --auth-control: #1c2030;
+  --auth-disabled: #1f212b;
+  --auth-disabled-text: #4a4e5e;
+  --auth-error: #ef4444;
+  --auth-surface: #141519;
+  --auth-text-primary: #e8eaf2;
+  --auth-text-secondary: #9aa0b4;
+  --auth-text-tertiary: #6b7088;
+  --auth-white: #fff;
+  --font-auth: var(--font-auth-inter), Inter, ui-sans-serif, system-ui, sans-serif;
 
   /* Typography — Scale (sizes per TODO; letter-spacing kept at 0 per house rules) */
   --text-caption: 12px;

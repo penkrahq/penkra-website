@@ -15,7 +15,7 @@ const meta = {
   parameters: {
     pencil: {
       componentId: "IdovB",
-      groupId: "NTSQr",
+      sectionMarkerId: "AxsD0",
     },
   },
   title: "Website/Button/Continue with Google",

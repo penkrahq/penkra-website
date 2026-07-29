@@ -9,7 +9,7 @@ export type ContinueWithGoogleButtonProps = Omit<
 
 export function ContinueWithGoogleButton(props: ContinueWithGoogleButtonProps) {
   return (
-    <ProviderButton icon={<GoogleMark />} {...props}>
+    <ProviderButton data-pencil-component="IdovB" icon={<GoogleMark />} {...props}>
       Continue with Google
     </ProviderButton>
   );

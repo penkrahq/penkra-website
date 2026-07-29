@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { expect, userEvent } from "storybook/test";
 
 import { InputShared } from "./InputShared";
 import styles from "./InputShared.module.css";
@@ -38,6 +39,14 @@ export const Default: Story = {};
 export const Focused: Story = {
   play: async ({ canvas }) => {
     await canvas.getByRole("textbox").focus();
+  },
+};
+
+export const Typed: Story = {
+  play: async ({ canvas }) => {
+    const input = canvas.getByRole("textbox");
+    await userEvent.type(input, "hello@penkra.com");
+    await expect(input).toHaveValue("hello@penkra.com");
   },
 };
 
