@@ -2,6 +2,12 @@
 
 Public website for Penkra.
 
+## Design authority
+
+`penkra-website.pen` is the canonical product-design source for the public website.
+The implementation should reproduce its screens, components, interaction states, and
+responsive behavior.
+
 ## Commands
 
 - `pnpm install`
