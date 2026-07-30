@@ -26,7 +26,7 @@ export function parseElectronAuthQuery(
     clientId !== PENKRA_DESKTOP_AUTH_CLIENT_ID ||
     codeChallengeMethod?.toUpperCase() !== "S256" ||
     !codeChallenge ||
-    !/^[A-Za-z0-9_-]{43,128}$/.test(codeChallenge) ||
+    !/^[A-Za-z0-9_-]{43}=?$/.test(codeChallenge) ||
     !state ||
     !/^[A-Za-z0-9_-]{8,256}$/.test(state) ||
     (desktopFlavor !== undefined &&
