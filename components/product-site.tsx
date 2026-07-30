@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 export const githubUrl = "https://github.com/penkrahq/penkra";
 export const downloadHref = "/download";
 
-export function PenkraMark({ withWordmark = false }: { withWordmark?: boolean }) {
+export function PenkraMark() {
   return (
     <span className="pk-brand" aria-hidden="true">
       <svg className="pk-mark" viewBox="0 0 512 512" role="img">
@@ -15,7 +15,6 @@ export function PenkraMark({ withWordmark = false }: { withWordmark?: boolean })
         />
         <path d="M182 303h78v71h-78z" fill="#8cb8e1" />
       </svg>
-      {withWordmark ? <span className="pk-wordmark">Penkra</span> : null}
     </span>
   );
 }
@@ -25,7 +24,7 @@ export function ProductNav() {
     <header className="pk-nav">
       <div className="pk-nav-inner">
         <Link className="pk-home-link" href="/" aria-label="Penkra home">
-          <PenkraMark withWordmark />
+          <PenkraMark />
         </Link>
 
         <nav className="pk-nav-links" aria-label="Primary navigation">
