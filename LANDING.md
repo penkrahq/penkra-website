@@ -44,6 +44,7 @@ These operator decisions supersede earlier conditional language in this document
 | Agent connection methods | All methods represented in onboarding launch: **Sign in with Claude**, **Sign in with ChatGPT**, and **Use an API key** |
 | API-key providers | Anthropic, OpenAI, Google, OpenRouter, and Custom base URL, following `STORIES.md` 1.2 |
 | Built-in harnesses | Claude Agent, Codex, and OpenCode, following `PENKRA.md` S5 |
+| Agent connections shown in onboarding | Claude, Codex, Cursor, Grok, Droid, Kilo, Pi, GitHub, and OpenCode |
 | Apps | Apps and Penkra's App registry are launch features |
 | Voice | Direct, product-led, and human; concrete outcomes first, technical depth second |
 
@@ -128,16 +129,16 @@ Common weaknesses:
 
 ### Category sentence
 
-> Penkra is the open-source desktop workspace for agentic work.
+> Penkra is the open-source desktop workspace where AI agents use Apps.
 
 This is already settled and should appear in the first screen.
 
 ### Hero copy
 
-> **Your work. Moving on every front.**
+> **Give your AI agents Apps.**
 >
-> Run multiple AI agents across your files, browser, and Apps—at the same time, in one
-> open-source desktop workspace you control.
+> Penkra gives the agents you already use Apps to work with your files, browser, and
+> tools—all from one desktop workspace.
 
 - Eyebrow: **Open-source desktop workspace for agentic work**
 - Primary CTA: **Download Penkra**
@@ -152,60 +153,58 @@ explicit content review, not ad hoc while laying out the page.
 Use the following as the first complete copy pass. The visual design may control line
 breaks but must not paraphrase the meaning.
 
+#### Apps
+
+- Eyebrow: **Penkra Apps**
+- Heading: **Apps make agents useful for your work.**
+- Body: **Each App can add an interface you use, capabilities your agents call, and
+  skills that teach them how. Start with Files + Editor and Browser, then install more.**
+- CTA: **Explore Apps**
+
 #### Concurrency
 
-- Eyebrow: **Parallel work**
-- Heading: **Keep every piece of work moving.**
-- Body: **Start one task, move to the next, and come back when an agent finishes or
-  needs you. Every thread keeps its own progress, context, and status.**
+- Eyebrow: **Work in parallel**
+- Heading: **Run tasks in parallel—not one by one.**
+- Body: **Each thread runs independently. See what’s working, what needs approval, and
+  what’s done—without opening every conversation.**
 
 #### Workspace
 
 - Eyebrow: **One workspace**
-- Heading: **The context stays with the work.**
-- Body: **Keep related threads in folders, work with files beside the conversation,
-  and use the browser without breaking your flow.**
+- Heading: **Files, browser, and conversations—together.**
+- Body: **Open a file, check a page, and talk to an agent side by side. Everything stays
+  attached to the thread where the work belongs.**
 
 #### Agent choice
 
 - Eyebrow: **Your agents**
-- Heading: **Choose the agent for the job.**
-- Body: **Use Claude Agent, Codex, or OpenCode in the same workspace. Connect with
-  Claude, ChatGPT, or an API key, then choose per thread.**
+- Heading: **Use the agents you already know.**
+- Body: **Connect Claude, Codex, Cursor, Grok, Droid, Kilo, Pi, GitHub, and OpenCode—then
+  choose the right one per thread.**
 - Supporting line: **API keys support Anthropic, OpenAI, Google, OpenRouter, and custom
   compatible endpoints.**
-
-#### Apps
-
-- Eyebrow: **Penkra Apps**
-- Heading: **Add what your work needs.**
-- Body: **Penkra starts with Files + Editor and Browser. Install more Apps from the
-  registry to add focused interfaces, agent capabilities, and reusable skills.**
-- CTA: **Explore Apps**
 
 #### Control
 
 - Eyebrow: **Permissioned by design**
-- Heading: **Capability without invisible access.**
-- Body: **Apps cannot browse your conversations, folders, threads, settings, or other
-  Apps. They receive only the arguments an agent explicitly passes and the permissions
-  you approve.**
+- Heading: **Apps only see what you hand them.**
+- Body: **An App cannot browse your conversations, folders, settings, or other Apps. It
+  gets only the input an agent passes and the permissions you approve.**
 - CTA: **How Penkra protects your work**
 
 #### Open source
 
 - Eyebrow: **Open platform**
-- Heading: **Open source from the desktop up.**
-- Body: **Inspect Penkra, contribute to it, or build Apps with familiar web
-  technologies and the open Agent Skills format. Penkra is free under the MIT License.**
+- Heading: **Free, open source, and built to extend.**
+- Body: **Inspect the code, contribute to Penkra, or build Apps with familiar web
+  technologies and the open Agent Skills format.**
 - Primary CTA: **View on GitHub**
 - Secondary CTA: **Read developer docs**
 
 #### Final conversion
 
-- Heading: **Put your work in motion.**
-- Body: **Download Penkra and run your agents, files, browser, and Apps from one
-  workspace.**
+- Heading: **Download Penkra. Put your agents to work.**
+- Body: **Free and open source for macOS, Windows, and Linux.**
 - CTA: **Download Penkra**
 - Availability line: **Free and open source · macOS, Windows, and Linux**
 
@@ -235,9 +234,25 @@ unless a website account becomes necessary outside the desktop onboarding flow.
 The product view should show multiple active threads and a useful right-panel App so
 the hero proves the category instead of showing an empty chat.
 
-### 3. The concurrency story
+### 3. Apps are the main positioning
 
-Working message: **Work on more than one thing at once.**
+Working message: **Give your AI agents Apps.**
+
+Show:
+
+- the bundled Apps available from first launch
+- an App adding a visible interface
+- an App exposing a capability an agent can call
+- a skill teaching an agent when and how to use the capability
+- the registry as the way people discover and install more
+
+Apps are Penkra's clearest category distinction. They are not an ecosystem footnote or
+a late-page extensibility pitch. They are the mechanism that turns a general agent into
+an agent equipped for the person's actual work.
+
+### 4. The concurrency story
+
+Working message: **Run tasks in parallel—not one by one.**
 
 Show:
 
@@ -246,38 +261,28 @@ Show:
 - a third waiting for approval
 - persistent status in navigation without hijacking the current task
 
-This is Penkra's clearest immediate distinction from ordinary chat products.
+Concurrency is supporting product proof, not the primary category position.
 
-### 4. The workspace story
+### 5. The workspace story
 
-Working message: **The context stays with the work.**
+Working message: **Files, browser, and conversations—together.**
 
 Show a folder containing threads, with Files or Browser beside the conversation.
 Explain the user outcome rather than the three-panel geometry.
 
-### 5. Agent choice
+### 6. Agent choice
 
-Working message: **Choose the agent for the job.**
+Working message: **Use the agents you already know.**
 
-Show the three built-in harnesses and all approved onboarding connection methods. Do
-not broaden “Sign in with Claude” or “Sign in with ChatGPT” into a promise that every
-provider plan, entitlement, or model is supported.
-
-### 6. Apps and capabilities
-
-Working message: **Add what your work needs.**
-
-Explain one coherent unit—an App—and show three understandable examples:
-
-- a visible App in the right panel
-- a capability the agent can use
-- a skill that teaches the agent when and why to use it
-
-The public page should not lead with SDK terminology.
+Show all nine canonical onboarding agent marks: Claude, Codex, Cursor, Grok, Droid,
+Kilo, Pi, GitHub, and OpenCode. Separately and accurately explain that Penkra's built-in
+harness set is Claude Agent, Codex, and OpenCode. Do not broaden “Sign in with Claude”
+or “Sign in with ChatGPT” into a promise that every provider plan, entitlement, or
+model is supported.
 
 ### 7. Control and permissions
 
-Working message: **Capability without invisible access.**
+Working message: **Apps only see what you hand them.**
 
 Explain:
 
@@ -336,7 +341,7 @@ Repeat the exact primary CTA. Do not introduce a new conversion goal at the bott
 | Label/action | Destination | Rule |
 |---|---|---|
 | Penkra mark/wordmark | `/` | Accessible name: “Penkra home” |
-| Product | `/#product` | Lands at the concurrency/product narrative |
+| Product | `/#apps` | Lands at the primary Apps narrative |
 | Apps | `/apps` | Registry and App explanation |
 | Security | `/security` | Trust model and permissions |
 | Developers | `/developers` | App-author entry point |
@@ -436,6 +441,11 @@ hierarchy, and line-count limits are acceptance requirements.
 - Derive neutrals and accent colors from current Penkra product variables.
 - The page uses one dominant near-dark canvas and at most two subordinate surface
   elevations.
+- Black remains the foundation, but the page must not be one uninterrupted flat
+  surface. Alternate selected sections with restrained near-black shifts and
+  low-opacity blue depth tied to Apps, active agents, or permission boundaries.
+- Depth comes from hierarchy, authentic product media, subtle borders, and localized
+  accent light—not ornamental gradients behind every section.
 - The primary CTA uses the same approved accent family as the product's primary action.
 - Provider colors belong only to provider marks or small identifying details.
 - Text/surface combinations must meet WCAG AA; focus indicators must reach 3:1 against
@@ -470,12 +480,13 @@ Secondary audiences get clear routes from the homepage but do not share the hero
 
 ### Message order
 
-1. **Transformation:** several pieces of work can move at the same time.
-2. **Category:** Penkra is an open-source desktop workspace for agentic work.
-3. **Mechanism:** threads, agents, files, browser, and Apps stay together.
-4. **Control:** the person sees progress and approves consequential actions.
-5. **Extensibility:** Apps add useful capabilities without silently reading Penkra data.
-6. **Proof:** authentic product states, implemented behavior, source, and documentation.
+1. **Category:** Penkra is the open-source desktop workspace where agents use Apps.
+2. **Mechanism:** an App can contribute an interface, agent capabilities, and skills.
+3. **Immediate proof:** Files + Editor and Browser are useful bundled Apps on first launch.
+4. **Workspace benefit:** threads, agents, files, browser, and Apps stay together.
+5. **Parallel benefit:** several pieces of work can move at the same time.
+6. **Control:** the person sees progress and approves consequential actions.
+7. **Proof:** authentic product states, implemented behavior, source, and documentation.
 
 ### Vocabulary rules
 
@@ -602,9 +613,43 @@ marketing theme.
 - the hero does not broaden approved connection methods into universal provider,
   entitlement, or model support
 
-### Section 03 — Concurrency
+### Section 03 — Apps
 
-**Purpose:** Establish the strongest product distinction.
+**Purpose:** Establish Penkra's primary category distinction immediately after the hero.
+
+**Sequence:**
+
+1. Start useful with bundled Files + Editor and Browser Apps.
+2. Discover and add an App from Penkra's launch registry when a job needs a new
+   interface or capability.
+3. Review required and optional permissions.
+4. Use it immediately without restarting Penkra.
+
+**Visual:**
+
+- an App interface visible inside Penkra
+- a capability the agent can call
+- a skill associated with that App
+- registry or onboarding installation state
+
+The page must explain the three-part App model without leading with SDK terminology.
+
+**Interaction:**
+
+- a controlled interface/capability/skill sequence is acceptable
+- the sequence must work with keyboard and touch
+- each state has a static fallback
+
+**Do not:**
+
+- call connectors Apps
+- reduce Apps to a decorative marketplace-card grid
+- imply an App can read the current conversation
+
+### Section 04 — Concurrency
+
+**Purpose:** Prove that the App-equipped workspace can keep multiple pieces of work
+moving.
 
 **Narrative:** The person can start work, move elsewhere, and return when an agent
 finishes or needs input.
@@ -625,7 +670,7 @@ finishes or needs input.
 
 **Copy proof:** Use day-one stories 8.16–8.18, not invented throughput numbers.
 
-### Section 04 — Workspace and context
+### Section 05 — Workspace and context
 
 **Purpose:** Show that Penkra is not another isolated chat window.
 
@@ -646,7 +691,7 @@ finishes or needs input.
 - explain the interface as “left rail / middle panel / right panel”
 - imply that every future search or memory story is already available
 
-### Section 05 — Agent choice
+### Section 06 — Agent choice
 
 **Purpose:** Show that Penkra is a workspace, not another model vendor.
 
@@ -655,6 +700,12 @@ finishes or needs input.
 - Claude Agent
 - Codex
 - OpenCode
+- Cursor
+- Grok
+- Droid
+- Kilo
+- Pi
+- GitHub
 - Sign in with Claude
 - Sign in with ChatGPT
 - Use an API key
@@ -669,35 +720,6 @@ finishes or needs input.
 **Claim boundary:** Use the approved launch table and `STORIES.md` 1.1–1.2. Do not claim
 included inference or access to plans/models beyond what each connected account or key
 actually provides.
-
-### Section 06 — Apps
-
-**Purpose:** Explain extensibility in user language.
-
-**Sequence:**
-
-1. Start useful with bundled Files + Editor and Browser Apps.
-2. Discover and add an App from Penkra's launch registry when a job needs a new
-   interface or capability.
-3. Review required and optional permissions.
-4. Use it immediately without restarting Penkra.
-
-**Visual:**
-
-- App detail or install state
-- permission review sheet
-- installed App open in the right panel
-
-**Interaction:**
-
-- a three-step controlled sequence is acceptable
-- the sequence must work with keyboard and touch
-- each state has a static fallback
-
-**Do not:**
-
-- call connectors Apps
-- imply an App can read the current conversation
 
 ### Section 07 — Control and privacy
 
@@ -763,8 +785,8 @@ Use these questions and answers:
    **Penkra is available for macOS, Windows, and Linux.**
 3. **Which agents can I use?**
 
-   **Penkra includes Claude Agent, Codex, and OpenCode. You can sign in with Claude or
-   ChatGPT, or connect an API key.**
+   **Connect Claude, Codex, Cursor, Grok, Droid, Kilo, Pi, GitHub, and OpenCode. Penkra
+   includes built-in Claude Agent, Codex, and OpenCode harnesses.**
 4. **Which API-key providers are supported?**
 
    **Connect Anthropic, OpenAI, Google, OpenRouter, or a compatible custom base URL.**
@@ -895,7 +917,9 @@ architecture, or UI.
 
 Reference priority by section:
 
-- Hero: Raycast clarity + Cursor product proof.
+- Hero: Raycast ecosystem clarity + Cursor product proof.
+- Apps: Raycast's central extension positioning, expressed through Penkra's distinct
+  interface + capability + skill model.
 - Concurrency: Codex sequencing + Synara state visibility.
 - Knowledge-work framing: Claude Cowork + ChatGPT Work.
 - Agent choice and openness: Warp.
@@ -918,9 +942,10 @@ each node immediately before export because the shared file is live.
 | Thread states and concurrency | `X3cN0l`, `y0DmC`, `RR4w3`, `aHzOp`, `kapCo` | Compose from instances; add no invented thread-row style |
 | Message/action detail | `BDWPr`, `kUqNe`, `Bx6FM`, `vI265` | Use only verified default/hover states |
 | Composer detail | `TKKOp`, `JwTiI`, `g1dQ5`, `eFqUm` | Preserve current component variants and sizing |
-| Agent choice | `HKAkV`, `k5hz3`, `TC6n2`, `mbMUu`, `BnEQu` | Use approved harness marks; do not fabricate provider icons |
+| Agent choice | `HKAkV`, `BnEQu`, `UHPei`, `R3VAsK`, `Ympaa`, `x7O54`, `eKNhZ`, `voEK6`, `I15im`, `fCOLZ`, `mbMUu` | Use all nine canonical onboarding marks; do not fabricate provider icons |
 | Connection methods | `BiK9J`, `pQHTj`, `EU9Dz`, `cv14N`, `YzDKb` | Show Claude, ChatGPT, and API-key routes from onboarding truth |
-| Bundled/registry Apps | `fcm2a`, `loYIZ`, `LbQmm`, `Q0YrUi`, `fgUwH` | Show a real directory/search/detail sequence |
+| Bundled Apps / first setup | `nsUrf`, `YmEq2`, `lHJt3` | Primary first-pass Apps proof; shows real Apps and enabled states |
+| Registry/search/detail | `fcm2a`, `loYIZ`, `LbQmm`, `Q0YrUi`, `fgUwH` | Do not export the full screens while their App-owned viewport is hatched/empty; repair and verify first |
 | App permissions | `irJ7w`, `p3iWcp`, `r5wcGn`, `t8z9QM` | Explain required versus optional permissions |
 | Settings/control depth | `P3rhe3`, `aS32i`, `Q6Nzkr`, `pwz9i` | Supporting route imagery only, not hero content |
 | Shared Penkra mark | `XUUPq` | Use the approved shared mark; compare with website `T9Z9s` before export |
@@ -939,7 +964,9 @@ does not invent asset names:
 | `landing-concurrency` | four thread statuses composed from shared instances | AVIF/WebP or accessible state demo poster |
 | `landing-workspace-context` | folder + thread + Files/Browser | AVIF/WebP |
 | `landing-agent-choice` | harness and connection choice | AVIF/WebP |
-| `landing-apps-registry` | registry/search/detail sequence | AVIF/WebP |
+| `landing-agent-marks` | all nine canonical onboarding agent marks | SVG/PNG source assets |
+| `landing-apps-onboarding` | `nsUrf`; first bundled Apps | AVIF/WebP |
+| `landing-apps-registry` | repaired and verified registry/search/detail sequence | AVIF/WebP |
 | `landing-app-permissions` | required/optional permission review | AVIF/WebP |
 | `landing-control-model` | purpose-built explanatory diagram | SVG + PNG review export |
 | `penkra-download-mark` | verified shared Penkra mark | SVG + PNG |
@@ -997,7 +1024,7 @@ Each shared component needs named properties rather than duplicate masters.
 | Product window | desktop/mobile crop; static/video poster; caption on/off |
 | Feature narrative | visual left/right; compact/full; dark/subtle surface |
 | Status badge | running/waiting/approval/completed/error |
-| Harness badge | Claude/Codex/OpenCode; default/selected/disabled |
+| Agent badge | Claude/Codex/Cursor/Grok/Droid/Kilo/Pi/GitHub/OpenCode; default/selected/disabled |
 | App card | bundled/registry/local; default/hover/installed/update |
 | Permission row | required/optional; on/off/denied |
 | FAQ item | closed/open; default/hover/focus |
@@ -1112,9 +1139,9 @@ Recommended sections:
 **Hero copy:**
 
 - Eyebrow: **Penkra Apps**
-- Heading: **Add what your work needs.**
-- Body: **Install focused interfaces, agent capabilities, and reusable skills from
-  Penkra's App registry.**
+- Heading: **Apps make agents useful for your work.**
+- Body: **Install interfaces you use, capabilities your agents call, and skills that
+  teach them how—from Penkra's App registry.**
 - Primary action: focus the registry search field
 - Secondary CTA: **Build an App**
 
@@ -1249,12 +1276,12 @@ Every public route needs:
 
 Homepage title:
 
-> Penkra — Open-source desktop workspace for agentic work
+> Penkra — Give your AI agents Apps
 
 Homepage description:
 
-> Run multiple AI agents across your files, browser, and Apps in one desktop workspace
-> built for knowledge work and control.
+> Penkra is the open-source desktop workspace that gives the agents you already use
+> Apps for working with your files, browser, and tools.
 
 ## Analytics and privacy
 
