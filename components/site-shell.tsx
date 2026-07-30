@@ -20,9 +20,15 @@ const AUTH_ROUTES = new Set([
 export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const isAuthRoute = AUTH_ROUTES.has(pathname);
+  const isProductRoute =
+    pathname === "/" || pathname === "/privacy" || pathname === "/terms";
 
   if (isAuthRoute) {
     return <main className="auth-route-main">{children}</main>;
+  }
+
+  if (isProductRoute) {
+    return <>{children}</>;
   }
 
   return (

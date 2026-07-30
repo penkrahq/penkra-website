@@ -5,11 +5,11 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Penkra",
     short_name: "Penkra",
     description:
-      "Paperwork, admin, logistics, and operational support handled for you.",
+      "The open-source desktop workspace where AI agents use Apps.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fffefc",
-    theme_color: "#073b63",
+    background_color: "#0a0b0e",
+    theme_color: "#0a0b0e",
     icons: [
       {
         src: "/icons/icon-192.png",

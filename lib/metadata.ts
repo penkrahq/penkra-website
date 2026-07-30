@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const siteUrl = "https://penkra.com";
 export const siteName = "Penkra";
-export const defaultTitle = "Penkra | Paperwork, admin, and logistics handled";
+export const defaultTitle = "Penkra | Give your AI agents Apps";
 export const defaultDescription =
-  "Penkra helps people and businesses delegate paperwork, registrations, admin follow-ups, records, logistics, and compliance awareness.";
+  "The free, open-source desktop workspace where AI agents use Apps to work with your files, browser, and tools.";
 
 type PageMetadataInput = {
   title?: string;
@@ -21,7 +21,7 @@ export function pageMetadata({
   title,
   description = defaultDescription,
   path = "",
-  image = "/og/default.png",
+  image = "/opengraph-image",
 }: PageMetadataInput = {}): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);

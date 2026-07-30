@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: absoluteUrl("/og/default.png"),
+        url: absoluteUrl("/opengraph-image"),
         width: 1200,
         height: 630,
-        alt: "Penkra preview",
+        alt: "Penkra — Give your AI agents Apps",
       },
     ],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: [absoluteUrl("/og/default.png")],
+    images: [absoluteUrl("/opengraph-image")],
   },
   icons: {
     icon: [
@@ -105,22 +105,17 @@ export default function RootLayout({
             url: siteUrl,
             logo: absoluteUrl("/icons/icon-512.png"),
             description: defaultDescription,
-            email: "emmanuel@penkra.com",
-            telephone: "+13073461585",
+            email: "support@penkra.com",
             contactPoint: [
               {
                 "@type": "ContactPoint",
                 contactType: "customer support",
-                email: "emmanuel@penkra.com",
-                telephone: "+13073461585",
-                url: absoluteUrl("/contact"),
+                email: "support@penkra.com",
                 availableLanguage: ["en"],
               },
             ],
             sameAs: [
-              "https://www.facebook.com/profile.php?id=61591393648650",
-              "https://www.linkedin.com/company/penkra/",
-              "https://www.youtube.com/@penkra",
+              "https://github.com/penkrahq/penkra",
             ],
           }}
         />

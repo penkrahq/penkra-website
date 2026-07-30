@@ -191,7 +191,9 @@ export function Analytics() {
       const href = link.getAttribute("href") || "";
       let eventName: string | null = null;
 
-      if (href.includes("wa.me")) eventName = "whatsapp_click";
+      if (href === "/download" || href.endsWith("/download")) eventName = "download_click";
+      else if (href.includes("github.com/penkrahq/penkra")) eventName = "github_click";
+      else if (href.includes("wa.me")) eventName = "whatsapp_click";
       else if (href.includes("cal.com")) eventName = "book_call_click";
       else if (href.startsWith("mailto:")) eventName = "email_click";
       else if (href.includes("/ghana/business-registration")) {
