@@ -1,0 +1,51 @@
+.group {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.input {
+  appearance: textfield;
+  background: var(--auth-control);
+  border: 1px solid var(--auth-border);
+  border-radius: 10px;
+  caret-color: var(--auth-input-text);
+  color: var(--auth-input-text);
+  font: 600 18px/1 var(--font-auth);
+  height: 52px;
+  min-width: 0;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  transition: border-color 140ms ease;
+  width: 100%;
+}
+
+.input:hover {
+  border-color: var(--auth-border-hover);
+}
+
+.input:focus {
+  border-color: var(--auth-accent);
+}
+
+.group[data-invalid="true"] .input {
+  border-color: var(--auth-error);
+}
+
+.input:disabled {
+  background: var(--auth-surface);
+  border-color: var(--auth-disabled);
+  color: var(--auth-disabled-text);
+  cursor: not-allowed;
+}
+
+@media (max-width: 420px) {
+  .group {
+    gap: 6px;
+  }
+
+  .input {
+    height: 46px;
+  }
+}

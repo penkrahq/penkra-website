@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Penkra logo</title>
+  <desc id="desc">A rounded letter P with a separated stem and a pale blue bridge.</desc>
+  <path
+    fill="#001D56"
+    d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"
+  />
+  <rect x="89" y="303" width="69" height="164" fill="#001D56"/>
+  <rect x="182" y="303" width="78" height="71" fill="#8CB8E1"/>
+</svg>

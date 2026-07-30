@@ -17,7 +17,7 @@ const meta = {
       sectionMarkerId: "AxsD0",
     },
   },
-  title: "Website/Auth Card/Shared",
+  title: "Website/Authentication/Auth Card",
 } satisfies Meta<typeof AuthCard>;
 
 export default meta;
@@ -43,6 +43,13 @@ export const SignUp: Story = {
 export const Submitting: Story = {
   args: {
     submitting: true,
+  },
+  decorators: [Frame],
+};
+
+export const Error: Story = {
+  args: {
+    error: "Email or password is incorrect.",
   },
   decorators: [Frame],
 };

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Bright Penkra logo color study</title>
+  <desc id="desc">Eight brighter and more diverse color directions for the selected Penkra P symbol.</desc>
+
+  <rect width="1760" height="1040" fill="#F5F3EE"/>
+  <text x="64" y="68" fill="#172139" font-family="Arial, sans-serif" font-size="34" font-weight="700">Brighter Penkra color directions</text>
+  <text x="64" y="101" fill="#172139" fill-opacity=".68" font-family="Arial, sans-serif" font-size="16">The geometry is locked. Each direction pairs a saturated primary with a bright bridge accent.</text>
+
+  <!-- 01 Cobalt + Cyan -->
+  <g transform="translate(64 144)">
+    <rect width="376" height="360" rx="28" fill="#F2F7FF"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#1746D1" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#1746D1"/>
+      <rect x="182" y="303" width="78" height="71" fill="#51D6FF"/>
+    </g>
+    <text x="30" y="282" fill="#1746D1" font-family="Arial, sans-serif" font-size="21" font-weight="700">01  Cobalt &amp; Cyan</text>
+    <text x="30" y="314" fill="#1746D1" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#1746D1 · #51D6FF</text>
+  </g>
+
+  <!-- 02 Violet + Coral -->
+  <g transform="translate(480 144)">
+    <rect width="376" height="360" rx="28" fill="#FAF6FF"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#6536D6" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#6536D6"/>
+      <rect x="182" y="303" width="78" height="71" fill="#FF7468"/>
+    </g>
+    <text x="30" y="282" fill="#6536D6" font-family="Arial, sans-serif" font-size="21" font-weight="700">02  Violet &amp; Coral</text>
+    <text x="30" y="314" fill="#6536D6" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#6536D6 · #FF7468</text>
+  </g>
+
+  <!-- 03 Teal + Lime -->
+  <g transform="translate(896 144)">
+    <rect width="376" height="360" rx="28" fill="#F1FCF8"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#007D78" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#007D78"/>
+      <rect x="182" y="303" width="78" height="71" fill="#B7E64B"/>
+    </g>
+    <text x="30" y="282" fill="#007D78" font-family="Arial, sans-serif" font-size="21" font-weight="700">03  Teal &amp; Lime</text>
+    <text x="30" y="314" fill="#007D78" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#007D78 · #B7E64B</text>
+  </g>
+
+  <!-- 04 Raspberry + Apricot -->
+  <g transform="translate(1312 144)">
+    <rect width="376" height="360" rx="28" fill="#FFF4F7"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#C52963" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#C52963"/>
+      <rect x="182" y="303" width="78" height="71" fill="#FFB36B"/>
+    </g>
+    <text x="30" y="282" fill="#C52963" font-family="Arial, sans-serif" font-size="21" font-weight="700">04  Raspberry &amp; Apricot</text>
+    <text x="30" y="314" fill="#C52963" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#C52963 · #FFB36B</text>
+  </g>
+
+  <!-- 05 Tangerine + Indigo -->
+  <g transform="translate(64 552)">
+    <rect width="376" height="360" rx="28" fill="#FFF6EF"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#ED5B2A" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#ED5B2A"/>
+      <rect x="182" y="303" width="78" height="71" fill="#5145CD"/>
+    </g>
+    <text x="30" y="282" fill="#B33C15" font-family="Arial, sans-serif" font-size="21" font-weight="700">05  Tangerine &amp; Indigo</text>
+    <text x="30" y="314" fill="#B33C15" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#ED5B2A · #5145CD</text>
+  </g>
+
+  <!-- 06 Azure + Sunflower -->
+  <g transform="translate(480 552)">
+    <rect width="376" height="360" rx="28" fill="#F1FAFF"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#0075C9" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#0075C9"/>
+      <rect x="182" y="303" width="78" height="71" fill="#FFD448"/>
+    </g>
+    <text x="30" y="282" fill="#0075C9" font-family="Arial, sans-serif" font-size="21" font-weight="700">06  Azure &amp; Sunflower</text>
+    <text x="30" y="314" fill="#0075C9" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#0075C9 · #FFD448</text>
+  </g>
+
+  <!-- 07 Emerald + Aqua -->
+  <g transform="translate(896 552)">
+    <rect width="376" height="360" rx="28" fill="#F0FCF7"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#008A5F" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#008A5F"/>
+      <rect x="182" y="303" width="78" height="71" fill="#55DED0"/>
+    </g>
+    <text x="30" y="282" fill="#008A5F" font-family="Arial, sans-serif" font-size="21" font-weight="700">07  Emerald &amp; Aqua</text>
+    <text x="30" y="314" fill="#008A5F" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#008A5F · #55DED0</text>
+  </g>
+
+  <!-- 08 Magenta + Lavender -->
+  <g transform="translate(1312 552)">
+    <rect width="376" height="360" rx="28" fill="#FFF4FC"/>
+    <g transform="translate(101 23) scale(.34)">
+      <path fill="#B526A9" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#B526A9"/>
+      <rect x="182" y="303" width="78" height="71" fill="#D7B5FF"/>
+    </g>
+    <text x="30" y="282" fill="#B526A9" font-family="Arial, sans-serif" font-size="21" font-weight="700">08  Magenta &amp; Lavender</text>
+    <text x="30" y="314" fill="#B526A9" fill-opacity=".7" font-family="Arial, sans-serif" font-size="15">#B526A9 · #D7B5FF</text>
+  </g>
+</svg>

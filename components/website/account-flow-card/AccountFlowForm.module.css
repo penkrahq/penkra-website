@@ -1,0 +1,49 @@
+.form,
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  gap: 24px;
+}
+
+.fields {
+  gap: 10px;
+}
+
+.status {
+  color: var(--auth-error);
+  font: 400 13px/1.4 var(--font-auth);
+  margin: -12px 0 0;
+}
+
+.note {
+  color: var(--auth-text-tertiary);
+  font: 400 12px/1.4 var(--font-auth);
+  margin: -12px 0 0;
+  text-align: center;
+}
+
+.resend {
+  align-items: center;
+  color: var(--auth-text-secondary);
+  display: flex;
+  font: 400 13px/1.4 var(--font-auth);
+  gap: 4px;
+  justify-content: center;
+}
+
+.textButton {
+  background: transparent;
+  border: 0;
+  color: var(--auth-accent);
+  cursor: pointer;
+  font: 600 13px/1.4 var(--font-auth);
+  padding: 0;
+}
+
+.textButton:disabled {
+  color: var(--auth-disabled-text);
+  cursor: not-allowed;
+}

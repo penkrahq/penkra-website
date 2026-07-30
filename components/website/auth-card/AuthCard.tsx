@@ -3,15 +3,16 @@ import type { FormEventHandler } from "react";
 
 import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
 import { InputShared } from "../../foundations/input-shared/InputShared";
-import { ContinueWithGitHubButton } from "../continue-with-github-button/ContinueWithGitHubButton";
 import { ContinueWithGoogleButton } from "../continue-with-google-button/ContinueWithGoogleButton";
 import styles from "./AuthCard.module.css";
 
 export type AuthCardMode = "sign-in" | "sign-up";
 
 export type AuthCardProps = {
+  alternateHref?: string;
+  error?: string | null;
+  forgotPasswordHref?: string;
   mode?: AuthCardMode;
-  onGitHub?: () => void;
   onGoogle?: () => void;
   onSubmit?: FormEventHandler<HTMLFormElement>;
   submitting?: boolean;
@@ -37,8 +38,10 @@ const copy = {
 } as const;
 
 export function AuthCard({
+  alternateHref,
+  error,
+  forgotPasswordHref = "/forgot-password",
   mode = "sign-in",
-  onGitHub,
   onGoogle,
   onSubmit,
   submitting = false,
@@ -58,33 +61,46 @@ export function AuthCard({
 
       <div className={styles.oauth}>
         <ContinueWithGoogleButton disabled={submitting} onClick={onGoogle} />
-        <ContinueWithGitHubButton disabled={submitting} onClick={onGitHub} />
       </div>
 
       <div className={styles.divider}>or</div>
 
-      <form className={styles.fields} onSubmit={onSubmit}>
-        <InputShared
-          aria-label="Email address"
-          autoComplete="email"
-          disabled={submitting}
-          icon="mail"
-          name="email"
-          placeholder="you@company.com"
-          required
-          type="email"
-        />
-        <InputShared
-          aria-label="Password"
-          autoComplete={mode === "sign-in" ? "current-password" : "new-password"}
-          disabled={submitting}
-          icon="lock"
-          minLength={8}
-          name="password"
-          placeholder="Password"
-          required
-          type="password"
-        />
+      <form className={styles.form} onSubmit={onSubmit}>
+        <div className={styles.fields}>
+          <InputShared
+            aria-label="Email address"
+            autoComplete="email"
+            disabled={submitting}
+            icon="mail"
+            invalid={Boolean(error)}
+            name="email"
+            placeholder="you@company.com"
+            required
+            type="email"
+          />
+          <InputShared
+            aria-label="Password"
+            autoComplete={mode === "sign-in" ? "current-password" : "new-password"}
+            disabled={submitting}
+            icon="lock"
+            invalid={Boolean(error)}
+            minLength={8}
+            name="password"
+            placeholder="Password"
+            required
+            type="password"
+          />
+          {mode === "sign-in" ? (
+            <Link className={styles.forgotLink} href={forgotPasswordHref}>
+              Forgot password?
+            </Link>
+          ) : null}
+        </div>
+        {error ? (
+          <p aria-live="polite" className={styles.status} role="alert">
+            {error}
+          </p>
+        ) : null}
         <ButtonPrimary disabled={submitting} fullWidth type="submit">
           {submitting ? "Please wait…" : content.submit}
         </ButtonPrimary>
@@ -92,7 +108,7 @@ export function AuthCard({
 
       <div className={styles.footer}>
         <span>{content.alternatePrompt}</span>
-        <Link className={styles.footerLink} href={content.alternateHref}>
+        <Link className={styles.footerLink} href={alternateHref ?? content.alternateHref}>
           {content.alternateLabel}
         </Link>
       </div>

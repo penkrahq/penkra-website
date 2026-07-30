@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Penkra logo color study</title>
+  <desc id="desc">Six color directions for the selected Penkra P symbol.</desc>
+  <rect width="1440" height="1040" fill="#F4F1EB"/>
+  <text x="72" y="72" fill="#182238" font-family="Arial, sans-serif" font-size="34" font-weight="700">Penkra color directions</text>
+  <text x="72" y="105" fill="#182238" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">Identical geometry; only the surface, primary, and bridge colors change.</text>
+
+  <!-- 01 Original navy -->
+  <g transform="translate(72 150)">
+    <rect width="400" height="360" rx="28" fill="#FFFEFC"/>
+    <g transform="translate(105 26) scale(.37109375)">
+      <path fill="#001D56" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#001D56"/>
+      <rect x="182" y="303" width="78" height="71" fill="#8CB8E1"/>
+    </g>
+    <text x="32" y="278" fill="#001D56" font-family="Arial, sans-serif" font-size="22" font-weight="600">01  Original Navy</text>
+    <text x="32" y="310" fill="#001D56" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">#001D56 · #8CB8E1</text>
+  </g>
+
+  <!-- 02 Reverse navy -->
+  <g transform="translate(520 150)">
+    <rect width="400" height="360" rx="28" fill="#001D56"/>
+    <g transform="translate(105 26) scale(.37109375)">
+      <path fill="#FFFEFC" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#FFFEFC"/>
+      <rect x="182" y="303" width="78" height="71" fill="#8CB8E1"/>
+    </g>
+    <text x="32" y="278" fill="#FFFEFC" font-family="Arial, sans-serif" font-size="22" font-weight="600">02  Reverse Navy</text>
+    <text x="32" y="310" fill="#FFFEFC" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">#FFFEFC · #8CB8E1</text>
+  </g>
+
+  <!-- 03 Penkra ink -->
+  <g transform="translate(968 150)">
+    <rect width="400" height="360" rx="28" fill="#EDF7FB"/>
+    <g transform="translate(105 26) scale(.37109375)">
+      <path fill="#073B63" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#073B63"/>
+      <rect x="182" y="303" width="78" height="71" fill="#B9D8E8"/>
+    </g>
+    <text x="32" y="278" fill="#073B63" font-family="Arial, sans-serif" font-size="22" font-weight="600">03  Ink &amp; Sky</text>
+    <text x="32" y="310" fill="#073B63" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">#073B63 · #B9D8E8</text>
+  </g>
+
+  <!-- 04 Forest -->
+  <g transform="translate(72 558)">
+    <rect width="400" height="360" rx="28" fill="#F4F3EA"/>
+    <g transform="translate(105 26) scale(.37109375)">
+      <path fill="#153E35" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#153E35"/>
+      <rect x="182" y="303" width="78" height="71" fill="#8FD8C6"/>
+    </g>
+    <text x="32" y="278" fill="#153E35" font-family="Arial, sans-serif" font-size="22" font-weight="600">04  Forest &amp; Mint</text>
+    <text x="32" y="310" fill="#153E35" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">#153E35 · #8FD8C6</text>
+  </g>
+
+  <!-- 05 Aubergine -->
+  <g transform="translate(520 558)">
+    <rect width="400" height="360" rx="28" fill="#FBF8F2"/>
+    <g transform="translate(105 26) scale(.37109375)">
+      <path fill="#34234F" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#34234F"/>
+      <rect x="182" y="303" width="78" height="71" fill="#C7B6F3"/>
+    </g>
+    <text x="32" y="278" fill="#34234F" font-family="Arial, sans-serif" font-size="22" font-weight="600">05  Aubergine &amp; Lilac</text>
+    <text x="32" y="310" fill="#34234F" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">#34234F · #C7B6F3</text>
+  </g>
+
+  <!-- 06 Monochrome -->
+  <g transform="translate(968 558)">
+    <rect width="400" height="360" rx="28" fill="#171A1F"/>
+    <g transform="translate(105 26) scale(.37109375)">
+      <path fill="#FFFFFF" d="M89 278v-67C89 119.3 163.3 45 255 45c92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163H260v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67H89Z"/>
+      <rect x="89" y="303" width="69" height="164" fill="#FFFFFF"/>
+      <rect x="182" y="303" width="78" height="71" fill="#FFFFFF"/>
+    </g>
+    <text x="32" y="278" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="600">06  Monochrome</text>
+    <text x="32" y="310" fill="#FFFFFF" fill-opacity=".7" font-family="Arial, sans-serif" font-size="16">One-color fallback</text>
+  </g>
+</svg>

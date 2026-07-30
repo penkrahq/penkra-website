@@ -1,0 +1,32 @@
+.screen {
+  align-items: center;
+  background: var(--auth-canvas);
+  color: var(--auth-text-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 32px 40px;
+  position: relative;
+  width: 100%;
+}
+
+.mark {
+  color: #f5f5f7;
+  height: 32px;
+  left: 40px;
+  position: absolute;
+  top: 32px;
+  width: 32px;
+}
+
+@media (max-width: 560px) {
+  .screen {
+    align-items: flex-start;
+    padding: 96px 0 32px;
+  }
+
+  .mark {
+    left: 24px;
+    top: 24px;
+  }
+}

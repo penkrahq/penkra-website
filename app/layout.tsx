@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope, Newsreader } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "../components/site-header";
-import { SiteFooter } from "../components/site-footer";
-import { CountryProvider } from "../components/country-provider";
+import { SiteShell } from "../components/site-shell";
 import { JsonLd } from "../components/json-ld";
 import { Analytics } from "../components/analytics";
 import {
@@ -139,11 +137,7 @@ export default function RootLayout({
             },
           }}
         />
-        <CountryProvider>
-          <SiteHeader />
-          <main style={{ flex: 1, paddingTop: "70px" }}>{children}</main>
-          <SiteFooter />
-        </CountryProvider>
+        <SiteShell>{children}</SiteShell>
         <Analytics />
         <script
           id="penkra-interaction-fallbacks"

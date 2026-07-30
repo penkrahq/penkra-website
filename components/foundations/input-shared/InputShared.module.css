@@ -1,52 +1,63 @@
 .control {
+  --input-icon-color: var(--auth-input-icon);
+  --input-placeholder-color: var(--auth-input-placeholder);
+
   align-items: center;
   background: var(--auth-control);
   border: 1px solid var(--auth-border);
   border-radius: 10px;
-  color: var(--auth-text-tertiary);
   display: flex;
   gap: 8px;
-  height: 43px;
+  height: 44px;
   padding: 0 16px;
-  transition:
-    border-color 140ms ease,
-    color 140ms ease;
+  transition: border-color 140ms ease;
   width: 100%;
 }
 
 .control:hover {
+  --input-icon-color: var(--auth-input-icon-hover);
+  --input-placeholder-color: var(--auth-input-placeholder-hover);
+
   border-color: var(--auth-border-hover);
-  color: var(--auth-text-secondary);
 }
 
 .control:focus-within {
+  --input-icon-color: var(--auth-input-icon);
+  --input-placeholder-color: var(--auth-input-placeholder);
+
   border-color: var(--auth-accent);
-  color: var(--auth-text-primary);
 }
 
 .control[data-invalid="true"] {
+  --input-icon-color: var(--auth-input-icon);
+  --input-placeholder-color: var(--auth-input-placeholder);
+
   border-color: var(--auth-error);
-  color: var(--auth-text-primary);
 }
 
 .control[data-disabled="true"] {
+  --input-icon-color: var(--auth-disabled-text);
+  --input-placeholder-color: var(--auth-disabled-text);
+
   background: var(--auth-surface);
   border-color: var(--auth-disabled);
-  color: var(--auth-disabled-text);
 }
 
 .icon {
-  color: currentColor;
+  color: var(--input-icon-color);
   display: block;
   flex: 0 0 auto;
   height: 16px;
+  transition: color 140ms ease;
   width: 16px;
 }
 
 .input {
+  align-self: stretch;
   background: transparent;
   border: 0;
-  color: var(--auth-text-primary);
+  caret-color: var(--auth-input-text);
+  color: var(--auth-input-text);
   flex: 1;
   font: 400 14px/1.2 var(--font-auth);
   min-width: 0;
@@ -55,7 +66,7 @@
 }
 
 .input::placeholder {
-  color: currentColor;
+  color: var(--input-placeholder-color);
   opacity: 1;
 }
 
@@ -67,7 +78,7 @@
 .input:-webkit-autofill,
 .input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px var(--auth-control) inset;
-  -webkit-text-fill-color: var(--auth-text-primary);
+  -webkit-text-fill-color: var(--auth-input-text);
 }
 
 .storyWidth {
