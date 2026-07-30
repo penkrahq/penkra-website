@@ -3,6 +3,7 @@ import type { FormEventHandler } from "react";
 
 import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
 import { InputShared } from "../../foundations/input-shared/InputShared";
+import { StatusMessage } from "../../foundations/status-message/StatusMessage";
 import { ContinueWithGoogleButton } from "../continue-with-google-button/ContinueWithGoogleButton";
 import styles from "./AuthCard.module.css";
 
@@ -90,17 +91,19 @@ export function AuthCard({
             required
             type="password"
           />
-          {mode === "sign-in" ? (
-            <Link className={styles.forgotLink} href={forgotPasswordHref}>
-              Forgot password?
-            </Link>
+          {error || mode === "sign-in" ? (
+            <div className={styles.utilityRow}>
+              {error ? (
+                <StatusMessage className={styles.inlineStatus}>{error}</StatusMessage>
+              ) : null}
+              {mode === "sign-in" ? (
+                <Link className={styles.forgotLink} href={forgotPasswordHref}>
+                  Forgot password?
+                </Link>
+              ) : null}
+            </div>
           ) : null}
         </div>
-        {error ? (
-          <p aria-live="polite" className={styles.status} role="alert">
-            {error}
-          </p>
-        ) : null}
         <ButtonPrimary disabled={submitting} fullWidth type="submit">
           {submitting ? "Please wait…" : content.submit}
         </ButtonPrimary>

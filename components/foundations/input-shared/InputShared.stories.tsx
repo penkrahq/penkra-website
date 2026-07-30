@@ -61,3 +61,31 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const PasswordHidden: Story = {
+  args: {
+    "aria-label": "Password",
+    icon: "lock",
+    placeholder: "Password",
+    type: "password",
+  },
+};
+
+export const PasswordShown: Story = {
+  args: {
+    "aria-label": "Password",
+    defaultValue: "correct horse battery staple",
+    icon: "lock",
+    placeholder: "Password",
+    type: "password",
+  },
+  play: async ({ canvas }) => {
+    const input = canvas.getByLabelText("Password");
+    await canvas.getByRole("button", { name: "Show password" }).click();
+    await expect(input).toHaveAttribute("type", "text");
+    await expect(canvas.getByRole("button", { name: "Hide password" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+  },
+};

@@ -75,6 +75,37 @@
   cursor: not-allowed;
 }
 
+.passwordToggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--input-icon-color);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 24px;
+  justify-content: center;
+  margin: 0 -4px 0 0;
+  padding: 4px;
+  transition: color 140ms ease;
+  width: 24px;
+}
+
+.passwordToggle:hover {
+  color: var(--auth-input-text);
+}
+
+.passwordToggle:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--auth-accent);
+  outline-offset: 1px;
+}
+
+.passwordToggle:disabled {
+  color: var(--auth-disabled-text);
+  cursor: not-allowed;
+}
+
 .input:-webkit-autofill,
 .input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px var(--auth-control) inset;

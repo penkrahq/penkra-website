@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
+import { StatusMessage } from "../../foundations/status-message/StatusMessage";
 import { VerificationCodeInput } from "../../foundations/verification-code-input/VerificationCodeInput";
 import { AccountFlowCard } from "./AccountFlowCard";
 import formStyles from "./AccountFlowForm.module.css";
@@ -70,7 +71,7 @@ export const InvalidCode: Story = {
           onChange={() => undefined}
           value="482901"
         />
-        <p className={formStyles.status}>That code isn’t valid. Check it and try again.</p>
+        <StatusMessage>That code isn’t valid. Check it and try again.</StatusMessage>
         <ButtonPrimary fullWidth>Verify email</ButtonPrimary>
       </form>
     </AccountFlowCard>

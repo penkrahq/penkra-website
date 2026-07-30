@@ -1,0 +1,22 @@
+.status {
+  align-items: center;
+  color: var(--auth-error);
+  display: flex;
+  font: 400 13px/1.35 var(--font-auth);
+  gap: 8px;
+  min-width: 0;
+}
+
+.icon {
+  flex: 0 0 auto;
+  height: 16px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 16px;
+}
+
+.text {
+  min-width: 0;
+}

@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
 import { InputShared } from "../../foundations/input-shared/InputShared";
+import { StatusMessage } from "../../foundations/status-message/StatusMessage";
 import { VerificationCodeInput } from "../../foundations/verification-code-input/VerificationCodeInput";
 import { accountAuthHref, type ElectronAuthQuery } from "../../../lib/electron-auth-query";
 import { authClient } from "../../../lib/auth-client";
@@ -110,11 +111,7 @@ export function ResetPasswordScreen({
               type="password"
             />
           </div>
-          {error ? (
-            <p aria-live="polite" className={formStyles.status} role="alert">
-              {error}
-            </p>
-          ) : null}
+          {error ? <StatusMessage>{error}</StatusMessage> : null}
           <ButtonPrimary disabled={submitting} fullWidth type="submit">
             {submitting ? "Please wait…" : "Reset password"}
           </ButtonPrimary>

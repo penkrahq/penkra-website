@@ -64,17 +64,24 @@
   gap: 10px;
 }
 
-.forgotLink {
-  align-self: flex-end;
-  color: var(--auth-accent);
-  font: 600 13px/1.4 var(--font-auth);
-  margin-top: 2px;
+.utilityRow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 18px;
+  padding-top: 2px;
 }
 
-.status {
-  color: var(--auth-error);
-  font: 400 13px/1.35 var(--font-auth);
-  margin: -12px 0 0;
+.inlineStatus {
+  flex: 1 1 210px;
+}
+
+.forgotLink {
+  color: var(--auth-accent);
+  flex: 0 0 auto;
+  font: 600 13px/1.4 var(--font-auth);
+  margin-left: auto;
 }
 
 .footer {

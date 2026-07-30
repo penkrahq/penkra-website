@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
+import { StatusMessage } from "../../foundations/status-message/StatusMessage";
 import {
   electronAuthFlavor,
   electronTransferQuery,
@@ -69,11 +70,7 @@ export function EmailVerifiedScreen({
             : "Your account is ready. You can continue to Penkra."
         }
       >
-        {error ? (
-          <p aria-live="polite" className={formStyles.status} role="alert">
-            {error}
-          </p>
-        ) : null}
+        {error ? <StatusMessage>{error}</StatusMessage> : null}
         <ButtonPrimary
           fullWidth
           onClick={() => {

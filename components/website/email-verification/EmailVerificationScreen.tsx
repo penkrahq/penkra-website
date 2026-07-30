@@ -4,6 +4,7 @@ import type { FormEvent } from "react";
 import { useState } from "react";
 
 import { ButtonPrimary } from "../../foundations/button-primary/ButtonPrimary";
+import { StatusMessage } from "../../foundations/status-message/StatusMessage";
 import { VerificationCodeInput } from "../../foundations/verification-code-input/VerificationCodeInput";
 import { accountAuthHref, type ElectronAuthQuery } from "../../../lib/electron-auth-query";
 import { authClient } from "../../../lib/auth-client";
@@ -81,11 +82,7 @@ export function EmailVerificationScreen({
             }}
             value={code}
           />
-          {error ? (
-            <p aria-live="polite" className={formStyles.status} role="alert">
-              {error}
-            </p>
-          ) : null}
+          {error ? <StatusMessage>{error}</StatusMessage> : null}
           {message ? (
             <p aria-live="polite" className={formStyles.note}>
               {message}

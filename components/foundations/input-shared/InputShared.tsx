@@ -1,4 +1,9 @@
-import { forwardRef, type InputHTMLAttributes, type ReactNode } from "react";
+import {
+  forwardRef,
+  type InputHTMLAttributes,
+  type ReactNode,
+  useState,
+} from "react";
 
 import styles from "./InputShared.module.css";
 
@@ -16,14 +21,17 @@ export const InputShared = forwardRef<HTMLInputElement, InputSharedProps>(
       disabled = false,
       icon,
       invalid = false,
+      type,
       ...props
     },
     ref,
   ) {
     const isInvalid = invalid || ariaInvalid === true || ariaInvalid === "true";
+    const isPassword = type === "password";
+    const [passwordVisible, setPasswordVisible] = useState(false);
 
     return (
-      <label
+      <div
         className={styles.control}
         data-disabled={disabled || undefined}
         data-invalid={isInvalid || undefined}
@@ -35,9 +43,22 @@ export const InputShared = forwardRef<HTMLInputElement, InputSharedProps>(
           className={styles.input}
           disabled={disabled}
           ref={ref}
+          type={isPassword && passwordVisible ? "text" : type}
           {...props}
         />
-      </label>
+        {isPassword ? (
+          <button
+            aria-label={passwordVisible ? "Hide password" : "Show password"}
+            aria-pressed={passwordVisible}
+            className={styles.passwordToggle}
+            disabled={disabled}
+            onClick={() => setPasswordVisible((visible) => !visible)}
+            type="button"
+          >
+            {renderVisibilityIcon(passwordVisible)}
+          </button>
+        ) : null}
+      </div>
     );
   },
 );
@@ -83,6 +104,36 @@ function renderIcon(icon: InputIcon) {
       width="16"
     >
       {paths[icon]}
+    </svg>
+  );
+}
+
+function renderVisibilityIcon(visible: boolean) {
+  return (
+    <svg
+      aria-hidden
+      fill="none"
+      height="16"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="16"
+    >
+      {visible ? (
+        <>
+          <path d="m2 2 20 20" />
+          <path d="M6.7 6.7C4.6 8.1 3.1 10 2 12c2 3.7 5.8 7 10 7 1.9 0 3.6-.6 5.1-1.5" />
+          <path d="M10.7 5.1A10.9 10.9 0 0 1 12 5c4.2 0 8 3.3 10 7a17.4 17.4 0 0 1-2 3" />
+          <path d="M14.1 14.1A3 3 0 0 1 9.9 9.9" />
+        </>
+      ) : (
+        <>
+          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+          <circle cx="12" cy="12" r="3" />
+        </>
+      )}
     </svg>
   );
 }
