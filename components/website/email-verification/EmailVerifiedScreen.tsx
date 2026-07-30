@@ -11,7 +11,7 @@ import {
 } from "../../../lib/electron-auth-query";
 import {
   authClient,
-  ensurePenkraElectronRedirect,
+  redirectPenkraElectronAuthorizationCode,
 } from "../../../lib/auth-client";
 import { AccountFlowCard } from "../account-flow-card/AccountFlowCard";
 import formStyles from "../account-flow-card/AccountFlowForm.module.css";
@@ -27,15 +27,6 @@ export function EmailVerifiedScreen({
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!electronQuery) return;
-    const interval = ensurePenkraElectronRedirect(
-      electronAuthFlavor(electronQuery),
-      { timeout: 300_000 },
-    );
-    return () => clearInterval(interval);
-  }, [electronQuery]);
-
-  useEffect(() => {
     if (
       !electronQuery ||
       !session.data?.user ||
@@ -49,13 +40,25 @@ export function EmailVerifiedScreen({
       .transferUser({
         fetchOptions: { query: electronTransferQuery(electronQuery) },
       })
-      .then(({ error: transferError }) => {
-        if (!transferError) return;
+      .then(({ data, error: transferError }) => {
+        if (
+          !transferError &&
+          redirectPenkraElectronAuthorizationCode(
+            electronAuthFlavor(electronQuery),
+            data?.electron_authorization_code,
+          )
+        ) {
+          return;
+        }
         transferStarted.current = false;
         setError(
-          transferError.message ||
+          transferError?.message ||
             "We couldn’t return you to Penkra. Please try again.",
         );
+      })
+      .catch(() => {
+        transferStarted.current = false;
+        setError("We couldn’t return you to Penkra. Please try again.");
       });
   }, [electronQuery, session.data?.user, session.isPending]);
 

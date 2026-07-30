@@ -4,6 +4,13 @@ import { createAuthClient } from "better-auth/react";
 
 export const PENKRA_DESKTOP_AUTH_CLIENT_ID = "penkra-desktop";
 export const PENKRA_ACCOUNT_AUTH_CALLBACK_PATH = "/auth/callback";
+const configuredAccountAuthUrl =
+  process.env.NEXT_PUBLIC_PENKRA_AUTH_URL?.trim().replace(/\/$/, "");
+export const PENKRA_ACCOUNT_AUTH_URL =
+  configuredAccountAuthUrl ||
+  (process.env.NODE_ENV === "production"
+    ? "https://api.penkra.com/auth"
+    : "http://localhost:3012/auth");
 export const PENKRA_ACCOUNT_AUTH_SCHEMES = {
   production: "com.penkra.app",
   development: "com.penkra.app.dev",
@@ -12,9 +19,11 @@ export const PENKRA_ACCOUNT_AUTH_SCHEMES = {
 
 export type PenkraDesktopFlavor = keyof typeof PENKRA_ACCOUNT_AUTH_SCHEMES;
 
-const REDIRECT_COOKIE_NAME = `better-auth.${PENKRA_DESKTOP_AUTH_CLIENT_ID}`;
-
 export const authClient = createAuthClient({
+  baseURL: PENKRA_ACCOUNT_AUTH_URL,
+  fetchOptions: {
+    credentials: "include",
+  },
   plugins: [
     emailOTPClient(),
     electronProxyClient({
@@ -27,26 +36,24 @@ export const authClient = createAuthClient({
   ],
 });
 
-export function ensurePenkraElectronRedirect(
+export function redirectPenkraElectronAuthorizationCode(
   flavor: PenkraDesktopFlavor,
-  options: { interval?: number; timeout?: number } = {},
-): ReturnType<typeof setInterval> {
-  const timeout = options.timeout ?? 10_000;
-  const interval = options.interval ?? 100;
-  const startedAt = Date.now();
+  authorizationCode: unknown,
+): boolean {
+  const callbackUrl = penkraElectronAuthorizationCallbackUrl(
+    flavor,
+    authorizationCode,
+  );
+  if (!callbackUrl) return false;
+  window.location.replace(callbackUrl);
+  return true;
+}
 
-  const timer = setInterval(() => {
-    const authorizationCode = authClient.electron.getAuthorizationCode();
-    if (!authorizationCode && Date.now() - startedAt <= timeout) return;
-    clearInterval(timer);
-    if (!authorizationCode) return;
-
-    document.cookie = `${REDIRECT_COOKIE_NAME}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
-    const scheme = PENKRA_ACCOUNT_AUTH_SCHEMES[flavor];
-    window.location.replace(
-      `${scheme}:/${PENKRA_ACCOUNT_AUTH_CALLBACK_PATH}#token=${authorizationCode}`,
-    );
-  }, interval);
-
-  return timer;
+export function penkraElectronAuthorizationCallbackUrl(
+  flavor: PenkraDesktopFlavor,
+  authorizationCode: unknown,
+): string | undefined {
+  if (typeof authorizationCode !== "string" || !authorizationCode) return;
+  const scheme = PENKRA_ACCOUNT_AUTH_SCHEMES[flavor];
+  return `${scheme}:/${PENKRA_ACCOUNT_AUTH_CALLBACK_PATH}#token=${encodeURIComponent(authorizationCode)}`;
 }

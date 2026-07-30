@@ -3,17 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
-  async rewrites() {
-    const authBackend =
-      process.env.PENKRA_AUTH_BACKEND_URL?.replace(/\/$/, "") ??
-      "http://localhost:3012";
-    return [
-      {
-        source: "/api/auth/:path*",
-        destination: `${authBackend}/api/auth/:path*`,
-      },
-    ];
-  },
   async headers() {
     return [
       {

@@ -26,6 +26,8 @@ pnpm dev
 ```
 
 The local Next.js server runs on `http://localhost:3000` by default.
+Account requests go directly to `http://localhost:3012/auth`. Override
+`NEXT_PUBLIC_PENKRA_AUTH_URL` when the local backend uses a different origin.
 
 ## Deployment Shape
 
@@ -36,9 +38,12 @@ The production Docker Compose deployment follows the existing Hetzner proxy patt
 - Use `penkra.com` as the production host.
 - GitHub Actions deploys with the repo runner labeled `self-hosted`, `Linux`, `ARM64`, `penkra`,
   and `website`.
-- Successful `main` CI deploys production.
+- CI validates `main`; production deployment requires an explicit workflow dispatch
+  so coordinated backend and website changes cannot roll out in the wrong order.
 
 The GitHub production environment URL is `https://penkra.com`.
+The browser auth client talks directly to `https://api.penkra.com/auth`; the
+website does not proxy Better Auth routes.
 
 ## Smoke Checks
 

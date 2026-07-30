@@ -12,7 +12,7 @@ import {
 } from "../../../lib/electron-auth-query";
 import {
   authClient,
-  ensurePenkraElectronRedirect,
+  redirectPenkraElectronAuthorizationCode,
 } from "../../../lib/auth-client";
 import { AuthCard, type AuthCardMode } from "../auth-card/AuthCard";
 import { PenkraMark } from "../penkra-mark/PenkraMark";
@@ -28,15 +28,6 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
   const transferStarted = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (!electronQuery) return;
-    const interval = ensurePenkraElectronRedirect(
-      electronAuthFlavor(electronQuery),
-      { timeout: 300_000 },
-    );
-    return () => clearInterval(interval);
-  }, [electronQuery]);
 
   useEffect(() => {
     if (
@@ -56,12 +47,28 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
           query: electronTransferQuery(electronQuery),
         },
       })
-      .then(({ error: transferError }) => {
+      .then(({ data, error: transferError }) => {
         if (transferError) {
           transferStarted.current = false;
           setError(messageForError(transferError.message));
           setSubmitting(false);
+          return;
         }
+        if (
+          !redirectPenkraElectronAuthorizationCode(
+            electronAuthFlavor(electronQuery),
+            data?.electron_authorization_code,
+          )
+        ) {
+          transferStarted.current = false;
+          setError("Authentication didn’t complete. Please try again.");
+          setSubmitting(false);
+        }
+      })
+      .catch(() => {
+        transferStarted.current = false;
+        setError("Authentication didn’t complete. Please try again.");
+        setSubmitting(false);
       });
   }, [electronQuery, session.data?.user, session.isPending]);
 
