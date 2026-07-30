@@ -990,8 +990,8 @@
     {
       "type": "frame",
       "id": "om2AS",
-      "x": 0,
-      "y": 17572,
+      "x": 27200,
+      "y": 1960,
       "name": "Landing / V1 / Desktop",
       "context": "div",
       "clip": true,
@@ -4853,8 +4853,8 @@
     {
       "type": "frame",
       "id": "cklvJ",
-      "x": 1520,
-      "y": 17572,
+      "x": 28720,
+      "y": 1960,
       "name": "Landing / V1 / Mobile",
       "context": "div",
       "clip": true,
@@ -7904,8 +7904,8 @@
     {
       "type": "frame",
       "id": "H1OFE",
-      "x": 0,
-      "y": 24236,
+      "x": 27200,
+      "y": 8624,
       "name": "Landing / V2 / Desktop",
       "context": "div",
       "clip": true,
@@ -12928,8 +12928,8 @@
     {
       "type": "frame",
       "id": "g03Lh",
-      "x": 1520,
-      "y": 24236,
+      "x": 28720,
+      "y": 8624,
       "name": "Landing / V2 / Mobile",
       "context": "div",
       "clip": true,
