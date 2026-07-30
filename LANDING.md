@@ -1,7 +1,54 @@
 # Penkra Landing and Website Plan
 
 **Research date:** 2026-07-29  
-**Status:** Evidence and planning only. No landing-page design has been approved.
+**Decision date:** 2026-07-29
+
+**Status:** Approved one-shot planning brief. No landing-page design has been created or approved.
+
+## Execution contract
+
+This document is the single implementation brief for the public Penkra website. A
+designer or implementation agent should be able to execute it without inventing the
+product position, page order, copy hierarchy, responsive intent, interaction model,
+reference set, or verification criteria.
+
+The implementer must:
+
+1. Read this document, `PENKRA.md`, and the `D1` stories in `STORIES.md` before working.
+2. Treat the approved decisions and exact copy deck below as authoritative.
+3. Use `penkra/penkra.pen` only as the source for product UI and product captures.
+4. Build shared website components in `penkra-website/penkra-website.pen` before pages.
+5. Never redesign the desktop product while composing marketing visuals.
+6. Never substitute a fabricated UI, generic AI illustration, stock dashboard, or
+   competitor screenshot for Penkra product proof.
+7. Stop and record the blocker when an exact source asset is missing. Do not guess.
+8. Verify each component, section, breakpoint, route, claim, and final full-page result
+   against the acceptance matrices in this document.
+
+The one-shot scope is the complete design plan and implementation specification. It
+does not authorize silently resolving contradictions in the product design. If a
+canonical product screen is visibly broken, incomplete, or inconsistent with its
+component master, repair or approval is a separate task.
+
+## Approved launch decisions
+
+These operator decisions supersede earlier conditional language in this document:
+
+| Decision | Approved launch fact |
+|---|---|
+| Primary conversion | **Download Penkra** |
+| Platforms | **macOS, Windows, and Linux** |
+| Source | Public at [github.com/penkrahq/penkra](https://github.com/penkrahq/penkra) |
+| License | MIT, verified from `penkra/LICENSE` |
+| Price | **Free**; there is no pricing page or paid plan on the launch website |
+| Agent connection methods | All methods represented in onboarding launch: **Sign in with Claude**, **Sign in with ChatGPT**, and **Use an API key** |
+| API-key providers | Anthropic, OpenAI, Google, OpenRouter, and Custom base URL, following `STORIES.md` 1.2 |
+| Built-in harnesses | Claude Agent, Codex, and OpenCode, following `PENKRA.md` S5 |
+| Apps | Apps and Penkra's App registry are launch features |
+| Voice | Direct, product-led, and human; concrete outcomes first, technical depth second |
+
+“All platforms” means macOS, Windows, and Linux. Do not expand it to mobile, web,
+ChromeOS, or another operating system without a later explicit decision.
 
 ## Product truth to design from
 
@@ -21,15 +68,15 @@ Penkra is:
 - designed so supported native applications can be detected and used through first-party
   connectors after one explicit onboarding permission
 
-Claims that are not yet safe for public copy:
+Claims that are not safe for public copy:
 
-- that users can use every existing AI subscription
-- a free inference allowance
-- final pricing
-- a public App marketplace available on launch day
-- support for every desktop operating system on launch day
+- that every provider subscription or every model in existence is supported
+- a Penkra-funded inference allowance
 - customer counts, productivity metrics, testimonials, or enterprise logos
 - features tagged `?` or `F` in `STORIES.md`
+- security certifications, audits, or compliance claims not actually held
+- “offline AI”; installed Apps load locally, but model and network-dependent work may
+  still require a connection
 
 ## Competitive audit
 
@@ -77,7 +124,7 @@ Common weaknesses:
 - screenshots become unreadable thumbnails on mobile
 - developer jargon is used as the category explanation
 
-## Recommended positioning
+## Approved positioning and exact copy deck
 
 ### Category sentence
 
@@ -85,23 +132,82 @@ Common weaknesses:
 
 This is already settled and should appear in the first screen.
 
-### Recommended hero direction
+### Hero copy
 
 > **Your work. Moving on every front.**
 >
-> Run multiple AI agents across your files, browser, and Apps in one open-source
-> desktop workspace—while you stay in control.
+> Run multiple AI agents across your files, browser, and Apps—at the same time, in one
+> open-source desktop workspace you control.
 
-This is a direction, not approved final copy. It expresses the transformation first,
-then defines the product without making an unsettled subscription, pricing, or
-marketplace claim.
+- Eyebrow: **Open-source desktop workspace for agentic work**
+- Primary CTA: **Download Penkra**
+- Secondary CTA: **View on GitHub**
+- Availability line: **Free and open source · macOS, Windows, and Linux**
 
-### Alternate, more explicit direction
+This wording is final for the first composition. Copy may be revised only through an
+explicit content review, not ad hoc while laying out the page.
 
-> **Put AI agents to work—without losing control.**
->
-> Penkra brings concurrent agent threads, files, the web, and permissioned Apps into
-> one desktop workspace built for knowledge work.
+### Section copy
+
+Use the following as the first complete copy pass. The visual design may control line
+breaks but must not paraphrase the meaning.
+
+#### Concurrency
+
+- Eyebrow: **Parallel work**
+- Heading: **Keep every piece of work moving.**
+- Body: **Start one task, move to the next, and come back when an agent finishes or
+  needs you. Every thread keeps its own progress, context, and status.**
+
+#### Workspace
+
+- Eyebrow: **One workspace**
+- Heading: **The context stays with the work.**
+- Body: **Keep related threads in folders, work with files beside the conversation,
+  and use the browser without breaking your flow.**
+
+#### Agent choice
+
+- Eyebrow: **Your agents**
+- Heading: **Choose the agent for the job.**
+- Body: **Use Claude Agent, Codex, or OpenCode in the same workspace. Connect with
+  Claude, ChatGPT, or an API key, then choose per thread.**
+- Supporting line: **API keys support Anthropic, OpenAI, Google, OpenRouter, and custom
+  compatible endpoints.**
+
+#### Apps
+
+- Eyebrow: **Penkra Apps**
+- Heading: **Add what your work needs.**
+- Body: **Penkra starts with Files + Editor and Browser. Install more Apps from the
+  registry to add focused interfaces, agent capabilities, and reusable skills.**
+- CTA: **Explore Apps**
+
+#### Control
+
+- Eyebrow: **Permissioned by design**
+- Heading: **Capability without invisible access.**
+- Body: **Apps cannot browse your conversations, folders, threads, settings, or other
+  Apps. They receive only the arguments an agent explicitly passes and the permissions
+  you approve.**
+- CTA: **How Penkra protects your work**
+
+#### Open source
+
+- Eyebrow: **Open platform**
+- Heading: **Open source from the desktop up.**
+- Body: **Inspect Penkra, contribute to it, or build Apps with familiar web
+  technologies and the open Agent Skills format. Penkra is free under the MIT License.**
+- Primary CTA: **View on GitHub**
+- Secondary CTA: **Read developer docs**
+
+#### Final conversion
+
+- Heading: **Put your work in motion.**
+- Body: **Download Penkra and run your agents, files, browser, and Apps from one
+  workspace.**
+- CTA: **Download Penkra**
+- Availability line: **Free and open source · macOS, Windows, and Linux**
 
 ## Recommended landing-page narrative
 
@@ -113,17 +219,17 @@ marketplace claim.
 - Security
 - Developers
 - GitHub
-- one primary CTA
+- **Download Penkra** primary CTA
 
-Pricing should not appear until pricing exists. Sign in should appear only if a
-website account is useful before downloading.
+Pricing must not appear; Penkra is free. Sign in stays out of the marketing navigation
+unless a website account becomes necessary outside the desktop onboarding flow.
 
 ### 2. Hero: promise, category, action
 
 - one transformation headline
 - one category-defining paragraph
-- primary CTA based on actual launch status
-- secondary open-source/GitHub CTA if the repository is public
+- **Download Penkra** primary CTA
+- **View on GitHub** secondary CTA
 - one large, composed Penkra product view using the canonical desktop design
 
 The product view should show multiple active threads and a useful right-panel App so
@@ -153,8 +259,9 @@ Explain the user outcome rather than the three-panel geometry.
 
 Working message: **Choose the agent for the job.**
 
-Show the built-in harnesses truthfully. Do not claim that every paid subscription can
-be reused until authentication and entitlement support is settled and implemented.
+Show the three built-in harnesses and all approved onboarding connection methods. Do
+not broaden “Sign in with Claude” or “Sign in with ChatGPT” into a promise that every
+provider plan, entitlement, or model is supported.
 
 ### 6. Apps and capabilities
 
@@ -193,11 +300,17 @@ Show:
 This section is secondary on the homepage because the primary audience is a knowledge
 worker.
 
-### 9. Final action
+### 9. FAQ
+
+Resolve the practical questions most likely to block a download: price, platforms,
+agent connections, provider usage, Apps, and data access. Use the exact FAQ copy in
+the detailed specification below.
+
+### 10. Final action
 
 Repeat the exact primary CTA. Do not introduce a new conversion goal at the bottom.
 
-### 10. Footer
+### 11. Footer
 
 - Product: Overview, Apps, Security, Download
 - Developers: Docs, App authoring, GitHub
@@ -212,20 +325,41 @@ Repeat the exact primary CTA. Do not introduce a new conversion goal at the bott
 1. `/` — product landing page
 2. `/download` — platform detection, requirements, install instructions, release notes link
 3. `/security` — permissions, App isolation, local/runtime boundaries, reporting
-4. `/apps` — App model and bundled Apps; directory only when the registry is public
+4. `/apps` — App model, bundled Apps, and public launch registry
 5. `/developers` — App author overview and documentation entry point
 6. `/privacy`
 7. `/terms`
 8. authentication and account-recovery routes already represented in Pencil
 
-### Add when the underlying product is real
+### Navigation and action map
 
-1. `/pricing`
-2. `/apps/[publisher]/[app]`
-3. `/docs/...`
-4. `/changelog`
-5. `/blog` or `/updates`
-6. `/enterprise`
+| Label/action | Destination | Rule |
+|---|---|---|
+| Penkra mark/wordmark | `/` | Accessible name: “Penkra home” |
+| Product | `/#product` | Lands at the concurrency/product narrative |
+| Apps | `/apps` | Registry and App explanation |
+| Security | `/security` | Trust model and permissions |
+| Developers | `/developers` | App-author entry point |
+| GitHub | `https://github.com/penkrahq/penkra` | External; label remains “GitHub” |
+| Download Penkra | `/download` | Same destination in nav, hero, and final CTA |
+| Explore Apps | `/apps` | Apps section CTA |
+| How Penkra protects your work | `/security` | Control section CTA |
+| Read developer docs | `/developers` | Until a stable docs root exists |
+
+Do not link a CTA to `#`, an empty handler, a speculative route, or an unavailable
+artifact. A preview build may use a documented temporary destination, but the release
+gate rejects placeholders.
+
+### Post-launch, only when the underlying surface is real
+
+1. `/docs/...` beyond the launch developer entry point
+2. `/changelog`
+3. `/blog` or `/updates`
+4. `/enterprise`
+
+`/pricing` is intentionally excluded because Penkra is free. The launch App registry
+requires `/apps/[publisher]/[app]` and any directory/filter routes needed by the
+implemented registry.
 
 ### Legacy website cleanup
 
@@ -255,6 +389,61 @@ Keep only reusable technical infrastructure and verified product surfaces:
   JavaScript delayed and reduced motion enabled.
 - Build desktop and mobile together, with readable mobile product crops rather than
   shrinking a 1440-pixel screenshot.
+
+### Layout blueprint
+
+Use these as the first composition constraints, not loose suggestions:
+
+| Property | Wide desktop | Compact desktop/tablet | Mobile |
+|---|---:|---:|---:|
+| Reference viewport | 1440 | 1280 | 390 |
+| Minimum stress viewport | — | — | 320 |
+| Main content maximum | 1200 | viewport minus 64 | viewport minus 40 |
+| Page gutter | 80 minimum | 32 | 20 |
+| Text-column maximum | 640 | 600 | fill available width |
+| Hero top/bottom space | 96 / 80 | 80 / 64 | 56 / 48 |
+| Major section space | 144 | 112 | 80 |
+| Internal section gap | 48–64 | 40–56 | 28–40 |
+| Product media radius | derive from product window; 16 maximum | same | 12 maximum |
+
+The 1200-pixel content maximum applies to copy, navigation, and ordinary section
+content. A product stage may occupy up to 1320 pixels at 1440 when it remains centered,
+does not cause horizontal scrolling, and preserves at least 24 pixels from the viewport
+edge.
+
+### Type blueprint
+
+Use the approved product/brand font if one exists in the canonical foundations. If no
+approved public-site font exists, use Inter for the first composition and record that
+fallback. Do not introduce a decorative display face merely to make the marketing site
+feel different from the product.
+
+| Role | Desktop | Mobile | Guidance |
+|---|---:|---:|---|
+| Hero heading | 72–80 / 0.95–1.0 | 44–52 / 1.0 | 700–750 weight; maximum two desktop lines |
+| Section heading | 48–56 / 1.0–1.08 | 34–40 / 1.05 | maximum three mobile lines |
+| Subsection heading | 28–32 / 1.15 | 24–28 / 1.15 | sentence case |
+| Hero body | 20 / 1.5 | 18 / 1.5 | maximum 640-pixel measure |
+| Body | 17–18 / 1.55 | 16–17 / 1.55 | no body copy below 16 in primary sections |
+| Navigation/button | 14–15 / 1.2 | 15–16 / 1.2 | labels remain single line |
+| Eyebrow/metadata | 12–13 / 1.3 | 12–13 / 1.3 | high contrast; never the sole label |
+
+Exact sizes may move within the stated ranges to fit the approved font, but roles,
+hierarchy, and line-count limits are acceptance requirements.
+
+### Color and surface blueprint
+
+- Derive neutrals and accent colors from current Penkra product variables.
+- The page uses one dominant near-dark canvas and at most two subordinate surface
+  elevations.
+- The primary CTA uses the same approved accent family as the product's primary action.
+- Provider colors belong only to provider marks or small identifying details.
+- Text/surface combinations must meet WCAG AA; focus indicators must reach 3:1 against
+  adjacent colors.
+- Do not use a decorative rainbow, “AI gradient,” glowing orb, glass-card grid, or
+  purple-blue haze as the page's identity.
+- Borders, shadows, and radii must be tokenized. No section receives a bespoke shadow
+  or corner language.
 
 ## Audience and message hierarchy
 
@@ -359,7 +548,7 @@ marketing theme.
 - Security
 - Developers
 - GitHub
-- primary CTA
+- Download Penkra
 
 **Behavior:**
 
@@ -386,7 +575,7 @@ marketing theme.
 - one supporting paragraph, ideally two or three lines
 - one primary CTA
 - at most one secondary CTA
-- availability note when platform or rollout limitations matter
+- **Free and open source · macOS, Windows, and Linux**
 - one authentic product composition
 
 **Product composition:**
@@ -410,7 +599,8 @@ marketing theme.
 - a first-time visitor can answer what Penkra is, who it is for, and what to do next
   without scrolling
 - the screenshot remains legible at its rendered size
-- the hero does not claim universal provider subscription reuse unless approved
+- the hero does not broaden approved connection methods into universal provider,
+  entitlement, or model support
 
 ### Section 03 — Concurrency
 
@@ -465,17 +655,20 @@ finishes or needs input.
 - Claude Agent
 - Codex
 - OpenCode
+- Sign in with Claude
+- Sign in with ChatGPT
+- Use an API key
 - a short explanation of choosing the right agent per thread
 
-**Possible interaction:**
+**Interaction:**
 
 - selector changes the agent badge and a short example of its use
 - no fake benchmark or “best model” ranking
 - provider logos retain their approved proportions and minimum sizes
 
-**Claim boundary:** Authentication methods, subscription reuse, included inference, and
-model availability must be maintained in a separate approved claim table before copy
-is published.
+**Claim boundary:** Use the approved launch table and `STORIES.md` 1.1–1.2. Do not claim
+included inference or access to plans/models beyond what each connected account or key
+actually provides.
 
 ### Section 06 — Apps
 
@@ -484,7 +677,8 @@ is published.
 **Sequence:**
 
 1. Start useful with bundled Files + Editor and Browser Apps.
-2. Add an App when a job needs a new interface or capability.
+2. Discover and add an App from Penkra's launch registry when a job needs a new
+   interface or capability.
 3. Review required and optional permissions.
 4. Use it immediately without restarting Penkra.
 
@@ -503,7 +697,6 @@ is published.
 **Do not:**
 
 - call connectors Apps
-- show a public directory before the registry exists
 - imply an App can read the current conversation
 
 ### Section 07 — Control and privacy
@@ -555,7 +748,45 @@ Beside it, show what an App cannot enumerate:
 **Hierarchy:** This section is compact. Developer documentation carries the technical
 depth.
 
-### Section 09 — Final CTA
+### Section 09 — FAQ
+
+**Purpose:** Remove launch objections without turning the page into documentation.
+
+Use these questions and answers:
+
+1. **How much does Penkra cost?**
+
+   **Penkra is free and open source under the MIT License. Your AI provider may charge
+   for its own subscription or API usage.**
+2. **Which operating systems does Penkra support?**
+
+   **Penkra is available for macOS, Windows, and Linux.**
+3. **Which agents can I use?**
+
+   **Penkra includes Claude Agent, Codex, and OpenCode. You can sign in with Claude or
+   ChatGPT, or connect an API key.**
+4. **Which API-key providers are supported?**
+
+   **Connect Anthropic, OpenAI, Google, OpenRouter, or a compatible custom base URL.**
+5. **Can Apps read my conversations?**
+
+   **No. Apps cannot browse your conversations, folders, threads, settings, or other
+   Apps. They receive only arguments an agent explicitly passes and permissions you
+   approve.**
+6. **What comes with Penkra?**
+
+   **Files + Editor, Browser, and themes are bundled. You can install more Apps from
+   Penkra's App registry.**
+
+**Behavior:**
+
+- first item closed by default; do not force one item open
+- multiple items may remain open so answers can be compared
+- full keyboard operation with visible focus
+- question button exposes expanded state semantically
+- opening an answer does not scroll or reposition the page unexpectedly
+
+### Section 10 — Final CTA
 
 **Purpose:** Convert after the visitor has seen promise, mechanism, and control.
 
@@ -566,7 +797,7 @@ depth.
 - no email capture and download CTA competing in the same block
 - no false urgency or countdown
 
-### Section 10 — Footer
+### Section 11 — Footer
 
 **Purpose:** Hold complete navigation, legal routes, and less-frequent resources.
 
@@ -635,6 +866,89 @@ Reduced motion:
 
 ## Content and asset inventory
 
+### Source precedence
+
+When sources disagree, use this order:
+
+1. Explicit operator decisions in **Approved launch decisions**.
+2. Settled rules in `PENKRA.md`.
+3. `D1` stories in `STORIES.md`.
+4. Composed component instances in `penkra/penkra.pen`.
+5. This document's copy and presentation requirements.
+6. Competitor references for pattern quality only.
+
+A competitor reference never overrides Penkra's product truth, brand, information
+architecture, or UI.
+
+### Reference library and intended use
+
+| Reference | Use it for | Do not copy |
+|---|---|---|
+| [Raycast](https://www.raycast.com/) | Download-first hierarchy, platform clarity, ecosystem progression | Its launcher category, dense utility inventory, or exact section styling |
+| [Cursor](https://cursor.com/) | Concise hero, authentic product proof, repeat download conversion | Developer-only language or visual identity |
+| [Claude Cowork](https://claude.com/product/cowork) | Knowledge-work outcomes, delegation examples, control language | Single-provider framing |
+| [ChatGPT Work](https://openai.com/chatgpt-work/) | Short outcome-led narrative and restrained section copy | Generic “AI for everyone” positioning |
+| [Synara](https://www.trysynara.com/) | Multiple-agent orchestration and visible state | Its exact layout, wording, or upstream visual structure |
+| [OpenAI Codex](https://openai.com/codex/) | Parallel/background work narrative | Product-specific Codex interaction model |
+| [Warp](https://www.warp.dev/) | Openness, agent choice, ownership and control | Terminal-first framing |
+| [Zed](https://zed.dev/) | Category confidence, open-source proof, product media | Editor-first audience assumptions |
+
+Reference priority by section:
+
+- Hero: Raycast clarity + Cursor product proof.
+- Concurrency: Codex sequencing + Synara state visibility.
+- Knowledge-work framing: Claude Cowork + ChatGPT Work.
+- Agent choice and openness: Warp.
+- Open-source proof: Zed.
+
+“Use” means analyze hierarchy and behavior, not reproduce trade dress. Penkra must remain
+recognizable as Penkra when competitor logos and names are removed from the review.
+
+### Canonical Pencil source map
+
+These IDs were read from the live canonical `penkra/penkra.pen` on 2026-07-29. Re-read
+each node immediately before export because the shared file is live.
+
+| Marketing use | Canonical source | Required treatment |
+|---|---|---|
+| Hero workspace | `UG43r` — Main — 3 rails | Primary product composition; preserve its 1440×900 geometry |
+| Hero left navigation | `UG43r/S0ES4`, instance of `UPCCE` | Do not redraw or flatten independently |
+| Hero thread | `UG43r/bv0J6` and `UG43r/O9J2t`, using `X3cN0l` and `y0DmC` | Composer and message stream must remain visible |
+| Hero App panel | `UG43r/F9KhZF`, instance of `nT768` | Keep enough detail to prove Apps without competing with the thread |
+| Thread states and concurrency | `X3cN0l`, `y0DmC`, `RR4w3`, `aHzOp`, `kapCo` | Compose from instances; add no invented thread-row style |
+| Message/action detail | `BDWPr`, `kUqNe`, `Bx6FM`, `vI265` | Use only verified default/hover states |
+| Composer detail | `TKKOp`, `JwTiI`, `g1dQ5`, `eFqUm` | Preserve current component variants and sizing |
+| Agent choice | `HKAkV`, `k5hz3`, `TC6n2`, `mbMUu`, `BnEQu` | Use approved harness marks; do not fabricate provider icons |
+| Connection methods | `BiK9J`, `pQHTj`, `EU9Dz`, `cv14N`, `YzDKb` | Show Claude, ChatGPT, and API-key routes from onboarding truth |
+| Bundled/registry Apps | `fcm2a`, `loYIZ`, `LbQmm`, `Q0YrUi`, `fgUwH` | Show a real directory/search/detail sequence |
+| App permissions | `irJ7w`, `p3iWcp`, `r5wcGn`, `t8z9QM` | Explain required versus optional permissions |
+| Settings/control depth | `P3rhe3`, `aS32i`, `Q6Nzkr`, `pwz9i` | Supporting route imagery only, not hero content |
+| Shared Penkra mark | `XUUPq` | Use the approved shared mark; compare with website `T9Z9s` before export |
+
+Do not use nodes named `Legacy Export Snapshot` or `Unverified` in public assets.
+
+### Required output asset manifest
+
+The design handoff must produce this manifest. Filenames are stable so implementation
+does not invent asset names:
+
+| File | Source/use | Formats |
+|---|---|---|
+| `landing-hero-workspace` | `UG43r`; desktop hero | AVIF/WebP + PNG review export |
+| `landing-hero-workspace-mobile` | approved intentional crop/alternate composition | AVIF/WebP + PNG |
+| `landing-concurrency` | four thread statuses composed from shared instances | AVIF/WebP or accessible state demo poster |
+| `landing-workspace-context` | folder + thread + Files/Browser | AVIF/WebP |
+| `landing-agent-choice` | harness and connection choice | AVIF/WebP |
+| `landing-apps-registry` | registry/search/detail sequence | AVIF/WebP |
+| `landing-app-permissions` | required/optional permission review | AVIF/WebP |
+| `landing-control-model` | purpose-built explanatory diagram | SVG + PNG review export |
+| `penkra-download-mark` | verified shared Penkra mark | SVG + PNG |
+| `og-home` | homepage sharing card | PNG/JPEG at 1200×630 |
+
+Every manifest entry must record the source `.pen` file, source node ID, export date,
+pixel dimensions, and whether it is a direct export or an approved marketing
+composition.
+
 ### Required product captures
 
 1. Hero: composed three-region workspace.
@@ -687,7 +1001,7 @@ Each shared component needs named properties rather than duplicate masters.
 | App card | bundled/registry/local; default/hover/installed/update |
 | Permission row | required/optional; on/off/denied |
 | FAQ item | closed/open; default/hover/focus |
-| Download control | macOS/Windows/Linux; available/coming soon/unsupported |
+| Download control | macOS/Windows/Linux; recommended/current-platform/other-platform |
 | Footer group | desktop/mobile; expanded/collapsed only if necessary |
 
 Component acceptance:
@@ -702,6 +1016,35 @@ Component acceptance:
 ## Page-level routes
 
 ### `/download`
+
+**Hero copy:**
+
+- Eyebrow: **Penkra for desktop**
+- Heading: **Download Penkra**
+- Body: **Free and open source for macOS, Windows, and Linux.**
+
+**Primary platform controls:**
+
+- **Download for macOS**
+- **Download for Windows**
+- **Download for Linux**
+- Small secondary link: **View all releases on GitHub**
+
+Recommend the detected platform first, but keep all three available. Never replace
+explicit platform choices with a forced redirect.
+
+**Page order:**
+
+1. Hero and three platform choices.
+2. Current version, release date, and release-notes link.
+3. Platform requirements and package choices.
+4. Three-step start:
+   - Download and install Penkra.
+   - Sign in to your Penkra account.
+   - Connect Claude, ChatGPT, or an API key.
+5. Integrity/signing information.
+6. Troubleshooting and GitHub issue link.
+7. Compact final download action.
 
 Must answer:
 
@@ -718,43 +1061,174 @@ available downloads visible.
 
 ### `/security`
 
+**Hero copy:**
+
+- Eyebrow: **Security and control**
+- Heading: **Your work stays under your control.**
+- Body: **Penkra makes access visible. Apps receive only the permissions you approve
+  and the arguments an agent explicitly passes.**
+- CTA: **View the source**
+
 Recommended sections:
 
-1. plain-language trust model
-2. what Apps cannot read
-3. how permissions are requested
-4. what changes during App updates
-5. how native connectors are detected and disabled
-6. local versus network-dependent behavior
-7. vulnerability reporting
-8. enterprise controls only when implemented
+1. **The boundary is explicit.**
+
+   Show `Your conversation → relevant arguments → App`. Explain that an App cannot
+   enumerate conversations, folders, threads, other Apps, or Penkra settings.
+2. **Permissions before capability.**
+
+   Explain required and optional permissions. Required permissions block installation
+   when declined; optional permissions leave the App functional in a reduced form.
+3. **Updates cannot quietly expand access.**
+
+   Updates with the same permission set can apply normally. Added permissions pause
+   the update until the person reviews them.
+4. **Installed Apps live on your machine.**
+
+   App contents are downloaded locally. Network-dependent features may still use the
+   network only with the relevant permission.
+5. **Native connectors are first-party and permissioned.**
+
+   Detection follows the explicit onboarding permission. Connectors are not
+   marketplace content and can be disabled.
+6. **Open source is verifiable.**
+
+   Link to the MIT-licensed repository.
+7. **Report a vulnerability.**
+
+   Use the repository's verified security-reporting route. Do not publish a guessed
+   email address.
+
+**Security route acceptance:**
+
+- distinguish Penkra accounts, agent-provider credentials, Apps, and connectors
+- do not say “zero knowledge,” “sandboxed,” “encrypted,” “local-first,” or “offline”
+  unless the exact statement has implementation evidence
+- diagram and copy agree on every data boundary
+- security reporting action reaches a maintained destination
 
 ### `/apps`
 
-Before the registry is public, this route explains:
+**Hero copy:**
+
+- Eyebrow: **Penkra Apps**
+- Heading: **Add what your work needs.**
+- Body: **Install focused interfaces, agent capabilities, and reusable skills from
+  Penkra's App registry.**
+- Primary action: focus the registry search field
+- Secondary CTA: **Build an App**
+
+The launch route combines explanation and the public registry:
 
 - what an App is
 - bundled Apps
 - visible UI Apps versus tool-only Apps
 - installation and permissions
 - how developer mode differs from registry installation
+- searchable/filterable registry results
+- App detail routes with publisher, capabilities, permissions, compatibility, version,
+  and install action
 
-After launch, the directory becomes progressive enhancement of this explanation, not a
-replacement for it.
+The directory progressively enhances the explanation; it does not replace it. A visitor
+must understand Apps even when no query/filter is selected.
+
+**Page order:**
+
+1. Hero and search.
+2. Bundled Apps: Files + Editor and Browser.
+3. Featured or curated Apps sourced from real registry data.
+4. Category/filter controls.
+5. Results grid/list.
+6. Plain-language App model.
+7. Permissions explanation and Security link.
+8. Developer invitation.
+
+**Registry states:**
+
+- initial/featured
+- query with results
+- query with no results
+- category filter
+- loading
+- recoverable error
+- unavailable/offline
+
+No-results copy: **No Apps match that search. Try another term or clear your filters.**
+
+Recoverable-error copy: **Apps could not be loaded. Check your connection and try
+again.**
+
+Each App result needs:
+
+- icon
+- App name
+- verified publisher name
+- one-sentence purpose
+- category
+- compatibility
+- rating only when backed by real review data
+- installed state only when the website can truthfully know it
+
+**App detail route `/apps/[publisher]/[app]`:**
+
+1. identity: icon, name, verified publisher, purpose
+2. install/open action
+3. screenshots
+4. capabilities
+5. required and optional permissions
+6. compatibility, version, updated date, and package size
+7. privacy/support/source links supplied by the publisher
+8. version history
+9. report action
+
+Do not use fake ratings, download totals, reviews, “popular” labels, or featured status.
 
 ### `/developers`
 
+**Hero copy:**
+
+- Eyebrow: **Developers**
+- Heading: **Build an App for agentic work.**
+- Body: **Create focused interfaces, capabilities, and skills with familiar web
+  technologies—then publish them to Penkra's App registry.**
+- Primary CTA: **Build your first App**
+- Secondary CTA: **View Penkra on GitHub**
+
 Recommended sections:
 
-- five-minute first App path
-- App shapes
-- UI and SDK model
-- skills
-- settings declarations
-- permissions
-- publishing
-- compatibility and deprecation
-- examples and reference documentation
+1. **Start with the shape your App needs.**
+
+   Explain visible interface, agent capability, skill, and combinations in plain
+   language.
+2. **Use familiar tools.**
+
+   Introduce the implemented Web/Node-shaped APIs without advertising unimplemented
+   framework support.
+3. **Declare settings once.**
+
+   Settings appear inside Penkra's consistent settings experience.
+4. **Ask only for the permissions you need.**
+
+   Link to the permission reference and Security page.
+5. **Teach agents with open skills.**
+
+   Explain the Agent Skills format and progressive discovery.
+6. **Test locally.**
+
+   Explain developer mode and local-folder/URL installation.
+7. **Publish to Penkra.**
+
+   Explain account, verified publisher namespace, package validation, and registry
+   submission.
+8. **Maintain compatibility.**
+
+   Link versioning, deprecation, and changelog policies.
+9. **Examples and reference.**
+
+   Use only runnable examples from the public repository or published docs.
+
+The five-minute path must be executable, versioned, and tested in a clean environment.
+Never place illustrative pseudo-code in a copyable production code block.
 
 ### Authentication routes
 
@@ -773,16 +1247,14 @@ Every public route needs:
 - accurate structured data only where a matching schema exists
 - inclusion or exclusion in sitemap based on whether the page is public and useful
 
-Homepage title direction:
+Homepage title:
 
 > Penkra — Open-source desktop workspace for agentic work
 
-Description direction:
+Homepage description:
 
 > Run multiple AI agents across your files, browser, and Apps in one desktop workspace
 > built for knowledge work and control.
-
-These remain draft until positioning is approved.
 
 ## Analytics and privacy
 
@@ -866,16 +1338,16 @@ Do not redirect every removed route to the homepage.
 
 ### Phase 0 — Decisions and claim ledger
 
-- answer the decisions at the end of this document
-- mark every candidate claim as approved, conditional, future, or prohibited
-- confirm primary CTA and launch platforms
-- confirm source/license visibility
+- complete: primary CTA, launch platforms, source visibility, license, pricing,
+  connection methods, App-registry launch status, and voice are approved above
+- during implementation, mark any newly introduced claim as approved, conditional,
+  future, or prohibited before it enters public copy
 
 ### Phase 1 — Content architecture
 
-- approve one hero direction
-- approve section order
-- write first-pass copy for every section
+- use the approved hero and copy deck in this document
+- use the approved section order
+- extend only supporting copy that the route specifications require
 - map every copy claim to evidence
 - select the exact product states needed for visuals
 
@@ -958,14 +1430,75 @@ Before a design is considered complete:
 11. Run typecheck, tests, and production build.
 12. Commit and push only after the design or implementation checkpoint is verified.
 
-## Decisions needed before the first landing-page composition
+### Required implementation commands
 
-1. What is the primary conversion at the current stage: download, waitlist, sign up,
-   or follow the GitHub repository?
-2. Which operating systems may the public page promise at launch?
-3. Is the GitHub repository public at launch, and should “open source” link directly to it?
-4. Which agent sign-in methods are implemented strongly enough to name on the page?
-5. Is the App registry a launch feature, a preview, or a future direction?
-6. Is there any approved pricing or is pricing intentionally absent for the first release?
-7. Should the brand voice feel more direct and utilitarian, or more warm and human,
-   while remaining product-led?
+Run from `penkra-website/`:
+
+```sh
+pnpm typecheck
+pnpm test
+pnpm build-storybook
+pnpm build
+```
+
+The current repository exposes these scripts in `package.json`. If a script changes,
+update this document in the same checkpoint.
+
+Add browser-level coverage for:
+
+- homepage primary/secondary CTAs
+- desktop and mobile navigation
+- FAQ keyboard and expanded states
+- platform recommendation without hiding other downloads
+- App search results, empty, loading, and error states
+- reduced-motion behavior
+- no horizontal overflow at 320, 390, 1280, and 1440
+- authentication routes surviving the site-shell migration
+
+### Visual review matrix
+
+| Route | 1440 | 1280 | 390 | 320 stress | Reduced motion | Keyboard |
+|---|---:|---:|---:|---:|---:|---:|
+| `/` | required | required | required | required | required | required |
+| `/download` | required | required | required | required | required | required |
+| `/security` | required | required | required | required | required | required |
+| `/apps` | required | required | required | required | required | required |
+| App detail | required | required | required | required | required | required |
+| `/developers` | required | required | required | required | required | required |
+| Authentication flows | required | required | required | required | n/a | required |
+
+For every cell, capture the viewport, inspect the full page, and record pass/fail plus
+the artifact path. A successful build alone is not visual verification.
+
+## One-shot readiness gate
+
+The brief is ready for a single design-and-implementation run only when the executor
+can check every item below before touching the canvas or code:
+
+- [ ] `LANDING.md`, `PENKRA.md`, and relevant `D1` stories have been read.
+- [ ] Both canonical `.pen` files are open and confirmed by absolute path.
+- [ ] Every referenced source node still exists and has been re-read.
+- [ ] Current website and product tokens, marks, and icon assets have been inventoried.
+- [ ] The exact page order and copy deck above are loaded into the work plan.
+- [ ] The legacy-route migration inventory has been produced.
+- [ ] Missing assets or broken canonical product screens are recorded as blockers,
+      not silently recreated.
+- [ ] The executor has reserved verification passes for components, desktop, compact
+      desktop, mobile, 320-pixel stress, accessibility, reduced motion, performance,
+      claims, and final full-page comparison.
+
+No product, commercial, platform, CTA, pricing, registry, source, or voice decision
+remains open for the first composition.
+
+The following are implementation facts to verify, not creative decisions:
+
+- final downloadable artifact URLs and current version metadata
+- platform-specific minimum system requirements
+- release signing/checksum details
+- final public documentation URLs
+- App registry API/data availability
+- production analytics provider and consent behavior
+
+If one is unavailable, design the state required by this brief with clearly marked
+realistic placeholder data, record the dependency, and do not publish the affected
+claim or action until it resolves.
