@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import type { ElectronAuthQuery } from "../../../lib/electron-auth-query";
 import {
   accountAuthHref,
+  accountAuthUrl,
   electronAuthFlavor,
   electronAuthSearch,
   electronTransferQuery,
@@ -119,8 +120,22 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
   async function continueWithGoogle() {
     setError(null);
     setSubmitting(true);
+    const authPath = mode === "sign-in" ? "/sign-in" : "/sign-up";
+    const authReturnUrl = accountAuthUrl(
+      window.location.origin,
+      electronQuery ? authPath : "/",
+      electronQuery,
+    );
+    const authErrorUrl = accountAuthUrl(
+      window.location.origin,
+      authPath,
+      electronQuery,
+    );
     const { error: socialError } = await authClient.signIn.social({
+      callbackURL: authReturnUrl,
+      errorCallbackURL: authErrorUrl,
       fetchOptions: electronQuery ? { query: electronQuery } : undefined,
+      newUserCallbackURL: authReturnUrl,
       provider: "google",
     });
 

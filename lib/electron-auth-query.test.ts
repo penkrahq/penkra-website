@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  accountAuthUrl,
   electronAuthFlavor,
   electronTransferQuery,
   parseElectronAuthQuery,
@@ -41,5 +42,16 @@ describe("Electron auth query", () => {
         client_id: "another-client",
       }),
     ).toBeUndefined();
+  });
+
+  it("preserves the desktop authorization request in an absolute OAuth return URL", () => {
+    const parsed = parseElectronAuthQuery(DESKTOP_QUERY);
+    const url = new URL(
+      accountAuthUrl("https://penkra.com", "/sign-in", parsed),
+    );
+
+    expect(url.origin).toBe("https://penkra.com");
+    expect(url.pathname).toBe("/sign-in");
+    expect(Object.fromEntries(url.searchParams)).toEqual(DESKTOP_QUERY);
   });
 });

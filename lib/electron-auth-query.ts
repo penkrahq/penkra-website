@@ -68,6 +68,15 @@ export function accountAuthHref(
   return serialized ? `${path}?${serialized}` : path;
 }
 
+export function accountAuthUrl(
+  origin: string,
+  path: string,
+  query?: ElectronAuthQuery,
+  values: Record<string, string> = {},
+): string {
+  return new URL(accountAuthHref(path, query, values), origin).toString();
+}
+
 export function electronAuthFlavor(
   query: ElectronAuthQuery,
 ): PenkraDesktopFlavor {
