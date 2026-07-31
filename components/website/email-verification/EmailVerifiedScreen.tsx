@@ -46,6 +46,7 @@ export function EmailVerifiedScreen({
           redirectPenkraElectronAuthorizationCode(
             electronAuthFlavor(electronQuery),
             data?.electron_authorization_code,
+            electronQuery.state,
           )
         ) {
           return;

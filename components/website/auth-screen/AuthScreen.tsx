@@ -59,6 +59,7 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
           !redirectPenkraElectronAuthorizationCode(
             electronAuthFlavor(electronQuery),
             data?.electron_authorization_code,
+            electronQuery.state,
           )
         ) {
           transferStarted.current = false;

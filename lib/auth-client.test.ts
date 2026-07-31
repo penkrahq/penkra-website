@@ -4,18 +4,64 @@ import { penkraElectronAuthorizationCallbackUrl } from "./auth-client";
 
 describe("Penkra Electron authorization callback", () => {
   it("returns the authorization code to the requested desktop flavor", () => {
-    expect(
-      penkraElectronAuthorizationCallbackUrl("production", "code_123"),
-    ).toBe("com.penkra.app://auth/callback#token=code_123");
-    expect(
-      penkraElectronAuthorizationCallbackUrl("development", "code_123"),
-    ).toBe("com.penkra.app.dev://auth/callback#token=code_123");
+    const production = new URL(
+      penkraElectronAuthorizationCallbackUrl(
+        "production",
+        "code_123",
+        "state_123",
+      )!,
+    );
+    const development = new URL(
+      penkraElectronAuthorizationCallbackUrl(
+        "development",
+        "code_123",
+        "state_123",
+      )!,
+    );
+
+    expect(`${production.protocol}//${production.host}${production.pathname}`).toBe(
+      "com.penkra.app://auth/callback",
+    );
+    expect(`${development.protocol}//${development.host}${development.pathname}`).toBe(
+      "com.penkra.app.dev://auth/callback",
+    );
+    expect(decodeAuthorizationToken(production)).toEqual({
+      identifier: "code_123",
+      state: "state_123",
+    });
   });
 
-  it("encodes the code and rejects missing values", () => {
+  it("encodes the Better Auth token and rejects missing values", () => {
+    const callback = new URL(
+      penkraElectronAuthorizationCallbackUrl(
+        "canary",
+        "code with spaces",
+        "state_123",
+      )!,
+    );
+
+    expect(decodeAuthorizationToken(callback)).toEqual({
+      identifier: "code with spaces",
+      state: "state_123",
+    });
     expect(
-      penkraElectronAuthorizationCallbackUrl("canary", "code with spaces"),
-    ).toBe("com.penkra.app.canary://auth/callback#token=code%20with%20spaces");
-    expect(penkraElectronAuthorizationCallbackUrl("production", undefined)).toBeUndefined();
+      penkraElectronAuthorizationCallbackUrl(
+        "production",
+        undefined,
+        "state_123",
+      ),
+    ).toBeUndefined();
+    expect(
+      penkraElectronAuthorizationCallbackUrl(
+        "production",
+        "code_123",
+        undefined,
+      ),
+    ).toBeUndefined();
   });
 });
+
+function decodeAuthorizationToken(url: URL): unknown {
+  const token = url.hash.replace(/^#token=/, "");
+  return JSON.parse(Buffer.from(token, "base64url").toString("utf8"));
+}

@@ -39,10 +39,12 @@ export const authClient = createAuthClient({
 export function redirectPenkraElectronAuthorizationCode(
   flavor: PenkraDesktopFlavor,
   authorizationCode: unknown,
+  state: unknown,
 ): boolean {
   const callbackUrl = penkraElectronAuthorizationCallbackUrl(
     flavor,
     authorizationCode,
+    state,
   );
   if (!callbackUrl) return false;
   window.location.replace(callbackUrl);
@@ -52,8 +54,30 @@ export function redirectPenkraElectronAuthorizationCode(
 export function penkraElectronAuthorizationCallbackUrl(
   flavor: PenkraDesktopFlavor,
   authorizationCode: unknown,
+  state: unknown,
 ): string | undefined {
-  if (typeof authorizationCode !== "string" || !authorizationCode) return;
+  if (
+    typeof authorizationCode !== "string" ||
+    !authorizationCode ||
+    typeof state !== "string" ||
+    !state
+  ) {
+    return;
+  }
   const scheme = PENKRA_ACCOUNT_AUTH_SCHEMES[flavor];
-  return `${scheme}:/${PENKRA_ACCOUNT_AUTH_CALLBACK_PATH}#token=${encodeURIComponent(authorizationCode)}`;
+  const token = encodeBase64UrlJson({
+    identifier: authorizationCode,
+    state,
+  });
+  return `${scheme}:/${PENKRA_ACCOUNT_AUTH_CALLBACK_PATH}#token=${encodeURIComponent(token)}`;
+}
+
+function encodeBase64UrlJson(value: Record<string, string>): string {
+  const bytes = new TextEncoder().encode(JSON.stringify(value));
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
 }
