@@ -1,5 +1,5 @@
 {
-  "version": "2.14",
+  "version": "2.15",
   "children": [
     {
       "id": "z8XSBJ",
@@ -32,401 +32,8 @@
         "bottom": 1
       },
       "strokeAlignment": "inner",
-      "layout": "none",
-      "children": [
-        {
-          "type": "frame",
-          "id": "D7wKa6",
-          "x": 40,
-          "y": 72,
-          "name": "Component Group — Foundations Marker",
-          "width": 8,
-          "height": 44,
-          "fill": "#3B82F6",
-          "cornerRadius": 4
-        },
-        {
-          "type": "text",
-          "id": "BGPvX",
-          "x": 64,
-          "y": 64,
-          "name": "Component Group — Foundations Label",
-          "fill": "$text-primary",
-          "content": "Foundations",
-          "fontFamily": "$font-body",
-          "fontSize": 56,
-          "fontWeight": "600"
-        },
-        {
-          "type": "frame",
-          "id": "T9Z9s",
-          "x": 64,
-          "y": 240,
-          "name": "Penkra Mark / Shared",
-          "reusable": true,
-          "clip": true,
-          "width": 32,
-          "height": 32,
-          "fill": "#00000000",
-          "layout": "none",
-          "children": [
-            {
-              "type": "frame",
-              "id": "oCf8q",
-              "x": 0,
-              "y": 0,
-              "name": "P Glyph",
-              "width": 32,
-              "height": 32,
-              "fill": "#00000000",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "path",
-                  "id": "z03lym",
-                  "x": 0,
-                  "y": 0,
-                  "name": "path",
-                  "geometry": "M89 278v-67c0-91.7 74.3-166 166-166 92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163h-3.8v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67h-69z m0 25h69v164h-69z",
-                  "viewBox": [
-                    0,
-                    0,
-                    512,
-                    512
-                  ],
-                  "fill": "#F5F5F7",
-                  "width": 32,
-                  "height": 32
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "n3sOjI",
-              "x": 0,
-              "y": 0,
-              "name": "Bridge",
-              "width": 32,
-              "height": 32,
-              "fill": "#00000000",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "path",
-                  "id": "lqkp7",
-                  "x": 0,
-                  "y": 0,
-                  "name": "path",
-                  "geometry": "M182 303h78v71h-78z",
-                  "viewBox": [
-                    0,
-                    0,
-                    512,
-                    512
-                  ],
-                  "fill": "#8CB8E1",
-                  "width": 32,
-                  "height": 32
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "V4RaC",
-          "x": 160,
-          "y": 236,
-          "name": "Button / Primary",
-          "theme": {
-            "state": "default"
-          },
-          "reusable": true,
-          "width": 360,
-          "height": 40.5,
-          "fill": "$btn-primary-bg",
-          "cornerRadius": 10,
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "gGTRQ",
-              "name": "Label",
-              "fill": "$btn-primary-text",
-              "content": "Continue",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "600"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "D5oq8U",
-          "x": 64,
-          "y": 360,
-          "name": "Input / Shared",
-          "theme": {
-            "state": "default",
-            "input-kind": "text",
-            "password-visibility": "hidden"
-          },
-          "reusable": true,
-          "width": 360,
-          "height": 44,
-          "fill": "$input-bg",
-          "cornerRadius": 10,
-          "stroke": "$input-border",
-          "strokeWidth": 1,
-          "strokeAlignment": "inner",
-          "gap": 8,
-          "padding": [
-            0,
-            16
-          ],
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "Spn2z",
-              "name": "Icon",
-              "width": 16,
-              "height": 16,
-              "fill": "#00000000",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "iKfvk",
-                  "x": 0,
-                  "y": 0,
-                  "name": "Icon",
-                  "width": 16,
-                  "height": 16,
-                  "icon": "mail",
-                  "library": "lucide",
-                  "fill": "$input-icon"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "n8oAk",
-              "name": "Placeholder",
-              "fill": "$input-placeholder",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "you@company.com",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "xMWC2",
-              "x": 0,
-              "y": 0,
-              "name": "Password Visibility Control",
-              "enabled": "$input-trailing-visible",
-              "width": 16,
-              "height": 16,
-              "fill": "#00000000",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "esyJ7",
-                  "x": 0,
-                  "y": 0,
-                  "name": "Visibility Icon",
-                  "width": 16,
-                  "height": 16,
-                  "icon": "$input-trailing-icon",
-                  "library": "lucide",
-                  "fill": "$input-icon"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "IdovB",
-          "x": 600,
-          "y": 360,
-          "name": "Button / Continue with Google",
-          "reusable": true,
-          "width": 360,
-          "height": 42,
-          "fill": "$btn-outline-bg",
-          "cornerRadius": "$radius-md",
-          "stroke": "$card-border",
-          "strokeWidth": 1,
-          "gap": 10,
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "kjPq6",
-              "name": "Google G Mark",
-              "width": 18,
-              "height": 18,
-              "fill": "#00000000",
-              "layout": "none",
-              "children": [
-                {
-                  "type": "path",
-                  "id": "VOXfH",
-                  "x": 0,
-                  "y": 0,
-                  "name": "Google Blue",
-                  "geometry": "M17.64 9.205c0-0.638-0.057-1.252-0.164-1.841h-8.476v3.482h4.844a4.14 4.14 0 0 1-1.797 2.715v2.258h2.909c1.702-1.566 2.684-3.874 2.684-6.614z",
-                  "viewBox": [
-                    0,
-                    0,
-                    18,
-                    18
-                  ],
-                  "fill": "#4285F4",
-                  "width": 18,
-                  "height": 18
-                },
-                {
-                  "type": "path",
-                  "id": "KZPHg",
-                  "x": 0,
-                  "y": 0,
-                  "name": "Google Green",
-                  "geometry": "M9 18c2.43 0 4.468-0.806 5.956-2.18l-2.909-2.259c-0.806 0.54-1.835 0.859-3.047 0.859-2.344 0-4.328-1.585-5.037-3.714h-3.007v2.332a9 9 0 0 0 8.044 4.962z",
-                  "viewBox": [
-                    0,
-                    0,
-                    18,
-                    18
-                  ],
-                  "fill": "#34A853",
-                  "width": 18,
-                  "height": 18
-                },
-                {
-                  "type": "path",
-                  "id": "w1UWKm",
-                  "x": 0,
-                  "y": 0,
-                  "name": "Google Yellow",
-                  "geometry": "M3.963 10.706a5.41 5.41 0 0 1-0.282-1.706c0-0.592 0.102-1.168 0.282-1.706v-2.332h-3.007a9 9 0 0 0-0.956 4.038c0 1.452 0.347 2.827 0.956 4.038l3.007-2.332z",
-                  "viewBox": [
-                    0,
-                    0,
-                    18,
-                    18
-                  ],
-                  "fill": "#FBBC05",
-                  "width": 18,
-                  "height": 18
-                },
-                {
-                  "type": "path",
-                  "id": "EVNK9",
-                  "x": 0,
-                  "y": 0,
-                  "name": "Google Red",
-                  "geometry": "M9 3.58c1.321 0 2.507 0.454 3.44 1.346l2.582-2.582c-1.559-1.452-3.597-2.344-6.022-2.344a9 9 0 0 0-8.044 4.962l3.007 2.332c0.709-2.129 2.693-3.714 5.037-3.714z",
-                  "viewBox": [
-                    0,
-                    0,
-                    18,
-                    18
-                  ],
-                  "fill": "#EA4335",
-                  "width": 18,
-                  "height": 18
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "U0MxAC",
-              "name": "Label",
-              "fill": "$btn-outline-text",
-              "content": "Continue with Google",
-              "fontFamily": "$font-body",
-              "fontSize": 13,
-              "fontWeight": "500"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "Mc1YK",
-          "x": 64,
-          "y": 500,
-          "name": "Input / Verification Code Digit",
-          "theme": {
-            "state": "default"
-          },
-          "reusable": true,
-          "width": 48,
-          "height": 52,
-          "fill": "$input-bg",
-          "cornerRadius": 10,
-          "stroke": "$input-border",
-          "strokeWidth": 1,
-          "strokeAlignment": "inner",
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "be1Pd",
-              "name": "Digit",
-              "fill": "$input-text",
-              "content": "4",
-              "fontFamily": "$font-body",
-              "fontSize": 20,
-              "fontWeight": "600"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "QxdKk",
-          "x": 160,
-          "y": 500,
-          "name": "Status Message / Shared",
-          "reusable": true,
-          "width": 360,
-          "gap": 8,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "icon",
-              "id": "GXOq4",
-              "name": "Status Icon",
-              "width": 16,
-              "height": 16,
-              "icon": "circle-alert",
-              "library": "lucide",
-              "fill": "$text-error"
-            },
-            {
-              "type": "text",
-              "id": "FcGEB",
-              "name": "Status Text",
-              "fill": "$text-error",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "That code is invalid or has expired.",
-              "lineHeight": 1.35,
-              "fontFamily": "$font-body",
-              "fontSize": 13,
-              "fontWeight": "normal"
-            }
-          ]
-        }
-      ]
+      "strokeLinejoin": "round",
+      "layout": "none"
     },
     {
       "type": "frame",
@@ -442,1039 +49,8 @@
         "bottom": 1
       },
       "strokeAlignment": "inner",
-      "layout": "none",
-      "children": [
-        {
-          "type": "frame",
-          "id": "AxsD0",
-          "x": 40,
-          "y": 72,
-          "name": "Component Group — Authentication Marker",
-          "width": 8,
-          "height": 44,
-          "fill": "#3B82F6",
-          "cornerRadius": 4
-        },
-        {
-          "type": "text",
-          "id": "MiA6V",
-          "x": 64,
-          "y": 64,
-          "name": "Component Group — Authentication Label",
-          "fill": "$text-primary",
-          "content": "Authentication",
-          "fontFamily": "$font-body",
-          "fontSize": 56,
-          "fontWeight": "600"
-        },
-        {
-          "type": "frame",
-          "id": "P8VhfD",
-          "x": 64,
-          "y": 240,
-          "name": "Auth Card / Shared",
-          "reusable": true,
-          "width": 440,
-          "fill": "$card-fill",
-          "stroke": "$card-stroke",
-          "strokeWidth": 1,
-          "layout": "vertical",
-          "gap": 24,
-          "padding": 40,
-          "children": [
-            {
-              "type": "frame",
-              "id": "UO0dJ",
-              "name": "Heading Group",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "wnum2",
-                  "name": "Heading",
-                  "fill": "$text-primary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Welcome back",
-                  "fontFamily": "$font-body",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "nDw2I",
-                  "name": "Subhead",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Sign in to your Penkra account.",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "GZDhF",
-              "name": "OAuth Buttons",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 10,
-              "children": [
-                {
-                  "id": "Vj1ei",
-                  "type": "ref",
-                  "ref": "IdovB",
-                  "name": "Google OAuth Button",
-                  "width": "fill_container"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "W162Te",
-              "name": "Divider Row",
-              "width": "fill_container",
-              "gap": 12,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "o3r5d1",
-                  "name": "Line Left",
-                  "width": "fill_container",
-                  "height": 1,
-                  "fill": "$border"
-                },
-                {
-                  "type": "text",
-                  "id": "bZ5fF",
-                  "name": "Or",
-                  "fill": "$text-tertiary",
-                  "content": "or",
-                  "fontFamily": "$font-body",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "frame",
-                  "id": "mz7mW",
-                  "name": "Line Right",
-                  "width": "fill_container",
-                  "height": 1,
-                  "fill": "$border"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "G3YZ5",
-              "name": "Fields",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 10,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "Canaw",
-                  "name": "Email",
-                  "theme": {
-                    "state": "default"
-                  },
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$input-bg",
-                  "cornerRadius": 10,
-                  "stroke": "$input-border",
-                  "strokeWidth": 1,
-                  "strokeAlignment": "inner",
-                  "gap": 8,
-                  "padding": [
-                    0,
-                    16
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "ia2pb",
-                      "name": "Icon",
-                      "width": 16,
-                      "height": 16,
-                      "fill": "#00000000",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "icon",
-                          "id": "lzvZK",
-                          "x": 0,
-                          "y": 0,
-                          "name": "Icon",
-                          "width": 16,
-                          "height": 16,
-                          "icon": "mail",
-                          "library": "lucide",
-                          "fill": "$input-icon"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "TaZed",
-                      "name": "Placeholder",
-                      "fill": "$input-placeholder",
-                      "content": "you@company.com",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "BrHZI",
-                  "name": "Password",
-                  "theme": {
-                    "state": "default",
-                    "input-kind": "password",
-                    "password-visibility": "hidden"
-                  },
-                  "width": "fill_container",
-                  "height": 44,
-                  "fill": "$input-bg",
-                  "cornerRadius": 10,
-                  "stroke": "$input-border",
-                  "strokeWidth": 1,
-                  "strokeAlignment": "inner",
-                  "gap": 8,
-                  "padding": [
-                    0,
-                    16
-                  ],
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "FnYH0",
-                      "name": "Icon",
-                      "width": 16,
-                      "height": 16,
-                      "fill": "#00000000",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "icon",
-                          "id": "TtF23",
-                          "x": 0,
-                          "y": 0,
-                          "name": "Icon",
-                          "width": 16,
-                          "height": 16,
-                          "icon": "lock",
-                          "library": "lucide",
-                          "fill": "$input-icon"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "id": "nUt5c",
-                      "name": "Placeholder",
-                      "fill": "$input-placeholder",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "Password",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "SlCq8",
-                      "name": "Password Visibility Control",
-                      "width": 16,
-                      "height": 16,
-                      "fill": "#00000000",
-                      "layout": "none",
-                      "children": [
-                        {
-                          "type": "icon",
-                          "id": "v2vL1",
-                          "x": 0,
-                          "y": 0,
-                          "name": "Visibility Icon",
-                          "width": 16,
-                          "height": 16,
-                          "icon": "$input-trailing-icon",
-                          "library": "lucide",
-                          "fill": "$input-icon"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "mcDB9",
-                  "name": "Field Utility Row",
-                  "width": "fill_container",
-                  "gap": 12,
-                  "padding": [
-                    2,
-                    0,
-                    0,
-                    0
-                  ],
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "kPHK0",
-                      "type": "ref",
-                      "ref": "QxdKk",
-                      "name": "Authentication Status",
-                      "enabled": false,
-                      "opacity": 0,
-                      "width": 224,
-                      "descendants": {
-                        "FcGEB": {
-                          "content": "Email or password is incorrect."
-                        }
-                      }
-                    },
-                    {
-                      "type": "frame",
-                      "id": "r4LW4",
-                      "name": "Utility Spacer",
-                      "width": "fill_container",
-                      "height": 1,
-                      "fill": "#00000000"
-                    },
-                    {
-                      "type": "text",
-                      "id": "EM73R",
-                      "name": "Forgot Password Link",
-                      "fill": "$accent-blue",
-                      "content": "Forgot password?",
-                      "fontFamily": "$font-body",
-                      "fontSize": 13,
-                      "fontWeight": "600"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "U0J4z",
-              "name": "Submit Button",
-              "theme": {
-                "state": "default"
-              },
-              "width": "fill_container",
-              "height": 40.5,
-              "fill": "$btn-primary-bg",
-              "cornerRadius": 10,
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "LT3si",
-                  "name": "Label",
-                  "fill": "$btn-primary-text",
-                  "content": "Sign in",
-                  "fontFamily": "Inter",
-                  "fontSize": 14,
-                  "fontWeight": "600"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "kkTJL",
-              "name": "Footer Link",
-              "width": "fill_container",
-              "gap": 4,
-              "justifyContent": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "NIRYh",
-                  "name": "Prompt",
-                  "fill": "$text-secondary",
-                  "content": "Don't have an account?",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "XSHyM",
-                  "name": "Link",
-                  "fill": "$accent-blue",
-                  "content": "Create one",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "r2Du4",
-              "name": "Legal",
-              "fill": "$text-tertiary",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "By continuing, you agree to Penkra's Terms of Service and Privacy Policy.",
-              "textAlign": "center",
-              "fontFamily": "$font-body",
-              "fontSize": 12,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "OtzTd",
-          "x": 64,
-          "y": 900,
-          "name": "Auth Card / Verify Email",
-          "reusable": true,
-          "width": 440,
-          "fill": "$card-fill",
-          "stroke": "$card-stroke",
-          "strokeWidth": 1,
-          "layout": "vertical",
-          "gap": 24,
-          "padding": 40,
-          "children": [
-            {
-              "type": "frame",
-              "id": "e1lxW",
-              "name": "Heading Group",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "c7c2fH",
-                  "name": "Heading",
-                  "fill": "$text-primary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Verify your email",
-                  "fontFamily": "$font-body",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "o8m2g9",
-                  "name": "Subhead",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Enter the 6-digit code sent to you@company.com.",
-                  "lineHeight": 1.35,
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "XlmBK",
-              "name": "Verification Code",
-              "width": "fill_container",
-              "gap": 10,
-              "justifyContent": "center",
-              "children": [
-                {
-                  "id": "A5yrT",
-                  "type": "ref",
-                  "ref": "Mc1YK",
-                  "name": "Digit 1",
-                  "theme": {
-                    "state": "default"
-                  },
-                  "width": "fill_container",
-                  "descendants": {
-                    "be1Pd": {
-                      "content": "4"
-                    }
-                  }
-                },
-                {
-                  "id": "map46",
-                  "type": "ref",
-                  "ref": "Mc1YK",
-                  "name": "Digit 2",
-                  "theme": {
-                    "state": "default"
-                  },
-                  "width": "fill_container",
-                  "descendants": {
-                    "be1Pd": {
-                      "content": "8"
-                    }
-                  }
-                },
-                {
-                  "id": "FTq54",
-                  "type": "ref",
-                  "ref": "Mc1YK",
-                  "name": "Digit 3",
-                  "theme": {
-                    "state": "default"
-                  },
-                  "width": "fill_container",
-                  "descendants": {
-                    "be1Pd": {
-                      "content": "2"
-                    }
-                  }
-                },
-                {
-                  "id": "S386q",
-                  "type": "ref",
-                  "ref": "Mc1YK",
-                  "name": "Digit 4",
-                  "theme": {
-                    "state": "focus"
-                  },
-                  "width": "fill_container",
-                  "descendants": {
-                    "be1Pd": {
-                      "content": ""
-                    }
-                  }
-                },
-                {
-                  "id": "cWsFR",
-                  "type": "ref",
-                  "ref": "Mc1YK",
-                  "name": "Digit 5",
-                  "theme": {
-                    "state": "default"
-                  },
-                  "width": "fill_container",
-                  "descendants": {
-                    "be1Pd": {
-                      "content": ""
-                    }
-                  }
-                },
-                {
-                  "id": "ZZbcT",
-                  "type": "ref",
-                  "ref": "Mc1YK",
-                  "name": "Digit 6",
-                  "theme": {
-                    "state": "default"
-                  },
-                  "width": "fill_container",
-                  "descendants": {
-                    "be1Pd": {
-                      "content": ""
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "id": "d1GZk",
-              "type": "ref",
-              "ref": "QxdKk",
-              "name": "Verification Status",
-              "width": 360,
-              "enabled": true,
-              "opacity": 0
-            },
-            {
-              "id": "tP2TO",
-              "type": "ref",
-              "ref": "V4RaC",
-              "name": "Verify Button",
-              "width": "fill_container",
-              "descendants": {
-                "gGTRQ": {
-                  "content": "Verify email"
-                }
-              }
-            },
-            {
-              "type": "frame",
-              "id": "pnqUD",
-              "name": "Resend Row",
-              "width": "fill_container",
-              "gap": 4,
-              "justifyContent": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "AFHK6",
-                  "name": "Prompt",
-                  "fill": "$text-secondary",
-                  "content": "Didn't get the code?",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "P9L1f",
-                  "name": "Resend Link",
-                  "fill": "$accent-blue",
-                  "content": "Resend code",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "Wr6CA",
-              "name": "Expiry Note",
-              "fill": "$text-tertiary",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "The code expires in 10 minutes.",
-              "textAlign": "center",
-              "fontFamily": "$font-body",
-              "fontSize": 12,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "ZabHp",
-          "x": 600,
-          "y": 900,
-          "name": "Auth Card / Verification Complete",
-          "reusable": true,
-          "width": 440,
-          "fill": "$card-fill",
-          "stroke": "$card-stroke",
-          "strokeWidth": 1,
-          "layout": "vertical",
-          "gap": 24,
-          "padding": 40,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "u3PnQL",
-              "name": "Success Icon",
-              "width": 48,
-              "height": 48,
-              "fill": "#1E3A2F",
-              "cornerRadius": 24,
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "LMiZX",
-                  "name": "Check",
-                  "width": 24,
-                  "height": 24,
-                  "icon": "check",
-                  "library": "lucide",
-                  "fill": "#6EE7A8"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "AiNrk",
-              "name": "Heading Group",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "D35wCK",
-                  "name": "Heading",
-                  "fill": "$text-primary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Email verified",
-                  "textAlign": "center",
-                  "fontFamily": "$font-body",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "govUO",
-                  "name": "Subhead",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Your Penkra account is ready. We're taking you back to the app.",
-                  "lineHeight": 1.35,
-                  "textAlign": "center",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "id": "NrlsJ",
-              "type": "ref",
-              "ref": "V4RaC",
-              "name": "Open Penkra Button",
-              "width": "fill_container",
-              "descendants": {
-                "gGTRQ": {
-                  "content": "Open Penkra"
-                }
-              }
-            },
-            {
-              "type": "text",
-              "id": "vFXoi",
-              "name": "Browser Note",
-              "fill": "$text-tertiary",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "You can close this browser window after Penkra opens.",
-              "lineHeight": 1.35,
-              "textAlign": "center",
-              "fontFamily": "$font-body",
-              "fontSize": 12,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "UTH4m",
-          "x": 64,
-          "y": 1450,
-          "name": "Auth Card / Forgot Password",
-          "reusable": true,
-          "width": 440,
-          "fill": "$card-fill",
-          "stroke": "$card-stroke",
-          "strokeWidth": 1,
-          "layout": "vertical",
-          "gap": 24,
-          "padding": 40,
-          "children": [
-            {
-              "type": "frame",
-              "id": "B1Q8jl",
-              "name": "Heading Group",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "f5NMe",
-                  "name": "Heading",
-                  "fill": "$text-primary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Reset your password",
-                  "fontFamily": "$font-body",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "TMizn",
-                  "name": "Subhead",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Enter your email and we'll send you a secure reset code.",
-                  "lineHeight": 1.35,
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "id": "S4SG4R",
-              "type": "ref",
-              "ref": "D5oq8U",
-              "name": "Email Input",
-              "width": "fill_container"
-            },
-            {
-              "id": "vgQ8T",
-              "type": "ref",
-              "ref": "V4RaC",
-              "name": "Send Reset Code Button",
-              "width": "fill_container",
-              "descendants": {
-                "gGTRQ": {
-                  "content": "Send reset code"
-                }
-              }
-            },
-            {
-              "type": "frame",
-              "id": "Ze6Gx",
-              "name": "Back Row",
-              "width": "fill_container",
-              "gap": 4,
-              "justifyContent": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "R1JUU",
-                  "name": "Back Icon",
-                  "width": 14,
-                  "height": 14,
-                  "icon": "arrow-left",
-                  "library": "lucide",
-                  "fill": "$accent-blue"
-                },
-                {
-                  "type": "text",
-                  "id": "cle5S",
-                  "name": "Back Link",
-                  "fill": "$accent-blue",
-                  "content": "Back to sign in",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "Cr83x",
-          "x": 600,
-          "y": 1450,
-          "name": "Auth Card / Reset Code Sent",
-          "reusable": true,
-          "width": 440,
-          "fill": "$card-fill",
-          "stroke": "$card-stroke",
-          "strokeWidth": 1,
-          "layout": "vertical",
-          "gap": 24,
-          "padding": 40,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "l9qXq",
-              "name": "Mail Icon",
-              "width": 48,
-              "height": 48,
-              "fill": "#172A3A",
-              "cornerRadius": 24,
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "rKauQ",
-                  "name": "Mail",
-                  "width": 24,
-                  "height": 24,
-                  "icon": "mail-check",
-                  "library": "lucide",
-                  "fill": "$accent-blue"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "WBXiV",
-              "name": "Heading Group",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "f3QIxn",
-                  "name": "Heading",
-                  "fill": "$text-primary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Check your email",
-                  "textAlign": "center",
-                  "fontFamily": "$font-body",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "x5Kfw",
-                  "name": "Subhead",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "We sent a reset code to you@company.com.",
-                  "lineHeight": 1.35,
-                  "textAlign": "center",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "myAHN",
-              "name": "Resend Link",
-              "fill": "$accent-blue",
-              "content": "Resend code",
-              "fontFamily": "$font-body",
-              "fontSize": 13,
-              "fontWeight": "600"
-            },
-            {
-              "type": "text",
-              "id": "DS4Xm",
-              "name": "Expiry Note",
-              "fill": "$text-tertiary",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "The code expires in 10 minutes.",
-              "textAlign": "center",
-              "fontFamily": "$font-body",
-              "fontSize": 12,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "mg5D5",
-          "x": 64,
-          "y": 2000,
-          "name": "Auth Card / Set New Password",
-          "reusable": true,
-          "width": 440,
-          "fill": "$card-fill",
-          "stroke": "$card-stroke",
-          "strokeWidth": 1,
-          "layout": "vertical",
-          "gap": 24,
-          "padding": 40,
-          "children": [
-            {
-              "type": "frame",
-              "id": "l8QUT",
-              "name": "Heading Group",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 8,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "r8gBI0",
-                  "name": "Heading",
-                  "fill": "$text-primary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Choose a new password",
-                  "fontFamily": "$font-body",
-                  "fontSize": 26,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "HcEoN",
-                  "name": "Subhead",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "Use at least 8 characters with a mix of letters and numbers.",
-                  "lineHeight": 1.35,
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "gQWnD",
-              "name": "Password Fields",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 10,
-              "children": [
-                {
-                  "id": "A4PSjk",
-                  "type": "ref",
-                  "ref": "D5oq8U",
-                  "name": "New Password",
-                  "width": "fill_container",
-                  "theme": {
-                    "state": "default",
-                    "input-kind": "password",
-                    "password-visibility": "hidden"
-                  },
-                  "descendants": {
-                    "iKfvk": {
-                      "icon": "lock"
-                    },
-                    "n8oAk": {
-                      "content": "New password"
-                    }
-                  }
-                },
-                {
-                  "id": "xM7Dx",
-                  "type": "ref",
-                  "ref": "D5oq8U",
-                  "name": "Confirm Password",
-                  "width": "fill_container",
-                  "theme": {
-                    "state": "default",
-                    "input-kind": "password",
-                    "password-visibility": "hidden"
-                  },
-                  "descendants": {
-                    "iKfvk": {
-                      "icon": "lock"
-                    },
-                    "n8oAk": {
-                      "content": "Confirm password"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "id": "O1T7Pe",
-              "type": "ref",
-              "ref": "V4RaC",
-              "name": "Update Password Button",
-              "width": "fill_container",
-              "descendants": {
-                "gGTRQ": {
-                  "content": "Update password"
-                }
-              }
-            }
-          ]
-        }
-      ]
+      "strokeLinejoin": "round",
+      "layout": "none"
     },
     {
       "type": "frame",
@@ -1490,114 +66,8 @@
         "bottom": 1
       },
       "strokeAlignment": "inner",
-      "layout": "none",
-      "children": [
-        {
-          "type": "frame",
-          "id": "yjxsg",
-          "x": 40,
-          "y": 72,
-          "name": "Component Group — Canvas Organization Marker",
-          "width": 8,
-          "height": 44,
-          "fill": "#3B82F6",
-          "cornerRadius": 4
-        },
-        {
-          "type": "text",
-          "id": "T8qAU",
-          "x": 64,
-          "y": 64,
-          "name": "Component Group — Canvas Organization Label",
-          "fill": "$text-primary",
-          "content": "Canvas Organization",
-          "fontFamily": "$font-body",
-          "fontSize": 56,
-          "fontWeight": "600"
-        },
-        {
-          "type": "frame",
-          "id": "mALV6",
-          "x": 64,
-          "y": 180,
-          "name": "Canvas Section Banner",
-          "reusable": true,
-          "metadata": {
-            "type": "recovered-evidence",
-            "source": "bf5058:241016",
-            "confidence": "exact"
-          },
-          "width": 2000,
-          "fill": "$card-fill",
-          "stroke": "$accent-blue",
-          "strokeWidth": 8,
-          "layout": "vertical",
-          "gap": 12,
-          "padding": [
-            48,
-            64
-          ],
-          "children": [
-            {
-              "type": "text",
-              "id": "V6ETK",
-              "name": "Title",
-              "fill": "$text-primary",
-              "content": "Section Title",
-              "fontFamily": "Inter",
-              "fontSize": 96,
-              "fontWeight": "700"
-            },
-            {
-              "type": "text",
-              "id": "dieUy",
-              "name": "Subtitle",
-              "fill": "$text-secondary",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "Section description",
-              "fontFamily": "Inter",
-              "fontSize": 18,
-              "fontWeight": "normal"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "jBenk",
-          "x": 64,
-          "y": 500,
-          "name": "Feature Row Header",
-          "reusable": true,
-          "metadata": {
-            "type": "recovered-evidence",
-            "source": "bf5058:241016",
-            "confidence": "exact"
-          },
-          "width": 2000,
-          "fill": "$card-fill",
-          "cornerRadius": 6,
-          "stroke": "$card-stroke",
-          "strokeWidth": 2,
-          "layout": "vertical",
-          "padding": [
-            20,
-            28
-          ],
-          "children": [
-            {
-              "type": "text",
-              "id": "O2Mve",
-              "name": "Title",
-              "fill": "$text-primary",
-              "content": "Feature Row Title",
-              "fontFamily": "Inter",
-              "fontSize": 32,
-              "fontWeight": "700"
-            }
-          ]
-        }
-      ]
+      "strokeLinejoin": "round",
+      "layout": "none"
     },
     {
       "id": "Q89PF",
@@ -4954,6 +3424,7 @@
               "strokeWidth": {
                 "top": 1
               },
+              "strokeLinejoin": "round",
               "layout": "vertical",
               "gap": 32,
               "padding": [
@@ -5193,7 +3664,8 @@
                   "lineHeight": 1.55,
                   "textAlign": "center",
                   "fontFamily": "$font-body",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -5202,7 +3674,8 @@
                   "fill": "$website-text-tertiary",
                   "content": "Effective July 29, 2026",
                   "fontFamily": "$font-body",
-                  "fontSize": 14
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -5229,6 +3702,7 @@
                   "strokeWidth": {
                     "top": 1
                   },
+                  "strokeLinejoin": "round",
                   "layout": "vertical",
                   "gap": 18,
                   "padding": [
@@ -5616,7 +4090,8 @@
                   "lineHeight": 1.55,
                   "textAlign": "center",
                   "fontFamily": "$font-body",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -5625,7 +4100,8 @@
                   "fill": "$website-text-tertiary",
                   "content": "Effective July 29, 2026",
                   "fontFamily": "$font-body",
-                  "fontSize": 14
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -5652,6 +4128,7 @@
                   "strokeWidth": {
                     "top": 1
                   },
+                  "strokeLinejoin": "round",
                   "layout": "vertical",
                   "gap": 18,
                   "padding": [
@@ -6066,7 +4543,8 @@
                   "lineHeight": 1.55,
                   "textAlign": "center",
                   "fontFamily": "$font-body",
-                  "fontSize": 17
+                  "fontSize": 17,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -6075,7 +4553,8 @@
                   "fill": "$website-text-tertiary",
                   "content": "Effective July 29, 2026",
                   "fontFamily": "$font-body",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -6105,6 +4584,7 @@
                   "strokeWidth": {
                     "top": 1
                   },
+                  "strokeLinejoin": "round",
                   "layout": "vertical",
                   "gap": 18,
                   "padding": [
@@ -6427,6 +4907,7 @@
               "strokeWidth": {
                 "top": 1
               },
+              "strokeLinejoin": "round",
               "layout": "vertical",
               "gap": 32,
               "padding": [
@@ -6666,7 +5147,8 @@
                   "lineHeight": 1.55,
                   "textAlign": "center",
                   "fontFamily": "$font-body",
-                  "fontSize": 17
+                  "fontSize": 17,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -6675,7 +5157,8 @@
                   "fill": "$website-text-tertiary",
                   "content": "Effective July 29, 2026",
                   "fontFamily": "$font-body",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -6705,6 +5188,7 @@
                   "strokeWidth": {
                     "top": 1
                   },
+                  "strokeLinejoin": "round",
                   "layout": "vertical",
                   "gap": 18,
                   "padding": [
@@ -7054,6 +5538,7 @@
               "strokeWidth": {
                 "top": 1
               },
+              "strokeLinejoin": "round",
               "layout": "vertical",
               "gap": 32,
               "padding": [
@@ -7231,119 +5716,746 @@
     },
     {
       "type": "frame",
-      "id": "kg6eL",
-      "x": 0,
+      "id": "z5hzyZ",
+      "x": 8240,
       "y": 0,
-      "name": "Website Navigation",
-      "reusable": true,
-      "width": 1440,
-      "height": 72,
+      "name": "Components — Foundations",
+      "width": 1100,
+      "height": 700,
       "fill": "$website-bg",
+      "stroke": "$website-border-subtle",
+      "strokeWidth": 1,
       "layout": "none",
       "children": [
         {
           "type": "frame",
-          "id": "jqYjj",
-          "x": 80,
-          "y": 0,
-          "name": "Inner",
-          "width": 1280,
-          "height": 72,
+          "id": "D7wKa6",
+          "x": 40,
+          "y": 72,
+          "name": "Component Group — Foundations Marker",
+          "width": 8,
+          "height": 44,
+          "fill": "#3B82F6",
+          "cornerRadius": 4
+        },
+        {
+          "type": "text",
+          "id": "BGPvX",
+          "x": 64,
+          "y": 64,
+          "name": "Component Group — Foundations Label",
+          "fill": "$text-primary",
+          "content": "Foundations",
+          "fontFamily": "$font-body",
+          "fontSize": 56,
+          "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "T9Z9s",
+          "x": 64,
+          "y": 240,
+          "name": "Penkra Mark / Shared",
+          "reusable": true,
+          "clip": true,
+          "width": 32,
+          "height": 32,
           "fill": "#00000000",
-          "gap": 40,
-          "alignItems": "center",
+          "layout": "none",
           "children": [
             {
-              "id": "T3D8I",
-              "type": "ref",
-              "ref": "T9Z9s",
-              "name": "Penkra Mark",
-              "width": 28,
-              "height": 28
-            },
-            {
-              "type": "text",
-              "id": "F1Z0TX",
-              "name": "Wordmark",
-              "fill": "$website-text-hero",
-              "content": "Penkra",
-              "fontFamily": "$font-body",
-              "fontSize": 18,
-              "fontWeight": "700"
+              "type": "frame",
+              "id": "oCf8q",
+              "x": 0,
+              "y": 0,
+              "name": "P Glyph",
+              "width": 32,
+              "height": 32,
+              "fill": "#00000000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "z03lym",
+                  "x": 0,
+                  "y": 0,
+                  "name": "path",
+                  "geometry": "M89 278v-67c0-91.7 74.3-166 166-166 92.2 0 167 74.3 167 166 0 88.5-70.3 160.8-158.2 163h-3.8v-71c50.8 0 92-41.2 92-92 0-52.5-42.5-95-95-95-54.7 0-99 43.1-99 95v67h-69z m0 25h69v164h-69z",
+                  "viewBox": [
+                    0,
+                    0,
+                    512,
+                    512
+                  ],
+                  "fill": "#F5F5F7",
+                  "width": 32,
+                  "height": 32
+                }
+              ]
             },
             {
               "type": "frame",
-              "id": "PaDUO",
-              "name": "Nav Links",
-              "gap": 32,
-              "alignItems": "center",
+              "id": "n3sOjI",
+              "x": 0,
+              "y": 0,
+              "name": "Bridge",
+              "width": 32,
+              "height": 32,
+              "fill": "#00000000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "lqkp7",
+                  "x": 0,
+                  "y": 0,
+                  "name": "path",
+                  "geometry": "M182 303h78v71h-78z",
+                  "viewBox": [
+                    0,
+                    0,
+                    512,
+                    512
+                  ],
+                  "fill": "#8CB8E1",
+                  "width": 32,
+                  "height": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "V4RaC",
+          "x": 160,
+          "y": 236,
+          "name": "Button / Primary",
+          "theme": {
+            "state": "default"
+          },
+          "reusable": true,
+          "width": 360,
+          "height": 40.5,
+          "fill": "$btn-primary-bg",
+          "cornerRadius": 10,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "gGTRQ",
+              "name": "Label",
+              "fill": "$btn-primary-text",
+              "content": "Continue",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "D5oq8U",
+          "x": 64,
+          "y": 360,
+          "name": "Input / Shared",
+          "theme": {
+            "state": "default",
+            "input-kind": "text",
+            "password-visibility": "hidden"
+          },
+          "reusable": true,
+          "width": 360,
+          "height": 44,
+          "fill": "$input-bg",
+          "cornerRadius": 10,
+          "stroke": "$input-border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "gap": 8,
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Spn2z",
+              "name": "Icon",
+              "width": 16,
+              "height": 16,
+              "fill": "#00000000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "iKfvk",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Icon",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "mail",
+                  "library": "lucide",
+                  "fill": "$input-icon"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "n8oAk",
+              "name": "Placeholder",
+              "fill": "$input-placeholder",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "you@company.com",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "xMWC2",
+              "x": 0,
+              "y": 0,
+              "name": "Password Visibility Control",
+              "enabled": "$input-trailing-visible",
+              "width": 16,
+              "height": 16,
+              "fill": "#00000000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "esyJ7",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Visibility Icon",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "$input-trailing-icon",
+                  "library": "lucide",
+                  "fill": "$input-icon"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IdovB",
+          "x": 600,
+          "y": 360,
+          "name": "Button / Continue with Google",
+          "theme": {
+            "state": "default"
+          },
+          "reusable": true,
+          "width": 360,
+          "height": 42,
+          "fill": "$btn-outline-bg",
+          "cornerRadius": "$radius-md",
+          "stroke": "$card-border",
+          "strokeWidth": 1,
+          "gap": 10,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kjPq6",
+              "name": "Google G Mark",
+              "opacity": "$provider-icon-opacity",
+              "width": 18,
+              "height": 18,
+              "fill": "#00000000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "VOXfH",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Google Blue",
+                  "geometry": "M17.64 9.205c0-0.638-0.057-1.252-0.164-1.841h-8.476v3.482h4.844a4.14 4.14 0 0 1-1.797 2.715v2.258h2.909c1.702-1.566 2.684-3.874 2.684-6.614z",
+                  "viewBox": [
+                    0,
+                    0,
+                    18,
+                    18
+                  ],
+                  "fill": "#4285F4",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "path",
+                  "id": "KZPHg",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Google Green",
+                  "geometry": "M9 18c2.43 0 4.468-0.806 5.956-2.18l-2.909-2.259c-0.806 0.54-1.835 0.859-3.047 0.859-2.344 0-4.328-1.585-5.037-3.714h-3.007v2.332a9 9 0 0 0 8.044 4.962z",
+                  "viewBox": [
+                    0,
+                    0,
+                    18,
+                    18
+                  ],
+                  "fill": "#34A853",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "path",
+                  "id": "w1UWKm",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Google Yellow",
+                  "geometry": "M3.963 10.706a5.41 5.41 0 0 1-0.282-1.706c0-0.592 0.102-1.168 0.282-1.706v-2.332h-3.007a9 9 0 0 0-0.956 4.038c0 1.452 0.347 2.827 0.956 4.038l3.007-2.332z",
+                  "viewBox": [
+                    0,
+                    0,
+                    18,
+                    18
+                  ],
+                  "fill": "#FBBC05",
+                  "width": 18,
+                  "height": 18
+                },
+                {
+                  "type": "path",
+                  "id": "EVNK9",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Google Red",
+                  "geometry": "M9 3.58c1.321 0 2.507 0.454 3.44 1.346l2.582-2.582c-1.559-1.452-3.597-2.344-6.022-2.344a9 9 0 0 0-8.044 4.962l3.007 2.332c0.709-2.129 2.693-3.714 5.037-3.714z",
+                  "viewBox": [
+                    0,
+                    0,
+                    18,
+                    18
+                  ],
+                  "fill": "#EA4335",
+                  "width": 18,
+                  "height": 18
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "U0MxAC",
+              "name": "Label",
+              "fill": "$btn-outline-text",
+              "content": "Continue with Google",
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Mc1YK",
+          "x": 64,
+          "y": 500,
+          "name": "Input / Verification Code Digit",
+          "theme": {
+            "state": "default"
+          },
+          "reusable": true,
+          "width": 48,
+          "height": 52,
+          "fill": "$input-bg",
+          "cornerRadius": 10,
+          "stroke": "$input-border",
+          "strokeWidth": 1,
+          "strokeAlignment": "inner",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "be1Pd",
+              "name": "Digit",
+              "fill": "$input-text",
+              "content": "4",
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "QxdKk",
+          "x": 160,
+          "y": 500,
+          "name": "Status Message / Shared",
+          "reusable": true,
+          "width": 360,
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "GXOq4",
+              "name": "Status Icon",
+              "width": 16,
+              "height": 16,
+              "icon": "circle-alert",
+              "library": "lucide",
+              "fill": "$text-error"
+            },
+            {
+              "type": "text",
+              "id": "FcGEB",
+              "name": "Status Text",
+              "fill": "$text-error",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "That code is invalid or has expired.",
+              "lineHeight": 1.35,
+              "fontFamily": "$font-body",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "q7fUj7",
+      "x": 8240,
+      "y": 860,
+      "name": "Components — Authentication",
+      "width": 1100,
+      "height": 2500,
+      "fill": "$website-bg",
+      "stroke": "$website-border-subtle",
+      "strokeWidth": 1,
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "AxsD0",
+          "x": 40,
+          "y": 72,
+          "name": "Component Group — Authentication Marker",
+          "width": 8,
+          "height": 44,
+          "fill": "#3B82F6",
+          "cornerRadius": 4
+        },
+        {
+          "type": "text",
+          "id": "MiA6V",
+          "x": 64,
+          "y": 64,
+          "name": "Component Group — Authentication Label",
+          "fill": "$text-primary",
+          "content": "Authentication",
+          "fontFamily": "$font-body",
+          "fontSize": 56,
+          "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "P8VhfD",
+          "x": 64,
+          "y": 240,
+          "name": "Auth Card / Shared",
+          "reusable": true,
+          "width": 440,
+          "fill": "$card-fill",
+          "stroke": "$card-stroke",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "UO0dJ",
+              "name": "Heading Group",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
               "children": [
                 {
                   "type": "text",
-                  "id": "ypXM8",
-                  "name": "Product",
-                  "fill": "$website-text-secondary",
-                  "content": "Product",
+                  "id": "wnum2",
+                  "name": "Heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Welcome back",
                   "fontFamily": "$font-body",
-                  "fontSize": "$website-nav-size",
-                  "fontWeight": "500"
+                  "fontSize": 26,
+                  "fontWeight": "600"
                 },
                 {
                   "type": "text",
-                  "id": "KR8wf",
-                  "name": "Apps",
-                  "fill": "$website-text-secondary",
-                  "content": "Apps",
+                  "id": "nDw2I",
+                  "name": "Subhead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Sign in to your Penkra account.",
                   "fontFamily": "$font-body",
-                  "fontSize": "$website-nav-size",
-                  "fontWeight": "500"
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GZDhF",
+              "name": "OAuth Buttons",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "id": "Vj1ei",
+                  "type": "ref",
+                  "ref": "IdovB",
+                  "name": "Google OAuth Button",
+                  "width": "fill_container"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "W162Te",
+              "name": "Divider Row",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "o3r5d1",
+                  "name": "Line Left",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "$border"
                 },
                 {
                   "type": "text",
-                  "id": "FkgfA",
-                  "name": "Security",
-                  "fill": "$website-text-secondary",
-                  "content": "Security",
+                  "id": "bZ5fF",
+                  "name": "Or",
+                  "fill": "$text-tertiary",
+                  "content": "or",
                   "fontFamily": "$font-body",
-                  "fontSize": "$website-nav-size",
-                  "fontWeight": "500"
-                },
-                {
-                  "type": "text",
-                  "id": "a52jCQ",
-                  "name": "Developers",
-                  "fill": "$website-text-secondary",
-                  "content": "Developers",
-                  "fontFamily": "$font-body",
-                  "fontSize": "$website-nav-size",
-                  "fontWeight": "500"
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
-                  "id": "rwMzz",
-                  "name": "GitHub Link",
-                  "gap": 6,
+                  "id": "mz7mW",
+                  "name": "Line Right",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "$border"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "G3YZ5",
+              "name": "Fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Canaw",
+                  "name": "Email",
+                  "theme": {
+                    "state": "default"
+                  },
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$input-bg",
+                  "cornerRadius": 10,
+                  "stroke": "$input-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    16
+                  ],
                   "alignItems": "center",
                   "children": [
                     {
-                      "type": "icon",
-                      "id": "tH8xZ",
-                      "name": "GitHub Icon",
+                      "type": "frame",
+                      "id": "ia2pb",
+                      "name": "Icon",
                       "width": 16,
                       "height": 16,
-                      "icon": "github",
-                      "library": "lucide",
-                      "fill": "$website-text-secondary"
+                      "fill": "#00000000",
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "lzvZK",
+                          "x": 0,
+                          "y": 0,
+                          "name": "Icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "mail",
+                          "library": "lucide",
+                          "fill": "$input-icon"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
-                      "id": "Qx6Ny",
-                      "name": "GitHub",
-                      "fill": "$website-text-secondary",
-                      "content": "GitHub",
+                      "id": "TaZed",
+                      "name": "Placeholder",
+                      "fill": "$input-placeholder",
+                      "content": "you@company.com",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BrHZI",
+                  "name": "Password",
+                  "theme": {
+                    "state": "default",
+                    "input-kind": "password",
+                    "password-visibility": "hidden"
+                  },
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$input-bg",
+                  "cornerRadius": 10,
+                  "stroke": "$input-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FnYH0",
+                      "name": "Icon",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "#00000000",
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "TtF23",
+                          "x": 0,
+                          "y": 0,
+                          "name": "Icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "lock",
+                          "library": "lucide",
+                          "fill": "$input-icon"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "nUt5c",
+                      "name": "Placeholder",
+                      "fill": "$input-placeholder",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Password",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SlCq8",
+                      "name": "Password Visibility Control",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "#00000000",
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "v2vL1",
+                          "x": 0,
+                          "y": 0,
+                          "name": "Visibility Icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "$input-trailing-icon",
+                          "library": "lucide",
+                          "fill": "$input-icon"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mcDB9",
+                  "name": "Field Utility Row",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "padding": [
+                    2,
+                    0,
+                    0,
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "kPHK0",
+                      "type": "ref",
+                      "ref": "QxdKk",
+                      "name": "Authentication Status",
+                      "enabled": false,
+                      "opacity": 0,
+                      "width": 224,
+                      "descendants": {
+                        "FcGEB": {
+                          "content": "Email or password is incorrect."
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "r4LW4",
+                      "name": "Utility Spacer",
+                      "width": "fill_container",
+                      "height": 1,
+                      "fill": "#00000000"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EM73R",
+                      "name": "Forgot Password Link",
+                      "fill": "$accent-blue",
+                      "content": "Forgot password?",
                       "fontFamily": "$font-body",
-                      "fontSize": "$website-nav-size",
-                      "fontWeight": "500"
+                      "fontSize": 13,
+                      "fontWeight": "600"
                     }
                   ]
                 }
@@ -7351,258 +6463,708 @@
             },
             {
               "type": "frame",
-              "id": "lnzKR",
-              "name": "Spacer",
+              "id": "U0J4z",
+              "name": "Submit Button",
+              "theme": {
+                "state": "default"
+              },
               "width": "fill_container",
-              "height": 1
-            },
-            {
-              "type": "frame",
-              "id": "eSDN1",
-              "name": "Download CTA",
-              "fill": "$website-accent",
-              "cornerRadius": "$website-radius-sm",
-              "padding": [
-                10,
-                20
-              ],
+              "height": 40.5,
+              "fill": "$btn-primary-bg",
+              "cornerRadius": 10,
               "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
-                  "id": "mDjhP",
+                  "id": "LT3si",
                   "name": "Label",
-                  "fill": "#FFFFFF",
-                  "content": "Download Penkra",
+                  "fill": "$btn-primary-text",
+                  "content": "Sign in",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kkTJL",
+              "name": "Footer Link",
+              "width": "fill_container",
+              "gap": 4,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NIRYh",
+                  "name": "Prompt",
+                  "fill": "$text-secondary",
+                  "content": "Don't have an account?",
                   "fontFamily": "$font-body",
-                  "fontSize": "$website-btn-size",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "XSHyM",
+                  "name": "Link",
+                  "fill": "$accent-blue",
+                  "content": "Create one",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "r2Du4",
+              "name": "Legal",
+              "fill": "$text-tertiary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "By continuing, you agree to Penkra's Terms of Service and Privacy Policy.",
+              "textAlign": "center",
+              "fontFamily": "$font-body",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OtzTd",
+          "x": 64,
+          "y": 900,
+          "name": "Auth Card / Verify Email",
+          "reusable": true,
+          "width": 440,
+          "fill": "$card-fill",
+          "stroke": "$card-stroke",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "e1lxW",
+              "name": "Heading Group",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "c7c2fH",
+                  "name": "Heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Verify your email",
+                  "fontFamily": "$font-body",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "o8m2g9",
+                  "name": "Subhead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Enter the 6-digit code sent to you@company.com.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XlmBK",
+              "name": "Verification Code",
+              "width": "fill_container",
+              "gap": 10,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "id": "A5yrT",
+                  "type": "ref",
+                  "ref": "Mc1YK",
+                  "name": "Digit 1",
+                  "theme": {
+                    "state": "default"
+                  },
+                  "width": "fill_container",
+                  "descendants": {
+                    "be1Pd": {
+                      "content": "4"
+                    }
+                  }
+                },
+                {
+                  "id": "map46",
+                  "type": "ref",
+                  "ref": "Mc1YK",
+                  "name": "Digit 2",
+                  "theme": {
+                    "state": "default"
+                  },
+                  "width": "fill_container",
+                  "descendants": {
+                    "be1Pd": {
+                      "content": "8"
+                    }
+                  }
+                },
+                {
+                  "id": "FTq54",
+                  "type": "ref",
+                  "ref": "Mc1YK",
+                  "name": "Digit 3",
+                  "theme": {
+                    "state": "default"
+                  },
+                  "width": "fill_container",
+                  "descendants": {
+                    "be1Pd": {
+                      "content": "2"
+                    }
+                  }
+                },
+                {
+                  "id": "S386q",
+                  "type": "ref",
+                  "ref": "Mc1YK",
+                  "name": "Digit 4",
+                  "theme": {
+                    "state": "focus"
+                  },
+                  "width": "fill_container",
+                  "descendants": {
+                    "be1Pd": {
+                      "content": ""
+                    }
+                  }
+                },
+                {
+                  "id": "cWsFR",
+                  "type": "ref",
+                  "ref": "Mc1YK",
+                  "name": "Digit 5",
+                  "theme": {
+                    "state": "default"
+                  },
+                  "width": "fill_container",
+                  "descendants": {
+                    "be1Pd": {
+                      "content": ""
+                    }
+                  }
+                },
+                {
+                  "id": "ZZbcT",
+                  "type": "ref",
+                  "ref": "Mc1YK",
+                  "name": "Digit 6",
+                  "theme": {
+                    "state": "default"
+                  },
+                  "width": "fill_container",
+                  "descendants": {
+                    "be1Pd": {
+                      "content": ""
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "d1GZk",
+              "type": "ref",
+              "ref": "QxdKk",
+              "name": "Verification Status",
+              "width": 360,
+              "enabled": true,
+              "opacity": 0
+            },
+            {
+              "id": "tP2TO",
+              "type": "ref",
+              "ref": "V4RaC",
+              "name": "Verify Button",
+              "width": "fill_container",
+              "descendants": {
+                "gGTRQ": {
+                  "content": "Verify email"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "pnqUD",
+              "name": "Resend Row",
+              "width": "fill_container",
+              "gap": 4,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AFHK6",
+                  "name": "Prompt",
+                  "fill": "$text-secondary",
+                  "content": "Didn't get the code?",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "P9L1f",
+                  "name": "Resend Link",
+                  "fill": "$accent-blue",
+                  "content": "Resend code",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Wr6CA",
+              "name": "Expiry Note",
+              "fill": "$text-tertiary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The code expires in 10 minutes.",
+              "textAlign": "center",
+              "fontFamily": "$font-body",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZabHp",
+          "x": 600,
+          "y": 900,
+          "name": "Auth Card / Verification Complete",
+          "reusable": true,
+          "width": 440,
+          "fill": "$card-fill",
+          "stroke": "$card-stroke",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "u3PnQL",
+              "name": "Success Icon",
+              "width": 52,
+              "height": 52,
+              "fill": "#22C55E1F",
+              "cornerRadius": 999,
+              "stroke": "#22C55E59",
+              "strokeWidth": 1,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "LMiZX",
+                  "name": "Check",
+                  "width": 28,
+                  "height": 28,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "#22C55E"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AiNrk",
+              "name": "Heading Group",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "D35wCK",
+                  "name": "Heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Email verified",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-body",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "govUO",
+                  "name": "Subhead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Your account is ready. We’re returning you to the Penkra app.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "id": "NrlsJ",
+              "type": "ref",
+              "ref": "V4RaC",
+              "name": "Open Penkra Button",
+              "width": "fill_container",
+              "descendants": {
+                "gGTRQ": {
+                  "content": "Open Penkra"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "id": "vFXoi",
+              "name": "Browser Note",
+              "fill": "$text-tertiary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Keep this page open until Penkra finishes signing you in.",
+              "lineHeight": 1.4,
+              "textAlign": "center",
+              "fontFamily": "$font-body",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UTH4m",
+          "x": 64,
+          "y": 1450,
+          "name": "Auth Card / Forgot Password",
+          "reusable": true,
+          "width": 440,
+          "fill": "$card-fill",
+          "stroke": "$card-stroke",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "B1Q8jl",
+              "name": "Heading Group",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "f5NMe",
+                  "name": "Heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Reset your password",
+                  "fontFamily": "$font-body",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "TMizn",
+                  "name": "Subhead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Enter your email and we'll send you a secure reset code.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "id": "S4SG4R",
+              "type": "ref",
+              "ref": "D5oq8U",
+              "name": "Email Input",
+              "width": "fill_container"
+            },
+            {
+              "id": "vgQ8T",
+              "type": "ref",
+              "ref": "V4RaC",
+              "name": "Send Reset Code Button",
+              "width": "fill_container",
+              "descendants": {
+                "gGTRQ": {
+                  "content": "Send reset code"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Ze6Gx",
+              "name": "Back Row",
+              "width": "fill_container",
+              "gap": 4,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "R1JUU",
+                  "name": "Back Icon",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "$accent-blue"
+                },
+                {
+                  "type": "text",
+                  "id": "cle5S",
+                  "name": "Back Link",
+                  "fill": "$accent-blue",
+                  "content": "Back to sign in",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
                   "fontWeight": "600"
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "Ghddu",
-      "x": 0,
-      "y": 0,
-      "name": "Website Button / Primary",
-      "reusable": true,
-      "fill": "$website-accent",
-      "cornerRadius": "$website-radius-sm",
-      "gap": 8,
-      "padding": [
-        14,
-        28
-      ],
-      "justifyContent": "center",
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "text",
-          "id": "h4Pdsb",
-          "name": "Label",
-          "fill": "#FFFFFF",
-          "content": "Button",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-btn-size",
-          "fontWeight": "600"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "EMEOf",
-      "x": 0,
-      "y": 0,
-      "name": "Website Button / Secondary",
-      "reusable": true,
-      "fill": "#00000000",
-      "cornerRadius": "$website-radius-sm",
-      "stroke": "$website-border",
-      "strokeWidth": 1,
-      "gap": 8,
-      "padding": [
-        14,
-        28
-      ],
-      "justifyContent": "center",
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "text",
-          "id": "ghgbT",
-          "name": "Label",
-          "fill": "$website-text-primary",
-          "content": "Button",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-btn-size",
-          "fontWeight": "600"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "k84mKK",
-      "x": 0,
-      "y": 0,
-      "name": "Website Button / Ghost",
-      "reusable": true,
-      "fill": "#00000000",
-      "cornerRadius": "$website-radius-sm",
-      "gap": 8,
-      "padding": [
-        14,
-        28
-      ],
-      "justifyContent": "center",
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "text",
-          "id": "WVP8F",
-          "name": "Label",
-          "fill": "$website-text-secondary",
-          "content": "Button",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-btn-size",
-          "fontWeight": "600"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "Bl9MK",
-      "x": 0,
-      "y": 0,
-      "name": "Website Section Header",
-      "reusable": true,
-      "width": 720,
-      "layout": "vertical",
-      "gap": 16,
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "text",
-          "id": "quspf",
-          "name": "Eyebrow",
-          "fill": "$website-accent",
-          "content": "EYEBROW",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-eyebrow-size",
-          "fontWeight": "600",
-          "letterSpacing": 1.2
         },
-        {
-          "type": "text",
-          "id": "KpGdr",
-          "name": "Heading",
-          "fill": "$website-text-hero",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "Section heading goes here",
-          "lineHeight": "$website-line-height-heading",
-          "textAlign": "center",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-heading-section",
-          "fontWeight": "700"
-        },
-        {
-          "type": "text",
-          "id": "N2PcYe",
-          "name": "Body",
-          "fill": "$website-text-secondary",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "Supporting body text that explains the section in more detail.",
-          "lineHeight": "$website-line-height-body",
-          "textAlign": "center",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-body-size",
-          "fontWeight": "normal"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "BEJ7d",
-      "x": 0,
-      "y": 0,
-      "name": "Website FAQ Item",
-      "reusable": true,
-      "width": "fill_container(0)",
-      "fill": "$website-surface-raised",
-      "cornerRadius": "$website-radius-md",
-      "stroke": "$website-border-subtle",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
         {
           "type": "frame",
-          "id": "gYkmP",
-          "name": "Question",
-          "width": "fill_container",
-          "gap": 16,
-          "padding": [
-            20,
-            24
-          ],
-          "justifyContent": "space_between",
+          "id": "Cr83x",
+          "x": 600,
+          "y": 1450,
+          "name": "Auth Card / Reset Code Sent",
+          "reusable": true,
+          "width": 440,
+          "fill": "$card-fill",
+          "stroke": "$card-stroke",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 40,
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "K4buKf",
-              "name": "Question Text",
-              "fill": "$website-text-primary",
-              "textGrowth": "fixed-width",
+              "type": "frame",
+              "id": "l9qXq",
+              "name": "Mail Icon",
+              "width": 48,
+              "height": 48,
+              "fill": "#172A3A",
+              "cornerRadius": 24,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "rKauQ",
+                  "name": "Mail",
+                  "width": 24,
+                  "height": 24,
+                  "icon": "mail-check",
+                  "library": "lucide",
+                  "fill": "$accent-blue"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WBXiV",
+              "name": "Heading Group",
               "width": "fill_container",
-              "content": "How much does Penkra cost?",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "f3QIxn",
+                  "name": "Heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Check your email",
+                  "textAlign": "center",
+                  "fontFamily": "$font-body",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "x5Kfw",
+                  "name": "Subhead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "We sent a reset code to you@company.com.",
+                  "lineHeight": 1.35,
+                  "textAlign": "center",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "myAHN",
+              "name": "Resend Link",
+              "fill": "$accent-blue",
+              "content": "Resend code",
               "fontFamily": "$font-body",
-              "fontSize": "$website-faq-size",
+              "fontSize": 13,
               "fontWeight": "600"
             },
             {
-              "type": "icon",
-              "id": "YfxRR",
-              "name": "Chevron",
-              "width": 20,
-              "height": 20,
-              "icon": "chevron-down",
-              "library": "lucide",
-              "fill": "$website-text-tertiary"
+              "type": "text",
+              "id": "DS4Xm",
+              "name": "Expiry Note",
+              "fill": "$text-tertiary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The code expires in 10 minutes.",
+              "textAlign": "center",
+              "fontFamily": "$font-body",
+              "fontSize": 12,
+              "fontWeight": "normal"
             }
           ]
         },
         {
           "type": "frame",
-          "id": "hncyk",
-          "name": "Answer",
-          "width": "fill_container",
+          "id": "mg5D5",
+          "x": 64,
+          "y": 2000,
+          "name": "Auth Card / Set New Password",
+          "reusable": true,
+          "width": 440,
+          "fill": "$card-fill",
+          "stroke": "$card-stroke",
+          "strokeWidth": 1,
           "layout": "vertical",
-          "padding": [
-            0,
-            24,
-            20,
-            24
-          ],
+          "gap": 24,
+          "padding": 40,
           "children": [
             {
-              "type": "text",
-              "id": "ZsuNS",
-              "name": "Answer Text",
-              "fill": "$website-text-secondary",
-              "textGrowth": "fixed-width",
+              "type": "frame",
+              "id": "l8QUT",
+              "name": "Heading Group",
               "width": "fill_container",
-              "content": "Penkra is free and open source under the MIT License.",
-              "lineHeight": "$website-line-height-body",
-              "fontFamily": "$font-body",
-              "fontSize": "$website-body-size",
-              "fontWeight": "normal"
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "r8gBI0",
+                  "name": "Heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Choose a new password",
+                  "fontFamily": "$font-body",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "HcEoN",
+                  "name": "Subhead",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Use at least 8 characters with a mix of letters and numbers.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gQWnD",
+              "name": "Password Fields",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "id": "A4PSjk",
+                  "type": "ref",
+                  "ref": "D5oq8U",
+                  "name": "New Password",
+                  "width": "fill_container",
+                  "theme": {
+                    "state": "default",
+                    "input-kind": "password",
+                    "password-visibility": "hidden"
+                  },
+                  "descendants": {
+                    "iKfvk": {
+                      "icon": "lock"
+                    },
+                    "n8oAk": {
+                      "content": "New password"
+                    }
+                  }
+                },
+                {
+                  "id": "xM7Dx",
+                  "type": "ref",
+                  "ref": "D5oq8U",
+                  "name": "Confirm Password",
+                  "width": "fill_container",
+                  "theme": {
+                    "state": "default",
+                    "input-kind": "password",
+                    "password-visibility": "hidden"
+                  },
+                  "descendants": {
+                    "iKfvk": {
+                      "icon": "lock"
+                    },
+                    "n8oAk": {
+                      "content": "Confirm password"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "O1T7Pe",
+              "type": "ref",
+              "ref": "V4RaC",
+              "name": "Update Password Button",
+              "width": "fill_container",
+              "descendants": {
+                "gGTRQ": {
+                  "content": "Update password"
+                }
+              }
             }
           ]
         }
@@ -7610,230 +7172,288 @@
     },
     {
       "type": "frame",
-      "id": "B1Hdi",
-      "x": 0,
-      "y": 0,
-      "name": "Website Footer",
-      "reusable": true,
-      "width": 1440,
-      "fill": "$website-surface",
+      "id": "Sq3vy",
+      "x": 8240,
+      "y": 3520,
+      "name": "Components — Canvas Organization",
+      "width": 2160,
+      "height": 700,
+      "fill": "$website-bg",
       "stroke": "$website-border-subtle",
-      "strokeWidth": {
-        "top": 1
-      },
-      "layout": "vertical",
-      "gap": 48,
-      "padding": [
-        64,
-        80,
-        48,
-        80
-      ],
+      "strokeWidth": 1,
+      "layout": "none",
       "children": [
         {
           "type": "frame",
-          "id": "wH7s4",
-          "name": "Footer Top",
-          "width": "fill_container",
-          "gap": 80,
+          "id": "yjxsg",
+          "x": 40,
+          "y": 72,
+          "name": "Component Group — Canvas Organization Marker",
+          "width": 8,
+          "height": 44,
+          "fill": "#3B82F6",
+          "cornerRadius": 4
+        },
+        {
+          "type": "text",
+          "id": "T8qAU",
+          "x": 64,
+          "y": 64,
+          "name": "Component Group — Canvas Organization Label",
+          "fill": "$text-primary",
+          "content": "Canvas Organization",
+          "fontFamily": "$font-body",
+          "fontSize": 56,
+          "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "mALV6",
+          "x": 64,
+          "y": 180,
+          "name": "Canvas Section Banner",
+          "reusable": true,
+          "metadata": {
+            "type": "recovered-evidence",
+            "source": "bf5058:241016",
+            "confidence": "exact"
+          },
+          "width": 2000,
+          "fill": "$card-fill",
+          "stroke": "$accent-blue",
+          "strokeWidth": 8,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            48,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "V6ETK",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "Section Title",
+              "fontFamily": "Inter",
+              "fontSize": 96,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "dieUy",
+              "name": "Subtitle",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Section description",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jBenk",
+          "x": 64,
+          "y": 500,
+          "name": "Feature Row Header",
+          "reusable": true,
+          "metadata": {
+            "type": "recovered-evidence",
+            "source": "bf5058:241016",
+            "confidence": "exact"
+          },
+          "width": 2000,
+          "fill": "$card-fill",
+          "cornerRadius": 6,
+          "stroke": "$card-stroke",
+          "strokeWidth": 2,
+          "layout": "vertical",
+          "padding": [
+            20,
+            28
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "O2Mve",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "Feature Row Title",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "c0LGc2",
+      "x": 8240,
+      "y": 4380,
+      "name": "Components — Website",
+      "width": 1600,
+      "height": 3500,
+      "fill": "$website-bg",
+      "stroke": "$website-border-subtle",
+      "strokeWidth": 1,
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "kg6eL",
+          "x": 64,
+          "y": 120,
+          "name": "Website Navigation",
+          "reusable": true,
+          "width": 1440,
+          "height": 72,
+          "fill": "$website-bg",
+          "layout": "none",
           "children": [
             {
               "type": "frame",
-              "id": "TaE1J",
-              "name": "Product",
-              "width": 160,
-              "layout": "vertical",
-              "gap": 12,
+              "id": "jqYjj",
+              "x": 80,
+              "y": 0,
+              "name": "Inner",
+              "width": 1280,
+              "height": 72,
+              "fill": "#00000000",
+              "gap": 40,
+              "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "ClX1e",
-                  "name": "Group Title",
-                  "fill": "$website-text-primary",
-                  "content": "Product",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
+                  "id": "T3D8I",
+                  "type": "ref",
+                  "ref": "T9Z9s",
+                  "name": "Penkra Mark",
+                  "width": 28,
+                  "height": 28
                 },
                 {
                   "type": "text",
-                  "id": "b73stW",
-                  "name": "Overview",
-                  "fill": "$website-text-tertiary",
-                  "content": "Overview",
+                  "id": "F1Z0TX",
+                  "name": "Wordmark",
+                  "fill": "$website-text-hero",
+                  "content": "Penkra",
                   "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "fontSize": 18,
+                  "fontWeight": "700"
                 },
                 {
-                  "type": "text",
-                  "id": "gW4DS",
-                  "name": "Apps",
-                  "fill": "$website-text-tertiary",
-                  "content": "Apps",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "type": "frame",
+                  "id": "PaDUO",
+                  "name": "Nav Links",
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ypXM8",
+                      "name": "Product",
+                      "fill": "$website-text-secondary",
+                      "content": "Product",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-nav-size",
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KR8wf",
+                      "name": "Apps",
+                      "fill": "$website-text-secondary",
+                      "content": "Apps",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-nav-size",
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FkgfA",
+                      "name": "Security",
+                      "fill": "$website-text-secondary",
+                      "content": "Security",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-nav-size",
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "a52jCQ",
+                      "name": "Developers",
+                      "fill": "$website-text-secondary",
+                      "content": "Developers",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-nav-size",
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rwMzz",
+                      "name": "GitHub Link",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "tH8xZ",
+                          "name": "GitHub Icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "github",
+                          "library": "lucide",
+                          "fill": "$website-text-secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Qx6Ny",
+                          "name": "GitHub",
+                          "fill": "$website-text-secondary",
+                          "content": "GitHub",
+                          "fontFamily": "$font-body",
+                          "fontSize": "$website-nav-size",
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "id": "j1PXyf",
-                  "name": "Security",
-                  "fill": "$website-text-tertiary",
-                  "content": "Security",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "type": "frame",
+                  "id": "lnzKR",
+                  "name": "Spacer",
+                  "width": "fill_container",
+                  "height": 1
                 },
                 {
-                  "type": "text",
-                  "id": "kL05D",
-                  "name": "Download",
-                  "fill": "$website-text-tertiary",
-                  "content": "Download",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "yvOQi",
-              "name": "Developers",
-              "width": 160,
-              "layout": "vertical",
-              "gap": 12,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "AMI57",
-                  "name": "Group Title",
-                  "fill": "$website-text-primary",
-                  "content": "Developers",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "e2GOpR",
-                  "name": "Docs",
-                  "fill": "$website-text-tertiary",
-                  "content": "Docs",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "GEUbp",
-                  "name": "App authoring",
-                  "fill": "$website-text-tertiary",
-                  "content": "App authoring",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "gk5d7",
-                  "name": "GitHub",
-                  "fill": "$website-text-tertiary",
-                  "content": "GitHub",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "yqw3o",
-              "name": "Resources",
-              "width": 160,
-              "layout": "vertical",
-              "gap": 12,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "agm2n",
-                  "name": "Group Title",
-                  "fill": "$website-text-primary",
-                  "content": "Resources",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "Y5e3MV",
-                  "name": "Changelog",
-                  "fill": "$website-text-tertiary",
-                  "content": "Changelog",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "R71pvz",
-                  "name": "Updates",
-                  "fill": "$website-text-tertiary",
-                  "content": "Updates",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "NJSTw",
-                  "name": "Support",
-                  "fill": "$website-text-tertiary",
-                  "content": "Support",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "zxXl9",
-              "name": "Company",
-              "width": 160,
-              "layout": "vertical",
-              "gap": 12,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "nfqSu",
-                  "name": "Group Title",
-                  "fill": "$website-text-primary",
-                  "content": "Company",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "600"
-                },
-                {
-                  "type": "text",
-                  "id": "o92un",
-                  "name": "About",
-                  "fill": "$website-text-tertiary",
-                  "content": "About",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "xJH1S",
-                  "name": "Contact",
-                  "fill": "$website-text-tertiary",
-                  "content": "Contact",
-                  "fontFamily": "$font-body",
-                  "fontSize": 14,
-                  "fontWeight": "normal"
+                  "type": "frame",
+                  "id": "eSDN1",
+                  "name": "Download CTA",
+                  "fill": "$website-accent",
+                  "cornerRadius": "$website-radius-sm",
+                  "padding": [
+                    10,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mDjhP",
+                      "name": "Label",
+                      "fill": "#FFFFFF",
+                      "content": "Download Penkra",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-btn-size",
+                      "fontWeight": "600"
+                    }
+                  ]
                 }
               ]
             }
@@ -7841,86 +7461,108 @@
         },
         {
           "type": "frame",
-          "id": "MwsSP",
-          "name": "Footer Bottom",
-          "width": "fill_container",
-          "stroke": "$website-border-subtle",
-          "strokeWidth": {
-            "top": 1
-          },
+          "id": "Ghddu",
+          "x": 64,
+          "y": 360,
+          "name": "Website Button / Primary",
+          "reusable": true,
+          "fill": "$website-accent",
+          "cornerRadius": "$website-radius-sm",
+          "gap": 8,
           "padding": [
-            24,
-            0,
-            0,
-            0
+            14,
+            28
           ],
-          "justifyContent": "space_between",
+          "justifyContent": "center",
           "alignItems": "center",
           "children": [
             {
               "type": "text",
-              "id": "x8wepI",
-              "name": "Copyright",
-              "fill": "$website-text-tertiary",
-              "content": "© 2026 Penkra. Open source under the MIT License.",
+              "id": "h4Pdsb",
+              "name": "Label",
+              "fill": "#FFFFFF",
+              "content": "Button",
               "fontFamily": "$font-body",
-              "fontSize": 13,
-              "fontWeight": "normal"
-            },
-            {
-              "type": "frame",
-              "id": "fvsRX",
-              "name": "Legal",
-              "gap": 24,
-              "children": [
-                {
-                  "type": "text",
-                  "id": "r5GVB",
-                  "name": "Privacy",
-                  "fill": "$website-text-tertiary",
-                  "content": "Privacy",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "z4Mchm",
-                  "name": "Terms",
-                  "fill": "$website-text-tertiary",
-                  "content": "Terms",
-                  "fontFamily": "$font-body",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                }
-              ]
+              "fontSize": "$website-btn-size",
+              "fontWeight": "600"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "l3JrB",
-      "x": 0,
-      "y": 0,
-      "name": "Website Feature Narrative",
-      "reusable": true,
-      "width": "fill_container(0)",
-      "gap": 64,
-      "alignItems": "center",
-      "children": [
+        },
         {
           "type": "frame",
-          "id": "U4LAx",
-          "name": "Text",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 16,
+          "id": "EMEOf",
+          "x": 280,
+          "y": 360,
+          "name": "Website Button / Secondary",
+          "reusable": true,
+          "fill": "#00000000",
+          "cornerRadius": "$website-radius-sm",
+          "stroke": "$website-border",
+          "strokeWidth": 1,
+          "gap": 8,
+          "padding": [
+            14,
+            28
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
           "children": [
             {
               "type": "text",
-              "id": "b4NPPD",
+              "id": "ghgbT",
+              "name": "Label",
+              "fill": "$website-text-primary",
+              "content": "Button",
+              "fontFamily": "$font-body",
+              "fontSize": "$website-btn-size",
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "k84mKK",
+          "x": 500,
+          "y": 360,
+          "name": "Website Button / Ghost",
+          "reusable": true,
+          "fill": "#00000000",
+          "cornerRadius": "$website-radius-sm",
+          "gap": 8,
+          "padding": [
+            14,
+            28
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "WVP8F",
+              "name": "Label",
+              "fill": "$website-text-secondary",
+              "content": "Button",
+              "fontFamily": "$font-body",
+              "fontSize": "$website-btn-size",
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Bl9MK",
+          "x": 64,
+          "y": 500,
+          "name": "Website Section Header",
+          "reusable": true,
+          "width": 720,
+          "layout": "vertical",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "quspf",
               "name": "Eyebrow",
               "fill": "$website-accent",
               "content": "EYEBROW",
@@ -7931,26 +7573,28 @@
             },
             {
               "type": "text",
-              "id": "q7zRh",
+              "id": "KpGdr",
               "name": "Heading",
               "fill": "$website-text-hero",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "Feature heading goes here",
-              "lineHeight": 1.15,
+              "content": "Section heading goes here",
+              "lineHeight": "$website-line-height-heading",
+              "textAlign": "center",
               "fontFamily": "$font-body",
-              "fontSize": "$website-heading-sub",
+              "fontSize": "$website-heading-section",
               "fontWeight": "700"
             },
             {
               "type": "text",
-              "id": "A4ZEj",
+              "id": "N2PcYe",
               "name": "Body",
               "fill": "$website-text-secondary",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "Feature body text that explains the benefit in one or two sentences.",
+              "content": "Supporting body text that explains the section in more detail.",
               "lineHeight": "$website-line-height-body",
+              "textAlign": "center",
               "fontFamily": "$font-body",
               "fontSize": "$website-body-size",
               "fontWeight": "normal"
@@ -7959,434 +7603,922 @@
         },
         {
           "type": "frame",
-          "id": "lLiCU",
-          "name": "Visual",
-          "width": "fill_container",
-          "height": 400,
-          "fill": "$website-surface-raised",
-          "cornerRadius": "$website-radius-lg",
+          "id": "B1Hdi",
+          "x": 64,
+          "y": 2680,
+          "name": "Website Footer",
+          "reusable": true,
+          "width": 1440,
+          "fill": "$website-surface",
           "stroke": "$website-border-subtle",
-          "strokeWidth": 1,
-          "justifyContent": "center",
-          "alignItems": "center",
+          "strokeWidth": {
+            "top": 1
+          },
+          "strokeLinejoin": "round",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            64,
+            80,
+            48,
+            80
+          ],
           "children": [
             {
-              "type": "text",
-              "id": "Q4nfy",
-              "name": "Placeholder",
-              "fill": "$website-text-tertiary",
-              "content": "[Product screenshot placeholder]",
-              "fontFamily": "$font-body",
-              "fontSize": 14,
-              "fontWeight": "normal"
+              "type": "frame",
+              "id": "wH7s4",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "gap": 80,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TaE1J",
+                  "name": "Product",
+                  "width": 160,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ClX1e",
+                      "name": "Group Title",
+                      "fill": "$website-text-primary",
+                      "content": "Product",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "b73stW",
+                      "name": "Overview",
+                      "fill": "$website-text-tertiary",
+                      "content": "Overview",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gW4DS",
+                      "name": "Apps",
+                      "fill": "$website-text-tertiary",
+                      "content": "Apps",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j1PXyf",
+                      "name": "Security",
+                      "fill": "$website-text-tertiary",
+                      "content": "Security",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kL05D",
+                      "name": "Download",
+                      "fill": "$website-text-tertiary",
+                      "content": "Download",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yvOQi",
+                  "name": "Developers",
+                  "width": 160,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AMI57",
+                      "name": "Group Title",
+                      "fill": "$website-text-primary",
+                      "content": "Developers",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e2GOpR",
+                      "name": "Docs",
+                      "fill": "$website-text-tertiary",
+                      "content": "Docs",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GEUbp",
+                      "name": "App authoring",
+                      "fill": "$website-text-tertiary",
+                      "content": "App authoring",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gk5d7",
+                      "name": "GitHub",
+                      "fill": "$website-text-tertiary",
+                      "content": "GitHub",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yqw3o",
+                  "name": "Resources",
+                  "width": 160,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "agm2n",
+                      "name": "Group Title",
+                      "fill": "$website-text-primary",
+                      "content": "Resources",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y5e3MV",
+                      "name": "Changelog",
+                      "fill": "$website-text-tertiary",
+                      "content": "Changelog",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "R71pvz",
+                      "name": "Updates",
+                      "fill": "$website-text-tertiary",
+                      "content": "Updates",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NJSTw",
+                      "name": "Support",
+                      "fill": "$website-text-tertiary",
+                      "content": "Support",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zxXl9",
+                  "name": "Company",
+                  "width": 160,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nfqSu",
+                      "name": "Group Title",
+                      "fill": "$website-text-primary",
+                      "content": "Company",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o92un",
+                      "name": "About",
+                      "fill": "$website-text-tertiary",
+                      "content": "About",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xJH1S",
+                      "name": "Contact",
+                      "fill": "$website-text-tertiary",
+                      "content": "Contact",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MwsSP",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "stroke": "$website-border-subtle",
+              "strokeWidth": {
+                "top": 1
+              },
+              "strokeLinejoin": "round",
+              "padding": [
+                24,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x8wepI",
+                  "name": "Copyright",
+                  "fill": "$website-text-tertiary",
+                  "content": "© 2026 Penkra. Open source under the MIT License.",
+                  "fontFamily": "$font-body",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "fvsRX",
+                  "name": "Legal",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r5GVB",
+                      "name": "Privacy",
+                      "fill": "$website-text-tertiary",
+                      "content": "Privacy",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "z4Mchm",
+                      "name": "Terms",
+                      "fill": "$website-text-tertiary",
+                      "content": "Terms",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "OWIR4",
-      "x": 0,
-      "y": 0,
-      "name": "Website Status Badge",
-      "reusable": true,
-      "cornerRadius": "$website-radius-pill",
-      "gap": 6,
-      "padding": [
-        4,
-        10
-      ],
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "ellipse",
-          "id": "jzziB",
-          "name": "Dot",
-          "fill": "#22C55E",
-          "width": 8,
-          "height": 8
         },
         {
-          "type": "text",
-          "id": "L78qK",
-          "name": "Label",
-          "fill": "$website-text-primary",
-          "content": "Running",
-          "fontFamily": "$font-body",
-          "fontSize": 12,
-          "fontWeight": "500"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "CZdNi",
-      "x": 0,
-      "y": 0,
-      "name": "Website Product Window",
-      "reusable": true,
-      "clip": true,
-      "width": "fill_container(0)",
-      "height": 520,
-      "fill": "$website-surface-raised",
-      "cornerRadius": "$website-radius-lg",
-      "stroke": "$website-border-subtle",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "children": [
-        {
           "type": "frame",
-          "id": "hwSV0",
-          "name": "Title Bar",
-          "width": "fill_container",
-          "height": 44,
-          "fill": "$website-surface-subtle",
-          "gap": 8,
+          "id": "OWIR4",
+          "x": 720,
+          "y": 366,
+          "name": "Website Status Badge",
+          "reusable": true,
+          "cornerRadius": "$website-radius-pill",
+          "gap": 6,
           "padding": [
-            0,
-            16
+            4,
+            10
           ],
           "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "wIVYE",
-              "name": "Traffic Lights",
-              "gap": 6,
-              "children": [
-                {
-                  "type": "ellipse",
-                  "id": "pZ9wj",
-                  "name": "Red",
-                  "fill": "#FF5F57",
-                  "width": 12,
-                  "height": 12
-                },
-                {
-                  "type": "ellipse",
-                  "id": "xTPN8",
-                  "name": "Yellow",
-                  "fill": "#FEBC2E",
-                  "width": 12,
-                  "height": 12
-                },
-                {
-                  "type": "ellipse",
-                  "id": "RARw7",
-                  "name": "Green",
-                  "fill": "#28C840",
-                  "width": 12,
-                  "height": 12
-                }
-              ]
+              "type": "ellipse",
+              "id": "jzziB",
+              "name": "Dot",
+              "fill": "#22C55E",
+              "width": 8,
+              "height": 8
+            },
+            {
+              "type": "text",
+              "id": "L78qK",
+              "name": "Label",
+              "fill": "$website-text-primary",
+              "content": "Running",
+              "fontFamily": "$font-body",
+              "fontSize": 12,
+              "fontWeight": "500"
             }
           ]
         },
         {
           "type": "frame",
-          "id": "mFHpu",
-          "name": "Content Area",
-          "width": "fill_container",
-          "height": "fill_container",
-          "fill": "$website-bg",
-          "justifyContent": "center",
+          "id": "hdjo3",
+          "x": 960,
+          "y": 320,
+          "name": "Website Download Control",
+          "reusable": true,
+          "width": 200,
+          "fill": "$website-surface-raised",
+          "cornerRadius": "$website-radius-md",
+          "stroke": "$website-border-subtle",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            20,
+            24
+          ],
           "alignItems": "center",
           "children": [
             {
+              "type": "icon",
+              "id": "lJI5X",
+              "name": "Platform Icon",
+              "width": 32,
+              "height": 32,
+              "icon": "monitor",
+              "library": "lucide",
+              "fill": "$website-text-primary"
+            },
+            {
               "type": "text",
-              "id": "uxmer",
-              "name": "Placeholder",
-              "fill": "$website-text-tertiary",
-              "content": "[Product capture placeholder — source: penkra.pen UG43r]",
+              "id": "c3dJD",
+              "name": "Platform",
+              "fill": "$website-text-primary",
+              "content": "macOS",
               "fontFamily": "$font-body",
-              "fontSize": 14,
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "F1IVI",
+              "name": "Action",
+              "fill": "$website-accent",
+              "content": "Download",
+              "fontFamily": "$font-body",
+              "fontSize": 13,
               "fontWeight": "normal"
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "hdjo3",
-      "x": 0,
-      "y": 0,
-      "name": "Website Download Control",
-      "reusable": true,
-      "width": 200,
-      "fill": "$website-surface-raised",
-      "cornerRadius": "$website-radius-md",
-      "stroke": "$website-border-subtle",
-      "strokeWidth": 1,
-      "layout": "vertical",
-      "gap": 8,
-      "padding": [
-        20,
-        24
-      ],
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "icon",
-          "id": "lJI5X",
-          "name": "Platform Icon",
-          "width": 32,
-          "height": 32,
-          "icon": "monitor",
-          "library": "lucide",
-          "fill": "$website-text-primary"
-        },
-        {
-          "type": "text",
-          "id": "c3dJD",
-          "name": "Platform",
-          "fill": "$website-text-primary",
-          "content": "macOS",
-          "fontFamily": "$font-body",
-          "fontSize": 15,
-          "fontWeight": "600"
-        },
-        {
-          "type": "text",
-          "id": "F1IVI",
-          "name": "Action",
-          "fill": "$website-accent",
-          "content": "Download",
-          "fontFamily": "$font-body",
-          "fontSize": 13,
-          "fontWeight": "normal"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "UbP0E",
-      "x": 0,
-      "y": 0,
-      "name": "Website Final CTA",
-      "reusable": true,
-      "width": "fill_container(0)",
-      "fill": "$website-surface",
-      "stroke": "$website-border-subtle",
-      "strokeWidth": {
-        "top": 1
-      },
-      "layout": "vertical",
-      "gap": 32,
-      "padding": [
-        96,
-        80
-      ],
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "text",
-          "id": "aYmMd",
-          "name": "Heading",
-          "fill": "$website-text-hero",
-          "content": "Put your work in motion.",
-          "lineHeight": "$website-line-height-heading",
-          "textAlign": "center",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-heading-section",
-          "fontWeight": "700"
-        },
-        {
-          "type": "text",
-          "id": "xNAv9",
-          "name": "Body",
-          "fill": "$website-text-secondary",
-          "textGrowth": "fixed-width",
-          "width": 560,
-          "content": "Download Penkra and run your agents, files, browser, and Apps from one workspace.",
-          "lineHeight": "$website-line-height-body",
-          "textAlign": "center",
-          "fontFamily": "$font-body",
-          "fontSize": "$website-body-size",
-          "fontWeight": "normal"
         },
         {
           "type": "frame",
-          "id": "WD5b8",
-          "name": "CTA Row",
-          "gap": 16,
-          "alignItems": "center",
-          "children": [
-            {
-              "id": "fVLBj",
-              "type": "ref",
-              "ref": "Ghddu",
-              "name": "Download CTA",
-              "descendants": {
-                "h4Pdsb": {
-                  "content": "Download Penkra"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "U01i2",
-          "name": "Availability",
-          "fill": "$website-text-tertiary",
-          "content": "Free and open source · macOS, Windows, and Linux",
-          "fontFamily": "$font-body",
-          "fontSize": 14,
-          "fontWeight": "normal"
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "i7kOxL",
-      "x": 0,
-      "y": 0,
-      "name": "Website Navigation / Mobile",
-      "reusable": true,
-      "width": 390,
-      "height": 64,
-      "fill": "$website-bg",
-      "layout": "none",
-      "children": [
-        {
-          "type": "frame",
-          "id": "IRtLo",
-          "x": 20,
-          "y": 0,
-          "name": "Inner",
-          "width": 350,
+          "id": "i7kOxL",
+          "x": 64,
+          "y": 240,
+          "name": "Website Navigation / Mobile",
+          "reusable": true,
+          "width": 390,
           "height": 64,
-          "fill": "#00000000",
-          "gap": 16,
-          "alignItems": "center",
+          "fill": "$website-bg",
+          "layout": "none",
           "children": [
             {
-              "id": "g6GnTs",
-              "type": "ref",
-              "ref": "T9Z9s",
-              "name": "Penkra Mark",
-              "width": 24,
-              "height": 24
-            },
-            {
-              "type": "text",
-              "id": "Q7CGRr",
-              "name": "Wordmark",
-              "fill": "$website-text-hero",
-              "content": "Penkra",
-              "fontFamily": "$font-body",
-              "fontSize": 16,
-              "fontWeight": "700"
-            },
-            {
               "type": "frame",
-              "id": "LbYjF",
-              "name": "Spacer",
-              "width": "fill_container",
-              "height": 1
-            },
-            {
-              "type": "frame",
-              "id": "TIfV8",
-              "name": "Menu Button",
-              "width": 32,
-              "height": 32,
-              "justifyContent": "center",
+              "id": "IRtLo",
+              "x": 20,
+              "y": 0,
+              "name": "Inner",
+              "width": 350,
+              "height": 64,
+              "fill": "#00000000",
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
-                  "type": "icon",
-                  "id": "b2rm09",
-                  "name": "Menu",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "menu",
-                  "library": "lucide",
-                  "fill": "$website-text-primary"
+                  "id": "g6GnTs",
+                  "type": "ref",
+                  "ref": "T9Z9s",
+                  "name": "Penkra Mark",
+                  "width": 24,
+                  "height": 24
+                },
+                {
+                  "type": "text",
+                  "id": "Q7CGRr",
+                  "name": "Wordmark",
+                  "fill": "$website-text-hero",
+                  "content": "Penkra",
+                  "fontFamily": "$font-body",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "LbYjF",
+                  "name": "Spacer",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "TIfV8",
+                  "name": "Menu Button",
+                  "width": 32,
+                  "height": 32,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "b2rm09",
+                      "name": "Menu",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "menu",
+                      "library": "lucide",
+                      "fill": "$website-text-primary"
+                    }
+                  ]
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "H47mX",
-      "x": 7320,
-      "y": 0,
-      "name": "Website Legal Section",
-      "reusable": true,
-      "width": 760,
-      "stroke": "$website-border",
-      "strokeWidth": {
-        "top": 1
-      },
-      "layout": "vertical",
-      "gap": 18,
-      "padding": [
-        32,
-        0,
-        40,
-        0
-      ],
-      "children": [
-        {
-          "type": "text",
-          "id": "z0SqgS",
-          "name": "Section Title",
-          "fill": "$website-text-primary",
-          "content": "Section title",
-          "lineHeight": 1.2,
-          "fontFamily": "$font-body",
-          "fontSize": 24,
-          "fontWeight": "600"
         },
         {
           "type": "frame",
-          "id": "S8tp0",
-          "name": "Section Body",
-          "width": "fill_container",
+          "id": "H47mX",
+          "x": 64,
+          "y": 3100,
+          "name": "Website Legal Section",
+          "reusable": true,
+          "width": 760,
+          "stroke": "$website-border",
+          "strokeWidth": {
+            "top": 1
+          },
+          "strokeLinejoin": "round",
           "layout": "vertical",
-          "gap": 14,
+          "gap": 18,
+          "padding": [
+            32,
+            0,
+            40,
+            0
+          ],
           "children": [
             {
               "type": "text",
-              "id": "DFkPe",
-              "name": "Paragraph 1",
-              "fill": "$website-text-secondary",
+              "id": "z0SqgS",
+              "name": "Section Title",
+              "fill": "$website-text-primary",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "Primary explanatory paragraph.",
-              "lineHeight": 1.65,
+              "content": "Section title",
+              "lineHeight": 1.2,
               "fontFamily": "$font-body",
-              "fontSize": 16
+              "fontSize": 24,
+              "fontWeight": "600"
             },
             {
-              "type": "text",
-              "id": "O9oXew",
-              "name": "Paragraph 2",
-              "fill": "$website-text-secondary",
-              "textGrowth": "fixed-width",
+              "type": "frame",
+              "id": "S8tp0",
+              "name": "Section Body",
               "width": "fill_container",
-              "content": "Supporting explanatory paragraph.",
-              "lineHeight": 1.65,
-              "fontFamily": "$font-body",
-              "fontSize": 16
-            },
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DFkPe",
+                  "name": "Paragraph 1",
+                  "fill": "$website-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Primary explanatory paragraph.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "$font-body",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "O9oXew",
+                  "name": "Paragraph 2",
+                  "fill": "$website-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Supporting explanatory paragraph.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "$font-body",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "i1dhU",
+                  "name": "Paragraph 3",
+                  "fill": "$website-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Additional detail when needed.",
+                  "lineHeight": 1.65,
+                  "fontFamily": "$font-body",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "GyGLX",
+          "x": 64,
+          "y": 48,
+          "name": "Website Components Label",
+          "fill": "$website-accent",
+          "content": "Website Components",
+          "fontFamily": "$font-body",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "z1seE2",
+          "x": 64,
+          "y": 780,
+          "name": "Preview — FAQ Item",
+          "width": 720,
+          "layout": "vertical",
+          "children": [
             {
-              "type": "text",
-              "id": "i1dhU",
-              "name": "Paragraph 3",
-              "fill": "$website-text-secondary",
-              "textGrowth": "fixed-width",
+              "type": "frame",
+              "id": "BEJ7d",
+              "name": "Website FAQ Item",
+              "reusable": true,
               "width": "fill_container",
-              "content": "Additional detail when needed.",
-              "lineHeight": 1.65,
-              "fontFamily": "$font-body",
-              "fontSize": 16
+              "fill": "$website-surface-raised",
+              "cornerRadius": "$website-radius-md",
+              "stroke": "$website-border-subtle",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gYkmP",
+                  "name": "Question",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "padding": [
+                    20,
+                    24
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K4buKf",
+                      "name": "Question Text",
+                      "fill": "$website-text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "How much does Penkra cost?",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-faq-size",
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "YfxRR",
+                      "name": "Chevron",
+                      "width": 20,
+                      "height": 20,
+                      "icon": "chevron-down",
+                      "library": "lucide",
+                      "fill": "$website-text-tertiary"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hncyk",
+                  "name": "Answer",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    0,
+                    24,
+                    20,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZsuNS",
+                      "name": "Answer Text",
+                      "fill": "$website-text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Penkra is free and open source under the MIT License.",
+                      "lineHeight": "$website-line-height-body",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-body-size",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CD1r1",
+          "x": 64,
+          "y": 1020,
+          "name": "Preview — Product Window",
+          "width": 1280,
+          "height": 520,
+          "children": [
+            {
+              "type": "frame",
+              "id": "CZdNi",
+              "name": "Website Product Window",
+              "reusable": true,
+              "clip": true,
+              "width": "fill_container",
+              "height": 520,
+              "fill": "$website-surface-raised",
+              "cornerRadius": "$website-radius-lg",
+              "stroke": "$website-border-subtle",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hwSV0",
+                  "name": "Title Bar",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "$website-surface-subtle",
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wIVYE",
+                      "name": "Traffic Lights",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "pZ9wj",
+                          "name": "Red",
+                          "fill": "#FF5F57",
+                          "width": 12,
+                          "height": 12
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "xTPN8",
+                          "name": "Yellow",
+                          "fill": "#FEBC2E",
+                          "width": 12,
+                          "height": 12
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "RARw7",
+                          "name": "Green",
+                          "fill": "#28C840",
+                          "width": 12,
+                          "height": 12
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mFHpu",
+                  "name": "Content Area",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$website-bg",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uxmer",
+                      "name": "Placeholder",
+                      "fill": "$website-text-tertiary",
+                      "content": "Product capture placeholder",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "os9F1",
+          "x": 64,
+          "y": 1620,
+          "name": "Preview — Feature Narrative",
+          "width": 1280,
+          "children": [
+            {
+              "type": "frame",
+              "id": "l3JrB",
+              "name": "Website Feature Narrative",
+              "reusable": true,
+              "width": "fill_container",
+              "gap": 64,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "U4LAx",
+                  "name": "Text",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "b4NPPD",
+                      "name": "Eyebrow",
+                      "fill": "$website-accent",
+                      "content": "EYEBROW",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-eyebrow-size",
+                      "fontWeight": "600",
+                      "letterSpacing": 1.2
+                    },
+                    {
+                      "type": "text",
+                      "id": "q7zRh",
+                      "name": "Heading",
+                      "fill": "$website-text-hero",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Feature heading goes here",
+                      "lineHeight": 1.15,
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-heading-sub",
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A4ZEj",
+                      "name": "Body",
+                      "fill": "$website-text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Feature body text that explains the benefit in one or two sentences.",
+                      "lineHeight": "$website-line-height-body",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-body-size",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lLiCU",
+                  "name": "Visual",
+                  "width": "fill_container",
+                  "height": 400,
+                  "fill": "$website-surface-raised",
+                  "cornerRadius": "$website-radius-lg",
+                  "stroke": "$website-border-subtle",
+                  "strokeWidth": 1,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Q4nfy",
+                      "name": "Placeholder",
+                      "fill": "$website-text-tertiary",
+                      "content": "[Product screenshot placeholder]",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "poJ0w",
+          "x": 64,
+          "y": 2180,
+          "name": "Preview — Final CTA",
+          "width": 1440,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "UbP0E",
+              "name": "Website Final CTA",
+              "reusable": true,
+              "width": "fill_container",
+              "fill": "$website-surface",
+              "stroke": "$website-border-subtle",
+              "strokeWidth": {
+                "top": 1
+              },
+              "strokeLinejoin": "round",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                96,
+                80
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aYmMd",
+                  "name": "Heading",
+                  "fill": "$website-text-hero",
+                  "content": "Put your work in motion.",
+                  "lineHeight": "$website-line-height-heading",
+                  "textAlign": "center",
+                  "fontFamily": "$font-body",
+                  "fontSize": "$website-heading-section",
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "xNAv9",
+                  "name": "Body",
+                  "fill": "$website-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 560,
+                  "content": "Download Penkra and run your agents, files, browser, and Apps from one workspace.",
+                  "lineHeight": "$website-line-height-body",
+                  "textAlign": "center",
+                  "fontFamily": "$font-body",
+                  "fontSize": "$website-body-size",
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "WD5b8",
+                  "name": "CTA Row",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "fVLBj",
+                      "type": "ref",
+                      "ref": "Ghddu",
+                      "name": "Download CTA",
+                      "descendants": {
+                        "h4Pdsb": {
+                          "content": "Download Penkra"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "U01i2",
+                  "name": "Availability",
+                  "fill": "$website-text-tertiary",
+                  "content": "Free and open source · macOS, Windows, and Linux",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
             }
           ]
         }
@@ -8961,6 +9093,53 @@
           "value": "eye-off",
           "theme": {
             "password-visibility": "shown"
+          }
+        }
+      ]
+    },
+    "provider-icon-opacity": {
+      "type": "number",
+      "value": [
+        {
+          "value": 1,
+          "theme": {
+            "state": "default"
+          }
+        },
+        {
+          "value": 1,
+          "theme": {
+            "state": "hover"
+          }
+        },
+        {
+          "value": 1,
+          "theme": {
+            "state": "active"
+          }
+        },
+        {
+          "value": 1,
+          "theme": {
+            "state": "selected"
+          }
+        },
+        {
+          "value": 0.35,
+          "theme": {
+            "state": "disabled"
+          }
+        },
+        {
+          "value": 1,
+          "theme": {
+            "state": "focus"
+          }
+        },
+        {
+          "value": 1,
+          "theme": {
+            "state": "error"
           }
         }
       ]
