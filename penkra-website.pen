@@ -5711,6 +5711,1406 @@
               ]
             }
           ]
+        },
+        {
+          "type": "frame",
+          "id": "wu8nx",
+          "x": 2160,
+          "y": 4217,
+          "name": "Download Page — Desktop 1440",
+          "clip": true,
+          "width": 1440,
+          "fill": "#0A0B0E",
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "kZ40b",
+              "type": "ref",
+              "ref": "kg6eL",
+              "name": "Navigation",
+              "width": 1440,
+              "height": 72
+            },
+            {
+              "type": "frame",
+              "id": "j2uPSN",
+              "name": "Download Hero",
+              "width": "fill_container",
+              "height": 430,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "radial",
+                "enabled": true,
+                "rotation": 0,
+                "size": {
+                  "width": 1,
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#172554",
+                    "position": 0
+                  },
+                  {
+                    "color": "#0A0B0E",
+                    "position": 1
+                  }
+                ],
+                "center": {
+                  "y": 0.15
+                }
+              },
+              "layout": "vertical",
+              "gap": 22,
+              "padding": [
+                88,
+                80,
+                64,
+                80
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B4ARl",
+                  "name": "Eyebrow",
+                  "fill": "$website-accent-hover",
+                  "content": "DOWNLOAD PENKRA",
+                  "fontFamily": "$font-body",
+                  "fontSize": "$website-eyebrow-size",
+                  "fontWeight": "600",
+                  "letterSpacing": 1.8
+                },
+                {
+                  "type": "text",
+                  "id": "gNNSw",
+                  "name": "Title",
+                  "fill": "$website-text-hero",
+                  "content": "Download Penkra.",
+                  "fontFamily": "$font-body",
+                  "fontSize": 64,
+                  "fontWeight": "700",
+                  "letterSpacing": -2.4
+                },
+                {
+                  "type": "text",
+                  "id": "Q0hn9",
+                  "name": "Description",
+                  "fill": "$website-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 700,
+                  "content": "Choose your operating system and put your agents, files, browser, and Apps in one workspace.",
+                  "lineHeight": 1.55,
+                  "textAlign": "center",
+                  "fontFamily": "$font-body",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "RXKOf",
+                  "name": "Detected Platform Badge",
+                  "height": 34,
+                  "fill": "#3B82F61A",
+                  "cornerRadius": "$website-radius-pill",
+                  "stroke": "#3B82F666",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    7,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "R4fawl",
+                      "name": "Detected Icon",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "circle-check",
+                      "library": "lucide",
+                      "fill": "$website-accent-hover"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e5vx5v",
+                      "name": "Detected Label",
+                      "fill": "$website-text-primary",
+                      "content": "macOS detected on this device",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sOstq",
+              "name": "Platform Downloads",
+              "width": "fill_container",
+              "fill": "$website-bg",
+              "layout": "vertical",
+              "gap": 30,
+              "padding": [
+                64,
+                80,
+                112,
+                80
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hQDuT",
+                  "name": "Platform Heading",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DvUfY",
+                      "name": "Section Title",
+                      "fill": "$website-text-primary",
+                      "content": "Choose your download",
+                      "fontFamily": "$font-body",
+                      "fontSize": 30,
+                      "fontWeight": "650"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j2kblK",
+                      "name": "Section Description",
+                      "fill": "$website-text-secondary",
+                      "content": "Your detected platform is selected. You can choose another at any time.",
+                      "textAlign": "center",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pvySK",
+                  "name": "Platform Cards",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "id": "FIFMo",
+                      "type": "ref",
+                      "ref": "hdjo3",
+                      "name": "macOS Download — Detected",
+                      "width": 360,
+                      "stroke": "$website-accent",
+                      "strokeWidth": 2,
+                      "fill": "#101827",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#3B82F62B",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 32
+                      }
+                    },
+                    {
+                      "id": "ma2pB",
+                      "type": "ref",
+                      "ref": "hdjo3",
+                      "name": "Windows Download",
+                      "width": 360,
+                      "descendants": {
+                        "HNrtX": {
+                          "icon": "monitor"
+                        },
+                        "V2Ndw": {
+                          "content": "Windows"
+                        },
+                        "YdNIr": {
+                          "content": "Windows 10 or later · .exe"
+                        },
+                        "ta8Wy": {
+                          "content": "For 64-bit Windows PCs. Includes automatic updates."
+                        },
+                        "g2wK15": {
+                          "fill": "$website-surface-subtle",
+                          "stroke": "$website-border",
+                          "strokeWidth": 1
+                        },
+                        "ULt3Q": {
+                          "fill": "$website-text-primary"
+                        },
+                        "jHXF7": {
+                          "content": "Download for Windows",
+                          "fill": "$website-text-primary"
+                        }
+                      }
+                    },
+                    {
+                      "id": "L7Shy2",
+                      "type": "ref",
+                      "ref": "hdjo3",
+                      "name": "Linux Download",
+                      "width": 360,
+                      "descendants": {
+                        "HNrtX": {
+                          "icon": "terminal"
+                        },
+                        "V2Ndw": {
+                          "content": "Linux"
+                        },
+                        "YdNIr": {
+                          "content": "64-bit · .AppImage"
+                        },
+                        "ta8Wy": {
+                          "content": "A portable AppImage for supported Linux distributions."
+                        },
+                        "g2wK15": {
+                          "fill": "$website-surface-subtle",
+                          "stroke": "$website-border",
+                          "strokeWidth": 1
+                        },
+                        "ULt3Q": {
+                          "fill": "$website-text-primary"
+                        },
+                        "jHXF7": {
+                          "content": "Download for Linux",
+                          "fill": "$website-text-primary"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y7FjQO",
+                  "name": "Release Links",
+                  "gap": 20,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yT1B4",
+                      "name": "Latest Release Label",
+                      "fill": "$website-text-tertiary",
+                      "content": "Latest stable release",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "Y3cVTj",
+                      "name": "Separator",
+                      "fill": "$website-text-tertiary",
+                      "width": 3,
+                      "height": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "wP2Lq",
+                      "name": "All Releases Link",
+                      "fill": "$website-accent-hover",
+                      "content": "View all releases →",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D6PLf0",
+              "name": "Install Guide",
+              "width": "fill_container",
+              "fill": "$website-surface",
+              "gap": 110,
+              "padding": [
+                96,
+                120
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "woLme",
+                  "name": "Install Introduction",
+                  "width": 430,
+                  "layout": "vertical",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ro2mR",
+                      "name": "Install Eyebrow",
+                      "fill": "$website-accent-hover",
+                      "content": "GET STARTED",
+                      "fontFamily": "$font-body",
+                      "fontSize": "$website-eyebrow-size",
+                      "fontWeight": "600",
+                      "letterSpacing": 1.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "mQG1O",
+                      "name": "Install Title",
+                      "fill": "$website-text-hero",
+                      "textGrowth": "fixed-width",
+                      "width": 430,
+                      "content": "From download to first thread in minutes.",
+                      "lineHeight": 1.08,
+                      "fontFamily": "$font-body",
+                      "fontSize": 42,
+                      "fontWeight": "650"
+                    },
+                    {
+                      "type": "text",
+                      "id": "R1YaZ2",
+                      "name": "Install Description",
+                      "fill": "$website-text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 400,
+                      "content": "Penkra keeps your workspace on your computer and guides you through connecting an agent.",
+                      "lineHeight": 1.55,
+                      "fontFamily": "$font-body",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OrEyz",
+                  "name": "Install Steps",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "b5ljh5",
+                      "name": "Install Step 1",
+                      "width": "fill_container",
+                      "stroke": "$website-border-subtle",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 20,
+                      "padding": [
+                        22,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "w5hTRa",
+                          "name": "Step Number 1",
+                          "width": 34,
+                          "height": 34,
+                          "fill": "$website-surface-subtle",
+                          "cornerRadius": "$website-radius-pill",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "MdU0S",
+                              "name": "Number 1",
+                              "fill": "$website-accent-hover",
+                              "content": "1",
+                              "fontFamily": "$font-body",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TXmXp",
+                          "name": "Step Copy 1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ZXcKD",
+                              "name": "Step Title 1",
+                              "fill": "$website-text-primary",
+                              "content": "Download the installer",
+                              "fontFamily": "$font-body",
+                              "fontSize": 17,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "FfW61",
+                              "name": "Step Description 1",
+                              "fill": "$website-text-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Choose your platform above and save the installer.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XPGvD",
+                      "name": "Install Step 2",
+                      "width": "fill_container",
+                      "stroke": "$website-border-subtle",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 20,
+                      "padding": [
+                        22,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "N7cet",
+                          "name": "Step Number 2",
+                          "width": 34,
+                          "height": 34,
+                          "fill": "$website-surface-subtle",
+                          "cornerRadius": "$website-radius-pill",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "zJyGA",
+                              "name": "Number 2",
+                              "fill": "$website-accent-hover",
+                              "content": "2",
+                              "fontFamily": "$font-body",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "G1Zgmd",
+                          "name": "Step Copy 2",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "icFev",
+                              "name": "Step Title 2",
+                              "fill": "$website-text-primary",
+                              "content": "Install and open Penkra",
+                              "fontFamily": "$font-body",
+                              "fontSize": 17,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "toNJf",
+                              "name": "Step Description 2",
+                              "fill": "$website-text-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Follow your system’s normal installation flow.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "K3sCyp",
+                      "name": "Install Step 3",
+                      "width": "fill_container",
+                      "stroke": "$website-border-subtle",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 20,
+                      "padding": [
+                        22,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Hh0ny",
+                          "name": "Step Number 3",
+                          "width": 34,
+                          "height": 34,
+                          "fill": "$website-surface-subtle",
+                          "cornerRadius": "$website-radius-pill",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Vth3v",
+                              "name": "Number 3",
+                              "fill": "$website-accent-hover",
+                              "content": "3",
+                              "fontFamily": "$font-body",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bVX8U",
+                          "name": "Step Copy 3",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pjkYJ",
+                              "name": "Step Title 3",
+                              "fill": "$website-text-primary",
+                              "content": "Connect an agent",
+                              "fontFamily": "$font-body",
+                              "fontSize": 17,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "a1hP2Z",
+                              "name": "Step Description 3",
+                              "fill": "$website-text-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Sign in to Codex or Claude, or add an API key.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-body",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "I0t1ev",
+              "type": "ref",
+              "ref": "B1Hdi",
+              "name": "Footer",
+              "width": 1440
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AdP6c",
+          "x": 3760,
+          "y": 4217,
+          "name": "Download Page — Mobile 390",
+          "clip": true,
+          "width": 390,
+          "fill": "#0A0B0E",
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "l7AKO",
+              "type": "ref",
+              "ref": "i7kOxL",
+              "name": "Navigation",
+              "width": 390,
+              "height": 64
+            },
+            {
+              "type": "frame",
+              "id": "BuNdH",
+              "name": "Download Hero",
+              "width": "fill_container",
+              "height": 360,
+              "fill": {
+                "type": "gradient",
+                "gradientType": "radial",
+                "enabled": true,
+                "rotation": 0,
+                "size": {
+                  "width": 1,
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#172554",
+                    "position": 0
+                  },
+                  {
+                    "color": "#0A0B0E",
+                    "position": 1
+                  }
+                ],
+                "center": {
+                  "y": 0.1
+                }
+              },
+              "layout": "vertical",
+              "gap": 18,
+              "padding": [
+                54,
+                20,
+                44,
+                20
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "R3kxt",
+                  "name": "Eyebrow",
+                  "fill": "$website-accent-hover",
+                  "content": "DOWNLOAD PENKRA",
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.6
+                },
+                {
+                  "type": "text",
+                  "id": "B8D5S",
+                  "name": "Title",
+                  "fill": "#FFFFFF",
+                  "content": "Download Penkra.",
+                  "fontFamily": "$font-body",
+                  "fontSize": 38,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.4
+                },
+                {
+                  "type": "text",
+                  "id": "kbhTk",
+                  "name": "Description",
+                  "fill": "$website-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 330,
+                  "content": "Choose your operating system and put your agents, files, browser, and Apps in one workspace.",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "e6yl2l",
+                  "name": "Detected Platform Badge",
+                  "height": 32,
+                  "fill": "#3B82F61A",
+                  "cornerRadius": 999,
+                  "stroke": "#3B82F666",
+                  "strokeWidth": 1,
+                  "gap": 7,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "KS1lg",
+                      "name": "Detected Icon",
+                      "width": 14,
+                      "height": 14,
+                      "icon": "circle-check",
+                      "library": "lucide",
+                      "fill": "#5B9CF6"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jluXT",
+                      "name": "Detected Label",
+                      "fill": "$website-text-primary",
+                      "content": "macOS detected",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "m4Er8",
+              "name": "Platform Downloads",
+              "width": "fill_container",
+              "fill": "#0A0B0E",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                44,
+                20,
+                72,
+                20
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VTmj0",
+                  "name": "Platform Heading",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bHDPZ",
+                      "name": "Section Title",
+                      "fill": "$website-text-primary",
+                      "content": "Choose your download",
+                      "fontFamily": "$font-body",
+                      "fontSize": 24,
+                      "fontWeight": "650"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zymDT",
+                      "name": "Section Description",
+                      "fill": "$website-text-secondary",
+                      "content": "Your detected platform is selected.",
+                      "textAlign": "center",
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K5IKv",
+                  "name": "Platform Cards",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "F4nXV",
+                      "type": "ref",
+                      "ref": "hdjo3",
+                      "name": "macOS Download — Detected",
+                      "width": 350,
+                      "stroke": "$website-accent",
+                      "strokeWidth": 2,
+                      "fill": "#101827",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#3B82F62B",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 28
+                      }
+                    },
+                    {
+                      "id": "VJjQ8",
+                      "type": "ref",
+                      "ref": "hdjo3",
+                      "name": "Windows Download",
+                      "width": 350,
+                      "descendants": {
+                        "HNrtX": {
+                          "icon": "monitor"
+                        },
+                        "V2Ndw": {
+                          "content": "Windows"
+                        },
+                        "YdNIr": {
+                          "content": "Windows 10 or later · .exe"
+                        },
+                        "ta8Wy": {
+                          "content": "For 64-bit Windows PCs. Includes automatic updates."
+                        },
+                        "g2wK15": {
+                          "fill": "$website-surface-subtle",
+                          "stroke": "$website-border",
+                          "strokeWidth": 1
+                        },
+                        "ULt3Q": {
+                          "fill": "$website-text-primary"
+                        },
+                        "jHXF7": {
+                          "content": "Download for Windows",
+                          "fill": "$website-text-primary"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Gm3BO",
+                      "type": "ref",
+                      "ref": "hdjo3",
+                      "name": "Linux Download",
+                      "width": 350,
+                      "descendants": {
+                        "HNrtX": {
+                          "icon": "terminal"
+                        },
+                        "V2Ndw": {
+                          "content": "Linux"
+                        },
+                        "YdNIr": {
+                          "content": "64-bit · .AppImage"
+                        },
+                        "ta8Wy": {
+                          "content": "A portable AppImage for supported Linux distributions."
+                        },
+                        "g2wK15": {
+                          "fill": "$website-surface-subtle",
+                          "stroke": "$website-border",
+                          "strokeWidth": 1
+                        },
+                        "ULt3Q": {
+                          "fill": "$website-text-primary"
+                        },
+                        "jHXF7": {
+                          "content": "Download for Linux",
+                          "fill": "$website-text-primary"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "g8hMQ",
+                  "name": "Release Links",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hSDCk",
+                      "name": "Latest Release Label",
+                      "fill": "$website-text-tertiary",
+                      "content": "Latest stable release",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o90mf",
+                      "name": "All Releases Link",
+                      "fill": "$website-accent-hover",
+                      "content": "View all releases →",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Tio1h",
+              "name": "Install Guide",
+              "width": "fill_container",
+              "fill": "$website-surface",
+              "layout": "vertical",
+              "gap": 38,
+              "padding": [
+                64,
+                24
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OkU2h",
+                  "name": "Install Introduction",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 15,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "b1armP",
+                      "name": "Install Eyebrow",
+                      "fill": "$website-accent-hover",
+                      "content": "GET STARTED",
+                      "fontFamily": "$font-body",
+                      "fontSize": 12,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.6
+                    },
+                    {
+                      "type": "text",
+                      "id": "b0nEl",
+                      "name": "Install Title",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "From download to first thread in minutes.",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$font-body",
+                      "fontSize": 31,
+                      "fontWeight": "650"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vt6TF",
+                      "name": "Install Description",
+                      "fill": "$website-text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Penkra keeps your workspace on your computer and guides you through connecting an agent.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y0iL8L",
+                  "name": "Install Steps",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CTV70",
+                      "name": "Install Step 1",
+                      "width": "fill_container",
+                      "stroke": "$website-border-subtle",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 16,
+                      "padding": [
+                        20,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Z5V69",
+                          "name": "Step Number 1",
+                          "width": 32,
+                          "height": 32,
+                          "fill": "$website-surface-subtle",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xbF6x",
+                              "name": "Number 1",
+                              "fill": "$website-accent-hover",
+                              "content": "1",
+                              "fontFamily": "$font-body",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ybEHd",
+                          "name": "Step Copy 1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EOv32",
+                              "name": "Step Title 1",
+                              "fill": "$website-text-primary",
+                              "content": "Download the installer",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "S2uMn",
+                              "name": "Step Description 1",
+                              "fill": "$website-text-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Choose your platform and save the installer.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-body",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dQMTo",
+                      "name": "Install Step 2",
+                      "width": "fill_container",
+                      "stroke": "$website-border-subtle",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 16,
+                      "padding": [
+                        20,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "iWiwv",
+                          "name": "Step Number 2",
+                          "width": 32,
+                          "height": 32,
+                          "fill": "$website-surface-subtle",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LzuE9",
+                              "name": "Number 2",
+                              "fill": "$website-accent-hover",
+                              "content": "2",
+                              "fontFamily": "$font-body",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "s1aJuM",
+                          "name": "Step Copy 2",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EK2vV",
+                              "name": "Step Title 2",
+                              "fill": "$website-text-primary",
+                              "content": "Install and open Penkra",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "PgNnz",
+                              "name": "Step Description 2",
+                              "fill": "$website-text-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Follow your system’s normal installation flow.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-body",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "trLOu",
+                      "name": "Install Step 3",
+                      "width": "fill_container",
+                      "stroke": "$website-border-subtle",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 16,
+                      "padding": [
+                        20,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "VXgIV",
+                          "name": "Step Number 3",
+                          "width": 32,
+                          "height": 32,
+                          "fill": "$website-surface-subtle",
+                          "cornerRadius": 999,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sojXg",
+                              "name": "Number 3",
+                              "fill": "$website-accent-hover",
+                              "content": "3",
+                              "fontFamily": "$font-body",
+                              "fontSize": 12,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oLukj",
+                          "name": "Step Copy 3",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "y7b8GE",
+                              "name": "Step Title 3",
+                              "fill": "$website-text-primary",
+                              "content": "Connect an agent",
+                              "fontFamily": "$font-body",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "DFfWg",
+                              "name": "Step Description 3",
+                              "fill": "$website-text-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Sign in or add an API key.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-body",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jljfl",
+              "name": "Footer",
+              "width": 390,
+              "fill": "$website-surface",
+              "stroke": "$website-border-subtle",
+              "strokeWidth": {
+                "top": 1
+              },
+              "strokeLinejoin": "round",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                48,
+                20,
+                32,
+                20
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Dv1Pi",
+                  "name": "Groups",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dYsZU",
+                      "name": "Product",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IfMr6",
+                          "name": "Title",
+                          "fill": "$website-text-primary",
+                          "content": "Product",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FHhAg",
+                          "name": "Overview",
+                          "fill": "$website-text-tertiary",
+                          "content": "Overview",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "KAfAZ",
+                          "name": "Apps",
+                          "fill": "$website-text-tertiary",
+                          "content": "Apps",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RQ1oF",
+                          "name": "Security",
+                          "fill": "$website-text-tertiary",
+                          "content": "Security",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rkBcz",
+                          "name": "Download",
+                          "fill": "$website-text-tertiary",
+                          "content": "Download",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SR92W",
+                      "name": "Developers",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "csyJU",
+                          "name": "Title",
+                          "fill": "$website-text-primary",
+                          "content": "Developers",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LB3lk",
+                          "name": "Docs",
+                          "fill": "$website-text-tertiary",
+                          "content": "Docs",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "exzQv",
+                          "name": "GitHub",
+                          "fill": "$website-text-tertiary",
+                          "content": "GitHub",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bi8UI",
+                      "name": "Legal",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "blEjB",
+                          "name": "Title",
+                          "fill": "$website-text-primary",
+                          "content": "Legal",
+                          "fontFamily": "$font-body",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hq7hP",
+                          "name": "Privacy",
+                          "fill": "$website-text-tertiary",
+                          "content": "Privacy",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "I5ib1",
+                          "name": "Terms",
+                          "fill": "$website-text-tertiary",
+                          "content": "Terms",
+                          "fontFamily": "$font-body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jXPbm",
+                  "name": "Copyright",
+                  "fill": "$website-text-tertiary",
+                  "content": "© 2026 Penkra. MIT License.",
+                  "fontFamily": "$font-body",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -7936,48 +9336,124 @@
           "y": 320,
           "name": "Website Download Control",
           "reusable": true,
-          "width": 200,
+          "width": 360,
           "fill": "$website-surface-raised",
           "cornerRadius": "$website-radius-md",
-          "stroke": "$website-border-subtle",
+          "stroke": "$website-border",
           "strokeWidth": 1,
           "layout": "vertical",
-          "gap": 8,
-          "padding": [
-            20,
-            24
-          ],
-          "alignItems": "center",
+          "gap": 22,
+          "padding": 28,
           "children": [
             {
-              "type": "icon",
-              "id": "lJI5X",
-              "name": "Platform Icon",
-              "width": 32,
-              "height": 32,
-              "icon": "monitor",
-              "library": "lucide",
-              "fill": "$website-text-primary"
+              "type": "frame",
+              "id": "DKPzY",
+              "name": "Platform Header",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "u33ci3",
+                  "name": "Platform Icon Container",
+                  "width": 48,
+                  "height": 48,
+                  "fill": "$website-surface-subtle",
+                  "cornerRadius": 10,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "HNrtX",
+                      "name": "Platform Icon",
+                      "width": 25,
+                      "height": 25,
+                      "icon": "laptop",
+                      "library": "lucide",
+                      "fill": "$website-text-primary"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H5ziM",
+                  "name": "Platform Details",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "V2Ndw",
+                      "name": "Platform Name",
+                      "fill": "#FFFFFF",
+                      "content": "macOS",
+                      "fontFamily": "$font-body",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YdNIr",
+                      "name": "Platform Build",
+                      "fill": "$website-text-tertiary",
+                      "content": "Apple silicon · .dmg",
+                      "fontFamily": "$font-body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "type": "text",
-              "id": "c3dJD",
-              "name": "Platform",
-              "fill": "$website-text-primary",
-              "content": "macOS",
+              "id": "ta8Wy",
+              "name": "Platform Description",
+              "fill": "$website-text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "For Macs with Apple silicon. Includes automatic updates.",
+              "lineHeight": 1.5,
               "fontFamily": "$font-body",
-              "fontSize": 15,
-              "fontWeight": "600"
-            },
-            {
-              "type": "text",
-              "id": "F1IVI",
-              "name": "Action",
-              "fill": "$website-accent",
-              "content": "Download",
-              "fontFamily": "$font-body",
-              "fontSize": 13,
+              "fontSize": 14,
               "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "g2wK15",
+              "name": "Download Button",
+              "width": "fill_container",
+              "height": 44,
+              "fill": "#3B82F6",
+              "cornerRadius": "$website-radius-sm",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "ULt3Q",
+                  "name": "Download Icon",
+                  "width": 17,
+                  "height": 17,
+                  "icon": "download",
+                  "library": "lucide",
+                  "fill": "#FFFFFF"
+                },
+                {
+                  "type": "text",
+                  "id": "jHXF7",
+                  "name": "Download Label",
+                  "fill": "#FFFFFF",
+                  "content": "Download for macOS",
+                  "fontFamily": "$font-body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
             }
           ]
         },
