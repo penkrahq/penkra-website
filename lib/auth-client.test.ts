@@ -34,7 +34,7 @@ describe("Penkra Electron authorization callback", () => {
   it("encodes the Better Auth token and rejects missing values", () => {
     const callback = new URL(
       penkraElectronAuthorizationCallbackUrl(
-        "canary",
+        "development",
         "code with spaces",
         "state_123",
       )!,

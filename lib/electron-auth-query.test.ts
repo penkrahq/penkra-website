@@ -42,6 +42,12 @@ describe("Electron auth query", () => {
         client_id: "another-client",
       }),
     ).toBeUndefined();
+    expect(
+      parseElectronAuthQuery({
+        ...DESKTOP_QUERY,
+        desktop_flavor: "canary",
+      }),
+    ).toBeUndefined();
   });
 
   it("preserves the desktop authorization request in an absolute OAuth return URL", () => {

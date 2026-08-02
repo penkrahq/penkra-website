@@ -1,7 +1,7 @@
 "use client";
 
 import type { FormEvent } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { ElectronAuthQuery } from "../../../lib/electron-auth-query";
 import {
@@ -30,6 +30,39 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
+  const transferToDesktop = useCallback(async (): Promise<boolean> => {
+    if (!electronQuery || transferStarted.current) return false;
+    transferStarted.current = true;
+    setSubmitting(true);
+    try {
+      const { data, error: transferError } = await authClient.electron.transferUser({
+        fetchOptions: {
+          query: electronTransferQuery(electronQuery),
+        },
+      });
+      if (transferError) throw new Error(transferError.message);
+      if (
+        !redirectPenkraElectronAuthorizationCode(
+          electronAuthFlavor(electronQuery),
+          data?.electron_authorization_code,
+          electronQuery.state,
+        )
+      ) {
+        throw new Error("Authentication didn’t complete. Please try again.");
+      }
+      return true;
+    } catch (transferError) {
+      transferStarted.current = false;
+      setError(
+        messageForError(
+          transferError instanceof Error ? transferError.message : undefined,
+        ),
+      );
+      setSubmitting(false);
+      return false;
+    }
+  }, [electronQuery]);
+
   useEffect(() => {
     if (
       !electronQuery ||
@@ -40,39 +73,8 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
       return;
     }
 
-    transferStarted.current = true;
-    setSubmitting(true);
-    void authClient.electron
-      .transferUser({
-        fetchOptions: {
-          query: electronTransferQuery(electronQuery),
-        },
-      })
-      .then(({ data, error: transferError }) => {
-        if (transferError) {
-          transferStarted.current = false;
-          setError(messageForError(transferError.message));
-          setSubmitting(false);
-          return;
-        }
-        if (
-          !redirectPenkraElectronAuthorizationCode(
-            electronAuthFlavor(electronQuery),
-            data?.electron_authorization_code,
-            electronQuery.state,
-          )
-        ) {
-          transferStarted.current = false;
-          setError("Authentication didn’t complete. Please try again.");
-          setSubmitting(false);
-        }
-      })
-      .catch(() => {
-        transferStarted.current = false;
-        setError("Authentication didn’t complete. Please try again.");
-        setSubmitting(false);
-      });
-  }, [electronQuery, session.data?.user, session.isPending]);
+    void transferToDesktop();
+  }, [electronQuery, session.data?.user, session.isPending, transferToDesktop]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -113,6 +115,8 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
       window.location.assign(
         accountAuthHref("/verify-email", electronQuery, { email }),
       );
+    } else if (electronQuery) {
+      await transferToDesktop();
     } else if (!electronQuery) {
       window.location.assign("/");
     }

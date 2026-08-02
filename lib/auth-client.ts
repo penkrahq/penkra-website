@@ -14,7 +14,6 @@ export const PENKRA_ACCOUNT_AUTH_URL =
 export const PENKRA_ACCOUNT_AUTH_SCHEMES = {
   production: "com.penkra.app",
   development: "com.penkra.app.dev",
-  canary: "com.penkra.app.canary",
 } as const;
 
 export type PenkraDesktopFlavor = keyof typeof PENKRA_ACCOUNT_AUTH_SCHEMES;

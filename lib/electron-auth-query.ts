@@ -29,9 +29,7 @@ export function parseElectronAuthQuery(
     !/^[A-Za-z0-9_-]{43}=?$/.test(codeChallenge) ||
     !state ||
     !/^[A-Za-z0-9_-]{8,256}$/.test(state) ||
-    (desktopFlavor !== undefined &&
-      desktopFlavor !== "development" &&
-      desktopFlavor !== "canary")
+    (desktopFlavor !== undefined && desktopFlavor !== "development")
   ) {
     return undefined;
   }
