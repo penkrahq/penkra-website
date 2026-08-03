@@ -46,7 +46,12 @@
   display: block;
   flex: 0 0 auto;
   height: 18px;
+  transition: opacity 140ms ease;
   width: 18px;
+}
+
+.button:disabled .icon {
+  opacity: 0.35;
 }
 
 .storyWidth {

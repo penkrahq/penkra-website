@@ -93,7 +93,7 @@
       "y": 7600,
       "name": "Features / Website",
       "width": 7200,
-      "height": 18300,
+      "height": 18850,
       "layout": "none",
       "children": [
         {
@@ -2113,36 +2113,6 @@
                       "fontWeight": "500"
                     },
                     {
-                      "type": "frame",
-                      "id": "Gv0EE",
-                      "x": 32,
-                      "y": 292,
-                      "name": "Pi Surface",
-                      "enabled": false,
-                      "width": 224,
-                      "height": 80,
-                      "fill": "#FFFFFF08",
-                      "cornerRadius": 12,
-                      "stroke": "#FFFFFF0A",
-                      "strokeWidth": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "t8C4M",
-                      "x": 52,
-                      "y": 317,
-                      "name": "Pi Logo",
-                      "enabled": false,
-                      "width": 30,
-                      "height": 30,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "assets/landing/agents/I15im.png",
-                        "mode": "fit"
-                      }
-                    },
-                    {
                       "type": "text",
                       "id": "qcosz",
                       "x": 984,
@@ -2155,36 +2125,6 @@
                       "fontWeight": "500"
                     },
                     {
-                      "type": "frame",
-                      "id": "sSfVO",
-                      "x": 280,
-                      "y": 292,
-                      "name": "GitHub Surface",
-                      "enabled": false,
-                      "width": 224,
-                      "height": 80,
-                      "fill": "#FFFFFF08",
-                      "cornerRadius": 12,
-                      "stroke": "#FFFFFF0A",
-                      "strokeWidth": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "CdTIi",
-                      "x": 300,
-                      "y": 317,
-                      "name": "GitHub Logo",
-                      "enabled": false,
-                      "width": 30,
-                      "height": 30,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "assets/landing/agents/fCOLZ.png",
-                        "mode": "fit"
-                      }
-                    },
-                    {
                       "type": "text",
                       "id": "tMzAB",
                       "x": 96,
@@ -2195,36 +2135,6 @@
                       "fontFamily": "$font-body",
                       "fontSize": 16,
                       "fontWeight": "600"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "aq4Nu",
-                      "x": 528,
-                      "y": 292,
-                      "name": "OpenCode Surface",
-                      "enabled": false,
-                      "width": 224,
-                      "height": 80,
-                      "fill": "#FFFFFF08",
-                      "cornerRadius": 12,
-                      "stroke": "#FFFFFF0A",
-                      "strokeWidth": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "ZAjV9",
-                      "x": 548,
-                      "y": 317,
-                      "name": "OpenCode Logo",
-                      "enabled": false,
-                      "width": 30,
-                      "height": 30,
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "assets/landing/agents/mbMUu.png",
-                        "mode": "fit"
-                      }
                     },
                     {
                       "type": "text",
