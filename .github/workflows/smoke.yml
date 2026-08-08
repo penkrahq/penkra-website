@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verify public website
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           node --input-type=module <<'NODE'
           const baseUrl = "https://penkra.com";
@@ -33,6 +35,7 @@ jobs:
             fetch("https://api.github.com/repos/penkrahq/penkra/releases/latest", {
               headers: {
                 accept: "application/vnd.github+json",
+                authorization: `Bearer ${process.env.GH_TOKEN}`,
                 "user-agent": "penkra.com-smoke",
                 "x-github-api-version": "2022-11-28",
               },
