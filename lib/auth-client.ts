@@ -39,11 +39,13 @@ export function redirectPenkraElectronAuthorizationCode(
   flavor: PenkraDesktopFlavor,
   authorizationCode: unknown,
   state: unknown,
+  developmentInstance = 1,
 ): boolean {
   const callbackUrl = penkraElectronAuthorizationCallbackUrl(
     flavor,
     authorizationCode,
     state,
+    developmentInstance,
   );
   if (!callbackUrl) return false;
   window.location.replace(callbackUrl);
@@ -54,6 +56,7 @@ export function penkraElectronAuthorizationCallbackUrl(
   flavor: PenkraDesktopFlavor,
   authorizationCode: unknown,
   state: unknown,
+  developmentInstance = 1,
 ): string | undefined {
   if (
     typeof authorizationCode !== "string" ||
@@ -63,7 +66,18 @@ export function penkraElectronAuthorizationCallbackUrl(
   ) {
     return;
   }
-  const scheme = PENKRA_ACCOUNT_AUTH_SCHEMES[flavor];
+  if (
+    !Number.isSafeInteger(developmentInstance) ||
+    developmentInstance < 1 ||
+    (flavor === "production" && developmentInstance !== 1)
+  ) {
+    return;
+  }
+  const baseScheme = PENKRA_ACCOUNT_AUTH_SCHEMES[flavor];
+  const scheme =
+    flavor === "development" && developmentInstance > 1
+      ? `${baseScheme}.${developmentInstance}`
+      : baseScheme;
   const token = encodeBase64UrlJson({
     identifier: authorizationCode,
     state,

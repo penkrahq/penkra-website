@@ -25,6 +25,17 @@ describe("Penkra Electron authorization callback", () => {
     expect(`${development.protocol}//${development.host}${development.pathname}`).toBe(
       "com.penkra.app.dev://auth/callback",
     );
+    const developmentThree = new URL(
+      penkraElectronAuthorizationCallbackUrl(
+        "development",
+        "code_123",
+        "state_123",
+        3,
+      )!,
+    );
+    expect(
+      `${developmentThree.protocol}//${developmentThree.host}${developmentThree.pathname}`,
+    ).toBe("com.penkra.app.dev.3://auth/callback");
     expect(decodeAuthorizationToken(production)).toEqual({
       identifier: "code_123",
       state: "state_123",

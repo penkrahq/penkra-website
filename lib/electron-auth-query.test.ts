@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   accountAuthUrl,
   electronAuthFlavor,
+  electronAuthDevelopmentInstance,
   electronTransferQuery,
   parseElectronAuthQuery,
 } from "./electron-auth-query";
@@ -13,6 +14,7 @@ const DESKTOP_QUERY = {
   code_challenge_method: "S256",
   state: "VuCYzN4WYtgqpOMr",
   desktop_flavor: "development",
+  desktop_instance: "2",
 } as const;
 
 describe("Electron auth query", () => {
@@ -21,6 +23,7 @@ describe("Electron auth query", () => {
 
     expect(parsed).toEqual(DESKTOP_QUERY);
     expect(electronAuthFlavor(parsed!)).toBe("development");
+    expect(electronAuthDevelopmentInstance(parsed!)).toBe(2);
     expect(electronTransferQuery(parsed!)).toEqual({
       client_id: DESKTOP_QUERY.client_id,
       code_challenge: DESKTOP_QUERY.code_challenge,
@@ -34,6 +37,18 @@ describe("Electron auth query", () => {
       parseElectronAuthQuery({
         ...DESKTOP_QUERY,
         code_challenge: `${DESKTOP_QUERY.code_challenge}=`,
+      }),
+    ).toBeUndefined();
+    expect(
+      parseElectronAuthQuery({
+        ...DESKTOP_QUERY,
+        desktop_instance: "0",
+      }),
+    ).toBeUndefined();
+    expect(
+      parseElectronAuthQuery({
+        ...DESKTOP_QUERY,
+        desktop_flavor: undefined,
       }),
     ).toBeUndefined();
     expect(

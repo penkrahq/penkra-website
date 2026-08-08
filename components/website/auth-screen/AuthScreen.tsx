@@ -8,6 +8,7 @@ import {
   accountAuthHref,
   accountAuthUrl,
   electronAuthFlavor,
+  electronAuthDevelopmentInstance,
   electronAuthSearch,
   electronTransferQuery,
 } from "../../../lib/electron-auth-query";
@@ -46,6 +47,7 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
           electronAuthFlavor(electronQuery),
           data?.electron_authorization_code,
           electronQuery.state,
+          electronAuthDevelopmentInstance(electronQuery),
         )
       ) {
         throw new Error("Authentication didn’t complete. Please try again.");

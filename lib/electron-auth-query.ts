@@ -9,6 +9,7 @@ export type ElectronAuthQuery = {
   code_challenge_method: string;
   state: string;
   desktop_flavor?: Exclude<PenkraDesktopFlavor, "production">;
+  desktop_instance?: string;
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -21,6 +22,8 @@ export function parseElectronAuthQuery(
   const codeChallengeMethod = single(searchParams.code_challenge_method);
   const state = single(searchParams.state);
   const desktopFlavor = single(searchParams.desktop_flavor);
+  const desktopInstance = single(searchParams.desktop_instance);
+  const parsedDesktopInstance = desktopInstance ? Number(desktopInstance) : 1;
 
   if (
     clientId !== PENKRA_DESKTOP_AUTH_CLIENT_ID ||
@@ -29,7 +32,11 @@ export function parseElectronAuthQuery(
     !/^[A-Za-z0-9_-]{43}=?$/.test(codeChallenge) ||
     !state ||
     !/^[A-Za-z0-9_-]{8,256}$/.test(state) ||
-    (desktopFlavor !== undefined && desktopFlavor !== "development")
+    (desktopFlavor !== undefined && desktopFlavor !== "development") ||
+    (desktopInstance !== undefined &&
+      (desktopFlavor !== "development" ||
+        !/^[2-9]\d*$/u.test(desktopInstance) ||
+        !Number.isSafeInteger(parsedDesktopInstance)))
   ) {
     return undefined;
   }
@@ -41,6 +48,7 @@ export function parseElectronAuthQuery(
     state,
   };
   if (desktopFlavor) query.desktop_flavor = desktopFlavor;
+  if (desktopInstance) query.desktop_instance = desktopInstance;
   return query;
 }
 
@@ -81,8 +89,16 @@ export function electronAuthFlavor(
   return query.desktop_flavor ?? "production";
 }
 
+export function electronAuthDevelopmentInstance(query: ElectronAuthQuery): number {
+  return query.desktop_instance ? Number(query.desktop_instance) : 1;
+}
+
 export function electronTransferQuery(query: ElectronAuthQuery) {
-  const { desktop_flavor: _desktopFlavor, ...transferQuery } = query;
+  const {
+    desktop_flavor: _desktopFlavor,
+    desktop_instance: _desktopInstance,
+    ...transferQuery
+  } = query;
   return transferQuery;
 }
 
