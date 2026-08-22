@@ -39,12 +39,13 @@ jobs:
           let lastError;
           while (Date.now() < deadline) {
             try {
-              const [home, sitemap, robots, manifest, macosDownload, latestRelease] = await Promise.all([
+              const [home, sitemap, robots, manifest, macosArm64, macosX64, latestRelease] = await Promise.all([
                 fetch("http://127.0.0.1:3000/"),
                 fetch("http://127.0.0.1:3000/sitemap.xml"),
                 fetch("http://127.0.0.1:3000/robots.txt"),
                 fetch("http://127.0.0.1:3000/manifest.webmanifest"),
-                fetch("http://127.0.0.1:3000/download/macos", { redirect: "manual" }),
+                fetch("http://127.0.0.1:3000/download/macos?arch=arm64", { redirect: "manual" }),
+                fetch("http://127.0.0.1:3000/download/macos?arch=x64", { redirect: "manual" }),
                 fetch("https://api.github.com/repos/penkrahq/penkra/releases/latest", {
                   headers: {
                     accept: "application/vnd.github+json",
@@ -59,11 +60,12 @@ jobs:
                 !sitemap.ok ||
                 !robots.ok ||
                 !manifest.ok ||
-                macosDownload.status !== 307 ||
+                macosArm64.status !== 307 ||
+                macosX64.status !== 307 ||
                 !latestRelease.ok
               ) {
                 throw new Error(
-                  `home=${home.status} sitemap=${sitemap.status} robots=${robots.status} manifest=${manifest.status} macos=${macosDownload.status} release=${latestRelease.status}`,
+                  `home=${home.status} sitemap=${sitemap.status} robots=${robots.status} manifest=${manifest.status} macosArm64=${macosArm64.status} macosX64=${macosX64.status} release=${latestRelease.status}`,
                 );
               }
 
@@ -74,20 +76,25 @@ jobs:
                 manifest.json(),
                 latestRelease.json(),
               ]);
-              const redirectLocation = macosDownload.headers.get("location");
-              const macosAssetUrls = Array.isArray(releaseJson.assets)
-                ? releaseJson.assets
-                    .filter((asset) => /arm64.*\.dmg$/i.test(asset.name))
-                    .map((asset) => asset.browser_download_url)
-                : [];
+              const arm64Redirect = macosArm64.headers.get("location");
+              const x64Redirect = macosX64.headers.get("location");
+              const releaseAssets = Array.isArray(releaseJson.assets) ? releaseJson.assets : [];
+              const arm64AssetUrls = releaseAssets
+                .filter((asset) => /arm64.*\.dmg$/i.test(asset.name))
+                .map((asset) => asset.browser_download_url);
+              const x64AssetUrls = releaseAssets
+                .filter((asset) => /x64.*\.dmg$/i.test(asset.name))
+                .map((asset) => asset.browser_download_url);
 
               if (
                 homeText.includes("Penkra") &&
                 sitemapText.includes("https://penkra.com") &&
                 robotsText.includes("Sitemap: https://penkra.com/sitemap.xml") &&
                 manifestJson.name === "Penkra" &&
-                redirectLocation &&
-                macosAssetUrls.includes(redirectLocation)
+                arm64Redirect &&
+                arm64AssetUrls.includes(arm64Redirect) &&
+                x64Redirect &&
+                x64AssetUrls.includes(x64Redirect)
               ) {
                 console.log(`penkra.com health check passed (${releaseJson.tag_name})`);
                 process.exit(0);

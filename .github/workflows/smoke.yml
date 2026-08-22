@@ -26,12 +26,13 @@ jobs:
             return response;
           }
 
-          const [home, sitemap, robots, manifest, macosDownload, latestRelease] = await Promise.all([
+          const [home, sitemap, robots, manifest, macosArm64, macosX64, latestRelease] = await Promise.all([
             get("/"),
             get("/sitemap.xml"),
             get("/robots.txt"),
             get("/manifest.webmanifest"),
-            fetch(`${baseUrl}/download/macos`, { redirect: "manual" }),
+            fetch(`${baseUrl}/download/macos?arch=arm64`, { redirect: "manual" }),
+            fetch(`${baseUrl}/download/macos?arch=x64`, { redirect: "manual" }),
             fetch("https://api.github.com/repos/penkrahq/penkra/releases/latest", {
               headers: {
                 accept: "application/vnd.github+json",
@@ -62,21 +63,29 @@ jobs:
             throw new Error(`Unexpected manifest name: ${manifestJson.name}`);
           }
 
-          if (macosDownload.status !== 307 || !latestRelease.ok) {
+          if (macosArm64.status !== 307 || macosX64.status !== 307 || !latestRelease.ok) {
             throw new Error(
-              `Download verification failed: redirect=${macosDownload.status} release=${latestRelease.status}`,
+              `Download verification failed: arm64=${macosArm64.status} x64=${macosX64.status} release=${latestRelease.status}`,
             );
           }
           const releaseJson = await latestRelease.json();
-          const redirectLocation = macosDownload.headers.get("location");
-          const macosAssetUrls = Array.isArray(releaseJson.assets)
-            ? releaseJson.assets
-                .filter((asset) => /arm64.*\.dmg$/i.test(asset.name))
-                .map((asset) => asset.browser_download_url)
-            : [];
-          if (!redirectLocation || !macosAssetUrls.includes(redirectLocation)) {
+          const arm64Redirect = macosArm64.headers.get("location");
+          const x64Redirect = macosX64.headers.get("location");
+          const releaseAssets = Array.isArray(releaseJson.assets) ? releaseJson.assets : [];
+          const arm64AssetUrls = releaseAssets
+            .filter((asset) => /arm64.*\.dmg$/i.test(asset.name))
+            .map((asset) => asset.browser_download_url);
+          const x64AssetUrls = releaseAssets
+            .filter((asset) => /x64.*\.dmg$/i.test(asset.name))
+            .map((asset) => asset.browser_download_url);
+          if (
+            !arm64Redirect ||
+            !arm64AssetUrls.includes(arm64Redirect) ||
+            !x64Redirect ||
+            !x64AssetUrls.includes(x64Redirect)
+          ) {
             throw new Error(
-              `macOS download is not from latest release ${releaseJson.tag_name}: ${redirectLocation}`,
+              `macOS downloads are not from latest release ${releaseJson.tag_name}: arm64=${arm64Redirect} x64=${x64Redirect}`,
             );
           }
 

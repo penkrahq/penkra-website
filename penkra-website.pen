@@ -9309,7 +9309,7 @@
                       "id": "YdNIr",
                       "name": "Platform Build",
                       "fill": "$website-text-tertiary",
-                      "content": "Apple silicon · .dmg",
+                      "content": "Apple silicon or Intel · .dmg",
                       "fontFamily": "$font-body",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -9325,7 +9325,7 @@
               "fill": "$website-text-secondary",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "For Macs with Apple silicon. Includes automatic updates.",
+              "content": "For Apple silicon and Intel-based Macs. Includes automatic updates.",
               "lineHeight": 1.5,
               "fontFamily": "$font-body",
               "fontSize": 14,

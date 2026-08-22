@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { isDownloadPlatform, resolveReleaseAssetUrl } from "./download-assets";
+import {
+  isDownloadPlatform,
+  isMacArchitecture,
+  resolveReleaseAssetUrl,
+} from "./download-assets";
 
 const release = {
   assets: [
@@ -18,10 +22,23 @@ describe("download assets", () => {
     expect(isDownloadPlatform("windows")).toBe(true);
     expect(isDownloadPlatform("linux")).toBe(true);
     expect(isDownloadPlatform("android")).toBe(false);
+    expect(isMacArchitecture("arm64")).toBe(true);
+    expect(isMacArchitecture("x64")).toBe(true);
+    expect(isMacArchitecture("universal")).toBe(false);
   });
 
   it("prefers the Apple silicon disk image for macOS", () => {
     expect(resolveReleaseAssetUrl("macos", release)).toContain("arm64.dmg");
+  });
+
+  it("selects the Intel disk image when requested", () => {
+    expect(resolveReleaseAssetUrl("macos", release, "x64")).toContain("x64.dmg");
+  });
+
+  it("does not send an Intel Mac to an Apple silicon-only release", () => {
+    expect(
+      resolveReleaseAssetUrl("macos", { assets: [asset("Penkra-0.8.7-arm64.dmg")] }, "x64"),
+    ).toBeNull();
   });
 
   it("selects executable and AppImage assets without matching metadata", () => {

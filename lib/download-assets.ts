@@ -1,6 +1,8 @@
 export const DOWNLOAD_PLATFORMS = ["macos", "windows", "linux"] as const;
+export const MAC_ARCHITECTURES = ["arm64", "x64"] as const;
 
 export type DownloadPlatform = (typeof DOWNLOAD_PLATFORMS)[number];
+export type MacArchitecture = (typeof MAC_ARCHITECTURES)[number];
 
 interface ReleaseAsset {
   readonly browser_download_url?: unknown;
@@ -15,9 +17,14 @@ export function isDownloadPlatform(value: string): value is DownloadPlatform {
   return DOWNLOAD_PLATFORMS.some((platform) => platform === value);
 }
 
+export function isMacArchitecture(value: string): value is MacArchitecture {
+  return MAC_ARCHITECTURES.some((architecture) => architecture === value);
+}
+
 export function resolveReleaseAssetUrl(
   platform: DownloadPlatform,
   release: unknown,
+  macArchitecture: MacArchitecture = "arm64",
 ): string | null {
   if (!release || typeof release !== "object") return null;
   const assets = (release as GitHubRelease).assets;
@@ -26,7 +33,7 @@ export function resolveReleaseAssetUrl(
   const candidates = assets
     .map((asset) => normalizeAsset(asset))
     .filter((asset): asset is { name: string; url: string } => asset !== null)
-    .map((asset) => ({ ...asset, score: scoreAsset(platform, asset.name) }))
+    .map((asset) => ({ ...asset, score: scoreAsset(platform, asset.name, macArchitecture) }))
     .filter((asset) => asset.score > 0)
     .sort((left, right) => right.score - left.score || left.name.localeCompare(right.name));
 
@@ -55,10 +62,16 @@ function normalizeAsset(asset: unknown): { name: string; url: string } | null {
   }
 }
 
-function scoreAsset(platform: DownloadPlatform, name: string): number {
+function scoreAsset(
+  platform: DownloadPlatform,
+  name: string,
+  macArchitecture: MacArchitecture,
+): number {
   if (platform === "macos") {
     if (!name.toLowerCase().endsWith(".dmg")) return 0;
-    return /arm64/i.test(name) ? 3 : 1;
+    if (/universal/i.test(name)) return 2;
+    if (macArchitecture === "arm64") return /(?:arm64|aarch64)/i.test(name) ? 3 : 0;
+    return /(?:x64|x86_64|amd64)/i.test(name) ? 3 : 0;
   }
   if (platform === "windows") {
     if (!name.toLowerCase().endsWith(".exe")) return 0;

@@ -1472,6 +1472,52 @@ body:has(.product-site) {
   line-height: 1.5;
 }
 
+.pk-mac-architecture-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.pk-mac-architecture {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--pk-border);
+  border-radius: 9px;
+  background: var(--pk-subtle);
+}
+
+.pk-mac-architecture button {
+  min-height: 34px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--pk-muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pk-mac-architecture button[aria-pressed="true"] {
+  background: var(--pk-raised);
+  color: var(--pk-text);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+}
+
+.pk-mac-architecture button:focus-visible {
+  outline: 2px solid var(--pk-accent-hover);
+  outline-offset: 1px;
+}
+
+.pk-mac-architecture-wrap > small {
+  color: var(--pk-tertiary);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .pk-platform-download {
   display: inline-flex;
   min-height: 44px;
@@ -1484,6 +1530,7 @@ body:has(.product-site) {
   color: var(--pk-text);
   font-size: 14px;
   font-weight: 600;
+  margin-top: auto;
   transition:
     background-color 160ms ease,
     border-color 160ms ease;
