@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, Linux, ARM64, penkra, website]
+    runs-on: [self-hosted, h-prod]
     steps:
       - name: Check out code
         uses: actions/checkout@v7
