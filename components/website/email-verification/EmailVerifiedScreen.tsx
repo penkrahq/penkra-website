@@ -47,6 +47,8 @@ export function EmailVerifiedScreen({
             electronAuthFlavor(electronQuery),
             data?.electron_authorization_code,
             electronQuery.state,
+            1,
+            electronQuery.client_id,
           )
         ) {
           return;

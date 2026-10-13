@@ -48,6 +48,7 @@ export function AuthScreen({ electronQuery, mode }: AuthScreenProps) {
           data?.electron_authorization_code,
           electronQuery.state,
           electronAuthDevelopmentInstance(electronQuery),
+          electronQuery.client_id,
         )
       ) {
         throw new Error("Authentication didn’t complete. Please try again.");

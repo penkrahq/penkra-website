@@ -3,6 +3,7 @@ import { emailOTPClient } from "better-auth/client/plugins";
 import { createAuthClient } from "better-auth/react";
 
 export const PENKRA_DESKTOP_AUTH_CLIENT_ID = "penkra-desktop";
+export const PENKRA_MOBILE_AUTH_CLIENT_ID = "penkra-mobile";
 export const PENKRA_ACCOUNT_AUTH_CALLBACK_PATH = "/auth/callback";
 const configuredAccountAuthUrl =
   process.env.NEXT_PUBLIC_PENKRA_AUTH_URL?.trim().replace(/\/$/, "");
@@ -40,12 +41,14 @@ export function redirectPenkraElectronAuthorizationCode(
   authorizationCode: unknown,
   state: unknown,
   developmentInstance = 1,
+  clientId: string = PENKRA_DESKTOP_AUTH_CLIENT_ID,
 ): boolean {
   const callbackUrl = penkraElectronAuthorizationCallbackUrl(
     flavor,
     authorizationCode,
     state,
     developmentInstance,
+    clientId,
   );
   if (!callbackUrl) return false;
   window.location.replace(callbackUrl);
@@ -57,6 +60,7 @@ export function penkraElectronAuthorizationCallbackUrl(
   authorizationCode: unknown,
   state: unknown,
   developmentInstance = 1,
+  clientId: string = PENKRA_DESKTOP_AUTH_CLIENT_ID,
 ): string | undefined {
   if (
     typeof authorizationCode !== "string" ||
@@ -67,6 +71,8 @@ export function penkraElectronAuthorizationCallbackUrl(
     return;
   }
   if (
+    ![PENKRA_DESKTOP_AUTH_CLIENT_ID, PENKRA_MOBILE_AUTH_CLIENT_ID].includes(clientId) ||
+    (clientId === PENKRA_MOBILE_AUTH_CLIENT_ID && (flavor !== "production" || developmentInstance !== 1)) ||
     !Number.isSafeInteger(developmentInstance) ||
     developmentInstance < 1 ||
     (flavor === "production" && developmentInstance !== 1)
@@ -74,7 +80,7 @@ export function penkraElectronAuthorizationCallbackUrl(
     return;
   }
   const baseScheme = PENKRA_ACCOUNT_AUTH_SCHEMES[flavor];
-  const scheme =
+  const scheme = clientId === PENKRA_MOBILE_AUTH_CLIENT_ID ? "com.penkra.mobile" :
     flavor === "development" && developmentInstance > 1
       ? `${baseScheme}.${developmentInstance}`
       : baseScheme;

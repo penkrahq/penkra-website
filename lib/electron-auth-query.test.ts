@@ -76,3 +76,12 @@ describe("Electron auth query", () => {
     expect(Object.fromEntries(url.searchParams)).toEqual(DESKTOP_QUERY);
   });
 });
+
+it("accepts and preserves the separate mobile client while rejecting desktop overrides", () => {
+  const mobile = { client_id: "penkra-mobile", state: DESKTOP_QUERY.state, code_challenge: DESKTOP_QUERY.code_challenge, code_challenge_method: "S256" };
+  expect(parseElectronAuthQuery(mobile)).toEqual(mobile);
+  expect(electronTransferQuery(parseElectronAuthQuery(mobile)!)).toEqual(mobile);
+  expect(new URL(accountAuthUrl("https://penkra.com", "/sign-in", parseElectronAuthQuery(mobile))).searchParams.get("client_id")).toBe("penkra-mobile");
+  expect(parseElectronAuthQuery({ ...mobile, desktop_flavor: "development" })).toBeUndefined();
+  expect(parseElectronAuthQuery({ ...mobile, desktop_instance: "2" })).toBeUndefined();
+});

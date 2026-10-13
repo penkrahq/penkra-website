@@ -1,5 +1,6 @@
 import {
   PENKRA_DESKTOP_AUTH_CLIENT_ID,
+  PENKRA_MOBILE_AUTH_CLIENT_ID,
   type PenkraDesktopFlavor,
 } from "./auth-client";
 
@@ -26,7 +27,8 @@ export function parseElectronAuthQuery(
   const parsedDesktopInstance = desktopInstance ? Number(desktopInstance) : 1;
 
   if (
-    clientId !== PENKRA_DESKTOP_AUTH_CLIENT_ID ||
+    ![PENKRA_DESKTOP_AUTH_CLIENT_ID, PENKRA_MOBILE_AUTH_CLIENT_ID].includes(clientId ?? "") ||
+    (clientId === PENKRA_MOBILE_AUTH_CLIENT_ID && (desktopFlavor !== undefined || desktopInstance !== undefined)) ||
     codeChallengeMethod?.toUpperCase() !== "S256" ||
     !codeChallenge ||
     !/^[A-Za-z0-9_-]{43}=?$/.test(codeChallenge) ||
@@ -42,7 +44,7 @@ export function parseElectronAuthQuery(
   }
 
   const query: ElectronAuthQuery = {
-    client_id: clientId,
+    client_id: clientId!,
     code_challenge: codeChallenge,
     code_challenge_method: "S256",
     state,
