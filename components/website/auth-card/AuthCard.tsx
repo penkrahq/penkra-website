@@ -66,7 +66,7 @@ export function AuthCard({
 
       <div className={styles.divider}>or</div>
 
-      <form className={styles.form} onSubmit={onSubmit}>
+      <form className={styles.form} method="post" onSubmit={onSubmit}>
         <div className={styles.fields}>
           <InputShared
             aria-label="Email address"
