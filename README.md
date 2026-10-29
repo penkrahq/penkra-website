@@ -45,9 +45,12 @@ The local Next.js server runs on `http://localhost:3000` by default. Auth reques
 
 ```sh
 pnpm typecheck    # Type checking
+pnpm test         # P36 security checks (download origin and auth refusals)
 pnpm build        # Production build
 pnpm start        # Start the production server
 ```
+
+Keep tests for failures that can silently cause data loss, hangs, security failures, or provider contract breakage and that types or normal use would not expose.
 
 ### Design system
 
